@@ -21,6 +21,8 @@ create time: 07/21/2015
 
 using namespace std;
 
+typedef vector<vector<int> > intss;
+
 void feedbackBlackkey(vector<string>& overBigKeys);
 
 void feedbackBlackkey1(strings& overBigKeys);
@@ -42,5 +44,7 @@ void selectAction(RLearn* rLearn[], int actionSize, size_ts& slotNums);
 void findMax(vector<QSum>& qSums, size_ts& slotNums, int actionSize );
 
 void printVec(vector<size_t>& vec);
+
+void loadKeys2Filter( string& inFileName, vector<size_t>& mask, intss& vuniquePrefix, intss& vuniqueAggPrefix);
 
 

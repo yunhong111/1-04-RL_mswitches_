@@ -39,6 +39,27 @@ int main(int argc, char * argv[])
     struct timezone tzp;
     long timeInv = 0;
 
+    // ---------------------------------------------------
+    /*define mask*/
+    vector<size_t> mask;
+    size_t maskIP;
+    mask.clear();
+    cout<<"* Compute prefixes main ... ..."<<endl<<endl;;
+    for(int i = 8; i <= 32; i++)
+    {
+        maskIP = (size_t(pow(2,i))-1)<<(32-i);
+        mask.push_back(maskIP);
+    }
+
+    std::string inFileName = argv[1];
+    intss& vuniquePrefix;
+    intss& vuniqueAggPrefix;
+
+    vuniquePrefix.clear();
+    vuniqueAggPrefix.clear();
+
+    loadKeys2Filter(inFileName, mask, vuniquePrefix, vuniqueAggPrefix);
+
 
 
     // ------------------------------------------------
@@ -108,13 +129,17 @@ int main(int argc, char * argv[])
                                        keyCountcs0M,keyCountDiffsM);
 
     // create RLearn for recvs
-    RLearn* rLearn[actionSize];
-    for(int i = 0; i < actionSize; i++)
+    RLearn* rLearn[switchSize][actionSize];
+    for(int si = 0; si < switchSize; si++)
     {
-        rLearn[i] = new RLearn();
-        initRLearn(rLearn[i]);
+        for(int i = 0; i < actionSize; i++)
+        {
+            rLearn[si][i] = new RLearn();
+            initRLearn(rLearn[si][i]);
 
+        }
     }
+
 
 
     // -----------------------------------------------
@@ -1402,7 +1427,7 @@ void printVec(vector<size_t>& vec)
     cout<<endl;
 }
 
-void loadKeys2Filter()
+void loadKeys2Filter( string& inFileName, vector<size_t>& mask, intss& vuniquePrefix, intss& vuniqueAggPrefix)
 {
     // ------------------------------
     int switchNum = 3;
@@ -1410,7 +1435,6 @@ void loadKeys2Filter()
 
     // ------------------------------
     /*load key file*/
-    std::string inFileName = argv[1];
     for(int si = 0; si < switchNum; si++)
     {
         inFileName = inFileName + num2str(si+1);
@@ -1541,23 +1565,16 @@ void loadKeys2Filter()
         }
         cout<<endl;*/
 
-        // ---------------------------------------------------
-        /*define mask*/
-        vector<size_t> mask;
-        size_t maskIP;
-        mask.clear();
-        cout<<"* Compute prefixes main ... ..."<<endl<<endl;;
-        for(int i = 8; i <= 32; i++)
-        {
-            maskIP = (size_t(pow(2,i))-1)<<(32-i);
-            mask.push_back(maskIP);
-        }
 
         // ------------------------------------------------
         // Init aggregation
         bool isInit = 1;
         initAggregation(keys,keyprefixlengths,keyActions,
                         mask, actionSize, storage, isInit, finger,uniqueAggPrefix,mL0,cuckooFilter[si], cuckooAggrKeyTable[si]);
+
+        // output
+        vuniquePrefix.push_back(uniquePrefix);
+        vuniqueAggPrefix.push_back(uniqueAggPrefix);
     }// end si
 }
 
