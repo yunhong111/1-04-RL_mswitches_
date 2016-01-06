@@ -31,6 +31,7 @@ typedef std::vector<float> floats;
 typedef std::vector<double> doubles;
 typedef std::vector<size_t> size_ts;
 typedef std::vector<vector<size_t> > size_tss;
+typedef std::vector<vector<float> > floatss;
 
 extern CuckooFilter cuckooFilter[3];
 extern CuckooFilter cuckooFilterInit0[3];
@@ -40,18 +41,18 @@ extern CuckooTable cuckooAggrKeyTable[3];
 extern CuckooFilter cuckooFilterFlowEst[3];
 
 
-int initCuckoo(vector<string> &key,vector<int> &keyPrefix,
-                vector<int> &keyAction,float &storage, int& finger, char mL0[][4][20]);
+int initCuckoo(vector<string> &keys,vector<int> &keyPrefixes,
+                vector<int> &keyActions,float &storage, int& finger, char mL0[][4][20], CuckooFilter& cuck, CuckooFilter& cuck0);
 
 bool addCuckooFilter(vector<string> &keys, vector<int> &keyPrefixes,
                       vector<int> &keyActions, CuckooFilter& cuck, CuckooFilter& cuck0);
 
-bool addCuckooFilter(vector<string> &keys, vector<int> &keyActions);
+bool addCuckooFilter(vector<string> &keys, vector<int> &keyActions, CuckooFilter& cuck);
 
 bool addCuckooFilter0(vector<string> &keys, vector<int> &keyPrefixes,
-                      vector<int> &keyActions, char mL0[][4][20]);
+                      vector<int> &keyActions, char mL0[][4][20], CuckooFilter& cuck, CuckooFilter& cuck0);
 
-bool addCuckooFiltermL(vector<string> &keys, vector<int> &keyActions, char mL0[][4][20]);
+bool addCuckooFiltermL(vector<string> &keys, vector<int> &keyActions,char mL0[][4][20] , CuckooFilter& cuck);
 
 bool kickoutBlack(vector<size_t> &mask, vector<string> &flow,
                   vector<string> &flow_cnt, vector<string> &keyprefixlength,

@@ -258,7 +258,7 @@ size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
     cuck.cuckooFilterInit(bucketNo,fingerprint,slotNo,maxNumKicks);
 
     // add key to cuckoo filter
-    addCuckooFiltermL(keys, keyActions,mL0);
+    addCuckooFiltermL(keys, keyActions,mL0, cuck);
 
     // ----------------------------------
     // test cuckoo filter
@@ -343,7 +343,7 @@ size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
 
 }
 
-size_t aggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
+/*size_t aggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
                         vector<int> &keyActionIns, vector<size_t> &maskes,
                       int actionSize, float &storage, bool isInit,
                       int &fingerprintOld,vector<int> &uniqueAggKeyprefixes, strings& overKeys, size_ts& overKeyNos,
@@ -375,7 +375,7 @@ size_t aggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
     bTrie = new Trie[trieNum];            // define trees
 
     // ---------------------------------------------------------
-    /* Insert keys to trie */
+    /* Insert keys to trie * /
     insertWordTrieSimple(bTrie, trieNum, indexes, keyIns, keyPrefixIns,
                          keyActionIns);
 
@@ -401,8 +401,8 @@ size_t aggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
     }
 
     // -------------------------------------------------------------------------
-    /* Aggregation */
-    /* Init variables */
+    /* Aggregation * /
+    /* Init variables * /
     size_t countKey = 0;
     size_t countAggregateKey = 0;
     size_t countBlackKey =0;
@@ -422,7 +422,7 @@ size_t aggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
         g_vcountblackkey[ai] = 0;
 
         // ----------------------------------------------------------
-        /* aggregate Trie */
+        /* aggregate Trie * /
         aggregateTrie(bTrie, ai,  actionOrder, countKey,countAggregateKey,
                       countBlackKey,countOriKey, keys,
         keyActions,blackKeys,blackkeyPrefixes, aggregateKeys, aggrPrefixlength, 1, isInit);
@@ -515,7 +515,7 @@ size_t aggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
                     {
                         break;
                     }
-                }*/
+                }* /
 
                 bTrie[ti].searchAggrPrefix(DecToBin(aggrIPInt),aggrPrefix, aggrCount);
                 break;
@@ -559,8 +559,8 @@ size_t aggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
 
         // -----------------------------------------
         // aggregate all other keys
-        /* Aggregation */
-        /* Init variables */
+        /* Aggregation * /
+        /* Init variables * /
         countKey = 0;
         countAggregateKey = 0;
         countBlackKey =0;
@@ -590,7 +590,7 @@ size_t aggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
 
             //g_vweightThld[ai] = 0;
             // ----------------------------------------------------------
-            /* aggregate Trie */
+            /* aggregate Trie * /
             aggregateTrie(bTrie, ai,  actionOrder, countKey,countAggregateKey,
                           countBlackKey,countOriKey, keys,keyActions,blackKeys,blackkeyPrefixes, aggregateKeys, aggrPrefixlength, 1, isInit);
             cout<<"* threshold: "<<g_vweightThld[ai]<<" prefixlength: "<<prefixlength[ai]<<endl;
@@ -642,7 +642,7 @@ size_t aggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
     prefixNum(keyPrefixes,uniqueAggKeyprefixes);
 
     // ----------------------------------
-    /* Insert to cuckoo filter */
+    /* Insert to cuckoo filter * /
     // parameters for cuckoo filter
     int slotNo = 4;
     size_t keySize = keys.size();
@@ -697,7 +697,7 @@ size_t aggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
     }
 
     blackKeys.clear();
-    blackkeyPrefixes.clear();*/
+    blackkeyPrefixes.clear();* /
 
     // ---------------------------------------
     for(int i = 0; i < trieNum; i++)
@@ -710,7 +710,7 @@ size_t aggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
     cout<<"* Aggregation Return! "<<endl;
     return countKey;
 
-}
+}*/
 
 bool clusterAction(vector<string> &flow, vector<int> &flowaction,
                    vector<size_t> &mask, vector<size_t> &index)
@@ -840,7 +840,7 @@ bool addCuckooFilter(vector<string> &keys, vector<int> &keyPrefixes,
 
 }
 
-bool addCuckooFilter(vector<string> &keys, vector<int> &keyActions)
+bool addCuckooFilter(vector<string> &keys, vector<int> &keyActions, CuckooFilter& cuck)
 {
     // define variables
     cout<<"* Cuckoo filter adding ..."<<endl;
@@ -853,7 +853,7 @@ bool addCuckooFilter(vector<string> &keys, vector<int> &keyActions)
     {
         str = keys[i];
         //add keys to cuckoo filter
-        flagAdd = cuckooFilter.AddKey(str,(keyActions[i]));
+        flagAdd = cuck.AddKey(str,(keyActions[i]));
         if(flagAdd == 0)
         {
             countFail++;
@@ -868,7 +868,7 @@ bool addCuckooFilter(vector<string> &keys, vector<int> &keyActions)
 
 }
 
-bool addCuckooFiltermL(vector<string> &keys, vector<int> &keyActions,char mL0[][4][20])
+bool addCuckooFiltermL(vector<string> &keys, vector<int> &keyActions,char mL0[][4][20] , CuckooFilter& cuck)
 {
     // define variables
     cout<<"* Cuckoo filter adding ..."<<endl;
@@ -881,7 +881,7 @@ bool addCuckooFiltermL(vector<string> &keys, vector<int> &keyActions,char mL0[][
     {
         str = keys[i];
         //add keys to cuckoo filter
-        flagAdd = cuckooFilter.AddKeyCount(str,(keyActions[i]),mL0);
+        flagAdd = cuck.AddKeyCount(str,(keyActions[i]),mL0);
         if(flagAdd == 0)
         {
             countFail++;
@@ -897,7 +897,7 @@ bool addCuckooFiltermL(vector<string> &keys, vector<int> &keyActions,char mL0[][
 }
 
 bool addCuckooFilter0(vector<string> &keys, vector<int> &keyPrefixes,
-                      vector<int> &keyActions, char mL0[][4][20])
+                      vector<int> &keyActions, char mL0[][4][20], CuckooFilter& cuck, CuckooFilter& cuck0)
 {
     cout<<"* Cuckoo filter adding ..."<<endl;
 
@@ -912,7 +912,7 @@ bool addCuckooFilter0(vector<string> &keys, vector<int> &keyPrefixes,
         str = keys[i]+'/'+num2str(keyPrefixes[i]);
 
         //add keys to cuckoo filter
-        flagAdd = cuckooFilter.AddKeyCount(str,(keyActions[i]),mL0);
+        flagAdd = cuck.AddKeyCount(str,(keyActions[i]),mL0);
         if(flagAdd == 0)
         {
             countFail++;
@@ -921,7 +921,7 @@ bool addCuckooFilter0(vector<string> &keys, vector<int> &keyPrefixes,
             break;
         }
 
-        flagAdd0 =cuckooFilterInit0.AddKey(str,(keyActions[i]));
+        flagAdd0 =cuck0.AddKey(str,(keyActions[i]));
         if(flagAdd0 == 0)
         {
             countFail++;
@@ -1055,7 +1055,7 @@ void assignAction(vector<string> &flow,vector<size_t> &flow_cnt,
 }
 
 
-bool lookupKey(size_t &line, int actionSize, size_t &flow_int,size_t &flow_cnt_int, vector<size_t> &mask,
+/*bool lookupKey(size_t &line, int actionSize, size_t &flow_int,size_t &flow_cnt_int, vector<size_t> &mask,
                double &key_sum, double &pkt_sum, double &aggrSum, floats& keySums, floats& countIps, double &countIP,
                size_t &countNum, double &countIP0, size_t &countNum0, size_t &countblack_tmp,
                vector<string> &overbigKey, vector<size_t> &overbigKey_cnt, Trie* trie, int2s& bigNonCounts, long2s& timeCounts,
@@ -1097,7 +1097,7 @@ bool lookupKey(size_t &line, int actionSize, size_t &flow_int,size_t &flow_cnt_i
         }
 
 
-    }*/
+    }* /
     //cout<<"2"<<endl;
 
     flag_look = 0;
@@ -1240,7 +1240,7 @@ bool lookupKey(size_t &line, int actionSize, size_t &flow_int,size_t &flow_cnt_i
 
     return 1;
 
-}
+}*/
 
 bool assignAction(vector<string> &key,vector<int> &keyaction,int &actionSize)
 {
@@ -1368,7 +1368,7 @@ void keySortInt(vector<string>& keys, vector<int>& keyNos)
 }
 
 
-void addFlowEst(string& key, int2s& bigNonCounts, long2s& timeCounts, strings& overBigKeys )
+/*void addFlowEst(string& key, int2s& bigNonCounts, long2s& timeCounts, strings& overBigKeys )
 {
     // generate a random number, if >= 1,  do nothing
     int v1 = rand() % 1000;         // v1 in the range 0 to 99
@@ -1462,7 +1462,7 @@ void addFlowEst(string& key, int2s& bigNonCounts, long2s& timeCounts, strings& o
         return;
     }
 
-}
+}*/
 
 void compressAct(floats& haoOvers, float target, int actionSize, ints& compressActions, ints& decompressActions)
 {

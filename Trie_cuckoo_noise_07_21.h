@@ -49,17 +49,18 @@ void initRLearn(RLearn* rLearn);
 void updateBlacklist(vector<string>& overBigKeys, vector<int>& overActions, RLearn* rLearn, int actionSeq
 , vector<string>& blackkeyPres, vector<int>& blackActionPres, ofstream& blackKeyFileOut, size_t& slotNum);
 
-void feedbackBlackkeyRL(vector<string>& overBigKeys, vector<int>& overActions, RLearn* rLearn[], int actionSize,
-size_ts& slotNums, size_t line);
+void feedbackBlackkeyRL(VBkInfo& vBkInfo, RLearn** rLearn[],
+int actionSize, int switchNum, size_tss& slotNums, size_t line);
 
 void printQList(RLearn* rLearn);
 
-void selectAction(RLearn* rLearn[], int actionSize, size_ts& slotNums);
+void selectAction(RLearn** rLearn[], int actionSize, int switchNum, size_tss& slotNums);
 
-void findMax(vector<QSum>& qSums, size_ts& slotNums, int actionSize );
+void findMax(vector<QSum>& qSums, size_tss& slotNums, int actionSize, int switchNum );
 
 void printVec(vector<size_t>& vec);
 
-void loadKeys2Filter( string& inFileName, vector<size_t>& mask, VUPrefix& vuniquePrefix, VUPrefix& vuniqueAggPrefix);
+void loadKeys2Filter(string& inFileName, vector<size_t>& mask, VUPrefix& vuniquePrefix,
+VUPrefix& vuniqueAggPrefix, char mL0[][4][20], char * argv[], int& finger, int& finger0);
 
 

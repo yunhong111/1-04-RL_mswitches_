@@ -1,7 +1,7 @@
 #!/bin/bash
 # Trie script
 
-keyFile=300k_rule_subset-evict-noise-withID-
+keyFile=~/Research/PCAP/mapped_caida_trace/BT_hao_Originalkey_prefix_key
 
 ipfileFolder=~/Research/PCAP/mapped_caida_trace/
 
