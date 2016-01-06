@@ -23,6 +23,21 @@ using namespace std;
 
 typedef vector<vector<int> > intss;
 
+struct BkInfo{
+    vector<string> bks;
+    vector<int> bkPres;
+    vector<int> bkActions;
+    vector<size_t> bkSizes;
+};
+
+struct UPrefix{
+    vector<int> uPres;
+};
+
+typedef vector<UPrefix> VUPrefix;
+
+typedef vector<BkInfo> VBkInfo;
+
 void feedbackBlackkey(vector<string>& overBigKeys);
 
 void feedbackBlackkey1(strings& overBigKeys);
@@ -45,6 +60,6 @@ void findMax(vector<QSum>& qSums, size_ts& slotNums, int actionSize );
 
 void printVec(vector<size_t>& vec);
 
-void loadKeys2Filter( string& inFileName, vector<size_t>& mask, intss& vuniquePrefix, intss& vuniqueAggPrefix);
+void loadKeys2Filter( string& inFileName, vector<size_t>& mask, VUPrefix& vuniquePrefix, VUPrefix& vuniqueAggPrefix);
 
 

@@ -39,6 +39,10 @@ int main(int argc, char * argv[])
     struct timezone tzp;
     long timeInv = 0;
 
+    // ------------------------------
+    int switchNum = 3;
+    int actionSize = 2;
+
     // ---------------------------------------------------
     /*define mask*/
     vector<size_t> mask;
@@ -52,15 +56,13 @@ int main(int argc, char * argv[])
     }
 
     std::string inFileName = argv[1];
-    intss& vuniquePrefix;
-    intss& vuniqueAggPrefix;
+    VUPrefix& vuniquePrefix;
+    VUPrefix& vuniqueAggPrefix;
 
     vuniquePrefix.clear();
     vuniqueAggPrefix.clear();
 
     loadKeys2Filter(inFileName, mask, vuniquePrefix, vuniqueAggPrefix);
-
-
 
     // ------------------------------------------------
     // File name for caida trace
@@ -129,8 +131,8 @@ int main(int argc, char * argv[])
                                        keyCountcs0M,keyCountDiffsM);
 
     // create RLearn for recvs
-    RLearn* rLearn[switchSize][actionSize];
-    for(int si = 0; si < switchSize; si++)
+    RLearn* rLearn[switchNum][actionSize];
+    for(int si = 0; si < switchNum; si++)
     {
         for(int i = 0; i < actionSize; i++)
         {
@@ -156,6 +158,8 @@ int main(int argc, char * argv[])
     vector<string> blackKeys;
     vector<size_t> blackKeyNos;
     vector<int> blackActions;
+    VBkInfo vBkInfo;
+
     vector<float> haoOvers;
     haoOvers.assign(actionSize,0);
 
@@ -192,13 +196,19 @@ int main(int argc, char * argv[])
     countIPsInv.assign(actionSize,0);
 
     uint64_t line = 0;
-    size_ts slotNums;
-    slotNums.assign(actionSize,0);
+    size_tss slotNums;
+    slotNums.resize(switchNum);
+
+    for (int si = 0; si < switchNum; si++)
+    {
+        slotNums[si].assign(actionSize,0);  // resize each of the contained vectors
+    }
 
     // ---------------------------
     // Define a trie
-    Trie *trie;            // define tree
-    trie = new Trie();            // define tree
+    Trie *trie[3];            // define tree
+    for(int si = 0; si < switchNum; si++)
+        trie[si] = new Trie();            // define tree
 
     // -------------------------
     //std::ifstream infile;
@@ -362,34 +372,36 @@ int main(int argc, char * argv[])
                         if (flag_lookblack == 0) // not a blackkey
                         {
                             // look up key
-                            for(int mi = uniquePrefix.size()-1; mi >=0; mi--)
+                            for(int si = 0; si < switchNum; si++)
                             {
-                                subIP = ip & mask[uniquePrefix[mi]-8];
-                                flowstr = parsedec2IPV4(subIP);
-                                prefix = uniquePrefix[mi];
-
-                                flag_lookkey = cuckooTableKey.LookUpKeyActionCount(flowstr,
-                                                                                   prefix,iflowaction,flowNoInt);
-                                if (flag_lookkey)
+                                for(int mi = uniquePrefix[si].size()-1; mi >=0; mi--)
                                 {
-                                    //cout<<hBuck<<" "<<slot_i<<endl;
-                                    //keyCountcs0[hBuck][slot_i] += flowNoInt;
-                                    //keyCountDiffs[hBuck][slot_i] = keyCountcs[hBuck][slot_i] - keyCountcs0[hBuck][slot_i];
-                                    keyType_cur = "1";
-                                    flow_action_str = num2str(iflowaction);
-                                    //#pragma omp atomic
-                                    keySumLocal += (flowNoInt);
-                                    for(int ai = 0; ai <actionSize; ai++)
+
+                                    subIP = ip & mask[uniquePrefix[si].uPres[mi]-8];
+                                    flowstr = parsedec2IPV4(subIP);
+                                    prefix = uniquePrefix[si].uPres[mi];
+
+
+                                    flag_lookkey = cuckooTableKey[si].LookUpKeyActionCount(flowstr,
+                                                                                       prefix,iflowaction,flowNoInt);
+                                    if (flag_lookkey)
                                     {
-                                        if(iflowaction == ai)
+                                        keyType_cur = "1";
+                                        flow_action_str = num2str(iflowaction);
+                                        //#pragma omp atomic
+                                        keySumLocal += (flowNoInt);
+                                        for(int ai = 0; ai <actionSize; ai++)
                                         {
-                                            //#pragma omp atomic
-                                            keySumsLocal[ai] += (flowNoInt);
+                                            if(iflowaction == ai)
+                                            {
+                                                //#pragma omp atomic
+                                                keySumsLocal[ai] += (flowNoInt);
+                                            }
+
                                         }
+                                        break;
 
                                     }
-                                    break;
-
                                 }
                             }
 
@@ -400,83 +412,89 @@ int main(int argc, char * argv[])
                             vector<int> iactions;
                             bool isAKey = 0;
 
-                            for(int mi = 0; mi < uniqueAggPrefix.size(); mi++)
+                            for(int si = 0; si < switchNum; si++)
                             {
-                                bool overbigFlag = 0;
-                                subIP = ip & mask[uniqueAggPrefix[mi]-8];
-                                flowstr = parsedec2IPV4(subIP)+"/"+num2str(uniqueAggPrefix[mi]);
-                                iactions.clear();
-                                hBuckhit = -1;
-                                slot_ihit = -1;
-                                flag_look = cuckooFilter.LookUpKeyActionsCount(flowstr,iactions,flowNoInt, mL0,
-                                                                                keyCountcs,  keyCountcs0, keyCountDiffs,hBuckhit,slot_ihit);
-                                if(hBuckhit!= -1 && slot_ihit!= -1)
+                                for(int mi = 0; mi < uniqueAggPrefix[si].size(); mi++)
                                 {
-                                    hBuck = hBuckhit;
-                                    slot_i = slot_ihit;
-                                }
-                                if (flag_look != 0)
-                                {
-                                    isAKey = 1;
-                                    countNumLocal += flag_look;
-                                    countIPLocal += flag_look*(flowNoInt);
-
-                                    // each action lookups
-                                    for(int ai = 0; ai <actionSize; ai++)
+                                    bool overbigFlag = 0;
+                                    subIP = ip & mask[uniqueAggPrefix[si].uPres[mi]-8];
+                                    flowstr = parsedec2IPV4(subIP)+"/"+num2str(uniqueAggPrefix[si].uPres[mi]);
+                                    iactions.clear();
+                                    hBuckhit = -1;
+                                    slot_ihit = -1;
+                                    flag_look = cuckooFilter[si].LookUpKeyActionsCount(flowstr,iactions,flowNoInt, mL0,
+                                                                                    keyCountcs,  keyCountcs0, keyCountDiffs,hBuckhit,slot_ihit);
+                                    if(hBuckhit!= -1 && slot_ihit!= -1)
                                     {
-                                        for(int li = 0; li < iactions.size(); li++)
+                                        hBuck = hBuckhit;
+                                        slot_i = slot_ihit;
+                                    }
+                                    if (flag_look != 0)
+                                    {
+                                        isAKey = 1;
+                                        countNumLocal += flag_look;
+                                        countIPLocal += flag_look*(flowNoInt);
+
+                                        // each action lookups
+                                        for(int ai = 0; ai <actionSize; ai++)
                                         {
-                                            if(iactions[li] == ai)
+                                            for(int li = 0; li < iactions.size(); li++)
                                             {
-                                                countIPsLocal[ai] += (flowNoInt);
+                                                if(iactions[li] == ai)
+                                                {
+                                                    countIPsLocal[ai] += (flowNoInt);
+                                                }
+
+                                            }
+                                        }
+
+                                        // overselection count
+                                        if(!flag_lookkey && !overbigFlag)
+                                        {
+                                            overbigFlag = 1;
+                                            #pragma omp critical
+                                            {
+                                                trie[si]->addWordCountNum(DecToBin(flowInt),32, isnonkey, iactions[0], countIPLocal);
                                             }
 
                                         }
-                                    }
-
-                                    // overselection count
-                                    if(!flag_lookkey && !overbigFlag)
-                                    {
-                                        overbigFlag = 1;
-                                        #pragma omp critical
-                                        {
-                                            trie->addWordCountNum(DecToBin(flowInt),32, isnonkey, iactions[0], countIPLocal);
-                                        }
-
                                     }
                                 }
                             }
 
                                                         // -------------------------------
                             // look up key
-                            for(int mi = uniquePrefix.size()-1; mi >=0; mi--)
+                            for(int si = 0; si < switchNum; si++)
                             {
-                                subIP = ip & mask[uniquePrefix[mi]-8];
-                                flowstr = parsedec2IPV4(subIP);
-                                prefix = uniquePrefix[mi];
-
-                                flag_lookkey = cuckooTableKey.LookUpKeyAction(flowstr,
-                                                                                   prefix,iflowaction);
-                                if (flag_lookkey)
+                                for(int mi = uniquePrefix[si].uPres.size()-1; mi >=0; mi--)
                                 {
-                                    //cout<<hBuck<<" "<<slot_i<<endl;
-                                    keyCountcs0[hBuck][slot_i] += flowNoInt;
-                                    keyCountDiffs[hBuck][slot_i] = keyCountcs[hBuck][slot_i] - keyCountcs0[hBuck][slot_i];
-                                    //keyType_cur = "1";
-                                    //flow_action_str = num2str(iflowaction);
-                                    //#pragma omp atomic
-                                    //keySumLocal += (flowNoInt);
-                                    /*for(int ai = 0; ai <actionSize; ai++)
+                                    subIP = ip & mask[uniquePrefix[si].uPres[mi]-8];
+                                    flowstr = parsedec2IPV4(subIP);
+                                    prefix = uniquePrefix[si].uPres[mi];
+
+                                    flag_lookkey = cuckooTableKey[si].LookUpKeyAction(flowstr,
+                                                                                       prefix,iflowaction);
+                                    if (flag_lookkey)
                                     {
-                                        if(iflowaction == ai)
+                                        //cout<<hBuck<<" "<<slot_i<<endl;
+                                        keyCountcs0[hBuck][slot_i] += flowNoInt;
+                                        keyCountDiffs[hBuck][slot_i] = keyCountcs[hBuck][slot_i] - keyCountcs0[hBuck][slot_i];
+                                        //keyType_cur = "1";
+                                        //flow_action_str = num2str(iflowaction);
+                                        //#pragma omp atomic
+                                        //keySumLocal += (flowNoInt);
+                                        /*for(int ai = 0; ai <actionSize; ai++)
                                         {
-                                            //#pragma omp atomic
-                                            keySumsLocal[ai] += (flowNoInt);
-                                        }
+                                            if(iflowaction == ai)
+                                            {
+                                                //#pragma omp atomic
+                                                keySumsLocal[ai] += (flowNoInt);
+                                            }
 
-                                    }*/
-                                    break;
+                                        }*/
+                                        break;
 
+                                    }
                                 }
                             }
 
@@ -484,12 +502,14 @@ int main(int argc, char * argv[])
                             // look up aggregate key
                             bool isAggregatekey = 0;
                             //if(cuckooAggrKeyTable.mm > 1)
+                            for(int si = 0; si < switchNum; si++)
+
                             {
-                                for(int mi = uniqueAggPrefix.size()-1; mi >=0; mi--)
+                                for(int mi = uniqueAggPrefix[si].size()-1; mi >=0; mi--)
                                 {
-                                    subIP = ip & mask[uniqueAggPrefix[mi]-8];
+                                    subIP = ip & mask[uniqueAggPrefix[si].uPres[mi]-8];
                                     flowstr = parsedec2IPV4(subIP);
-                                    prefix = uniqueAggPrefix[mi];
+                                    prefix = uniqueAggPrefix[si].uPres[mi];
                                     isAggregatekey = cuckooAggrKeyTable.LookUpKey(flowstr,prefix);
                                     if (isAggregatekey && !flag_lookkey)
                                     {
@@ -501,40 +521,31 @@ int main(int argc, char * argv[])
                                 }
                             }
 
-                            // ---------------------------------------------------
-                            // add to flow est filter
-                            if(isAKey == 0)  // not inside cuckooFilter
-                            {
-                                // add to filter
-                                //if(FLOW_EST_SIZE>0)
-                               // addFlowEst(flowIpv4, bigNonCounts, timeCounts, overbigKey );
-
-                            }
-
                         }
 
                         // -------------------------------
                         // lookup key from cuckoo filterInit0
                         vector<int> iactions;
-                        for(int mi = 0; mi < uniquePrefix.size(); mi++)
+                        for(int si = 0; si < switchNum; si++)
                         {
-                            subIP = ip & mask[uniquePrefix[mi]-8];
-                            flowstr = parsedec2IPV4(subIP)+"/"+num2str(uniquePrefix[mi]);
-                            iactions.clear();
-                            flag_look0 =cuckooFilterInit0.LookUpKeyActions(flowstr,iactions);
-                            if (flag_look0)
+                            for(int mi = 0; mi < uniquePrefix[si].uPres.size(); mi++)
                             {
-                                //#pragma omp atomic
-                                countNum0Local += flag_look0;
-                                //#pragma omp atomic
-                                countIP0Local += flag_look0*(flowNoInt);
+                                subIP = ip & mask[uniquePrefix[si].uPres[mi]-8];
+                                flowstr = parsedec2IPV4(subIP)+"/"+num2str(uniquePrefix[si].uPres[mi]);
+                                iactions.clear();
+                                flag_look0 =cuckooFilterInit0[si].LookUpKeyActions(flowstr,iactions);
+                                if (flag_look0)
+                                {
+                                    //#pragma omp atomic
+                                    countNum0Local += flag_look0;
+                                    //#pragma omp atomic
+                                    countIP0Local += flag_look0*(flowNoInt);
+
+                                }
 
                             }
-
                         }
                         // lookup key end
-                        // ---------------------------------------------
-                        // ---------------------------------------------
 
                         // ---------------------------------------------
                         // update global variable
@@ -671,176 +682,123 @@ int main(int argc, char * argv[])
 
                 // ---------------------------
                 // the overselects for feedback
-                vector<char> word;
-                trie->getLeaf(trie->root,word,blackKeys,blackKeyNos, blackActions);
-                trie->deleteChild(trie->root);
-                delete trie;
-                trie = new Trie();            // define tree
 
-                //trie->deleteChild(trie->root);
-
-                int init = 0;
-                float overTotalSum = accumulate(blackKeyNos.begin(), blackKeyNos.end(), init);
-
-                // sort balckkeys
-                keySort3(blackKeys,blackKeyNos, blackActions);
-
-                float portionFeedBack = strtof(argv[4],NULL);
-                blackBackSize = portionFeedBack*blackKeys.size();
-                /*if(blackKeys.size()<100)
+                for(int si = 0; si < switchNum; si++)
                 {
-                    blackBackSize = blackKeys.size();
+                    vector<char> word;
+                    trie[si]->getLeaf(trie[si]->root,word,blackKeys,blackKeyNos, blackActions);
+                    trie[si]->deleteChild(trie[si]->root);
+                    delete trie[si];
+                    trie[si] = new Trie();            // define tree
+
+                    int init = 0;
+                    float overTotalSum = accumulate(blackKeyNos.begin(), blackKeyNos.end(), init);
+
+                    // sort balckkeys
+                    keySort3(blackKeys,blackKeyNos, blackActions);
+
+                    float portionFeedBack = strtof(argv[4],NULL);
+                    blackBackSize = portionFeedBack*blackKeys.size();
+
+                    blackKeys.erase(blackKeys.begin()+blackBackSize, blackKeys.end());
+                    blackKeyNos.erase(blackKeyNos.begin()+blackBackSize, blackKeyNos.end());
+                    blackActions.erase(blackActions.begin()+blackBackSize, blackActions.end());
+
+                    float feedSum = accumulate(blackKeyNos.begin(), blackKeyNos.end(), init);
+                    feedSumPortion = feedSum/overTotalSum;
+
+                    // output
+                    BkInfo bkInfo;
+                    bkInfo.bkActions = blackActions;
+                    bkInfo.bkPres.assign(blackKeys.size(),32);
+                    bkInfo.bks = blackKeys;
+                    bkInfo.bkSizes = blackKeyNos;
+
+                    vBkInfo.push_back(bkInfo);
                 }
-                else if(blackKeys.size()<200 && portionFeedBack<=0.5)
-                {
-                    blackBackSize = 0.5*blackKeys.size();
-                }
-                else if(blackKeys.size()<1000 && portionFeedBack <=0.1)
-                {
-                    blackBackSize = 0.1*blackKeys.size();
-                }*/
-                blackKeys.erase(blackKeys.begin()+blackBackSize, blackKeys.end());
-                blackKeyNos.erase(blackKeyNos.begin()+blackBackSize, blackKeyNos.end());
-                blackActions.erase(blackActions.begin()+blackBackSize, blackActions.end());
 
-                float feedSum = accumulate(blackKeyNos.begin(), blackKeyNos.end(), init);
-                feedSumPortion = feedSum/overTotalSum;
 
-                // -----------------------------
-                // Get instant reward and Q learn
-                //cout<<"* Q learn!"<<endl;
-                //if(pktSumTotal > 9.59646e+08)
-                //if(line>60000)
-                {
-                    // cout<<"* compare: "<<countIPsInv[0]<<" "<<countIPs[0]<<endl;
-                    maxHaoOver = haoOvers[0];
-                    indexHaoOver = 0;
-                    minHaoOver = haoOvers[0];
-                    indexMinHaoOver = 0;
-
-                    for(int ri = 0; ri < actionSize; ri++)
+                    // -----------------------------
+                    // Get instant reward and Q learn
+                    //cout<<"* Q learn!"<<endl;
+                    //if(pktSumTotal > 9.59646e+08)
+                    //if(line>60000)
+                    for(int si = 0; si < switchNum; si++)
                     {
-                        //cout<<rLearn[ri]<<endl;
-                        rLearn[ri]->update(slotNums[ri],haoOvers[ri]);
-                        //cout<<"* qleran!"<<endl;
+                        // cout<<"* compare: "<<countIPsInv[0]<<" "<<countIPs[0]<<endl;
+                        /*maxHaoOver = haoOvers[0];
+                        indexHaoOver = 0;
+                        minHaoOver = haoOvers[0];
+                        indexMinHaoOver = 0;*/
 
-                        // find maximum haoover
-                        if(haoOvers[ri] > maxHaoOver)
+                        for(int ri = 0; ri < actionSize; ri++)
                         {
-                            maxHaoOver = haoOvers[ri];
-                            indexHaoOver = ri;
+                            //cout<<rLearn[ri]<<endl;
+                            rLearn[si][ri]->update(slotNums[si][ri],haoOvers[ri]);
+                            //cout<<"* qleran!"<<endl;
+
+                            // find maximum haoover
+                            /*if(haoOvers[ri] > maxHaoOver)
+                            {
+                                maxHaoOver = haoOvers[ri];
+                                indexHaoOver = ri;
+                            }
+
+                            // find maximum haoover
+                            if(haoOvers[ri] < minHaoOver)
+                            {
+                                minHaoOver = haoOvers[ri];
+                                indexMinHaoOver = ri;
+                            }*/
+
+                            // compute ebuse0
+                            if(line<1000000)
+                            {
+                                EPSILON0 = 1.0;
+                            }
+                            else
+                            {
+                                EPSILON0 = 0.20;
+                            }
+                            rLearn[si][ri]->qLearn();
+                            printQList(rLearn[si][ri]);
                         }
 
-                        // find maximum haoover
-                        if(haoOvers[ri] < minHaoOver)
-                        {
-                            minHaoOver = haoOvers[ri];
-                            indexMinHaoOver = ri;
-                        }
 
-                        // compute ebuse0
-                        if(line<1000000)
-                        {
-                            EPSILON0 = 1.0;
-                        }
-                        else
-                        {
-                            EPSILON0 = 0.20;
-                        }
-                        rLearn[ri]->qLearn();
-                        printQList(rLearn[ri]);
+                        // ------------------------------------
+                        // feedback
+                        // -------------------------
+                        //time before calling function
+                        gettimeofday(&gen_start, &tzp);
+                        // ---------------------------------
+                        // call function
+                        cout<<"* feedback bks!"<<endl;
+                        feedbackBlackkeyRL(blackKeys, blackActions, rLearn, actionSize,slotNums, line);
+                        cout<<"* feedback bks end!"<<endl;
+
+                        // ------------------------------
+                        // time after calling function
+                        gettimeofday(&gen_end, &tzp);
+                        // time interval
+                        timeInv = print_elapsed("Aggr: ", &gen_start,&gen_end, 1);
+
                     }
 
-                    // ------------------------------------
-                    // feedback
-                    // -------------------------
-                    //time before calling function
-                    gettimeofday(&gen_start, &tzp);
-                    // ---------------------------------
-                    // call function
-                    //feedbackBlackkey(blackKeys);
-                    cout<<"* feedback bks!"<<endl;
-                    feedbackBlackkeyRL(blackKeys, blackActions, rLearn, actionSize,slotNums, line);
-                    cout<<"* feedback bks end!"<<endl;
-                    /*if(10 < blackKeys.size())
-                    {
-                        for(size_t i = 0; i < 10; i++)
-                        {
-                             cout<<"* blackkey: "<<blackKeys[i]<<" num: "<<blackKeyNos[i]<<" actions: "<<blackActions[i]<<endl;
-                        }
-                    }*/
+                    // write to file
+                    strings().swap(keycsM);
+                    ints().swap(keyActioncsM);
+                    size_ts().swap(keyCountcsM);
+                    size_ts().swap(keyCountcs0M);
+                    size_ts().swap(keyCountDiffsM);
 
+                    //cuckooFilter.returnKey(keycsM,keyActioncsM,mL0, keyCountcs,keyCountcs0,keyCountDiffs,keyCountcsM, \
+                                           keyCountcs0M,keyCountDiffsM);
 
-                    // ------------------------------
-                    // time after calling function
-                    gettimeofday(&gen_end, &tzp);
-                    // time interval
-                    timeInv = print_elapsed("Aggr: ", &gen_start,&gen_end, 1);
+                    strings().swap(blackKeys);
+                    vector<size_t>().swap(blackKeyNos);
+                    vector<int>().swap(blackActions);
                 }
 
-                // write to file
-                strings().swap(keycsM);
-                ints().swap(keyActioncsM);
-                size_ts().swap(keyCountcsM);
-                size_ts().swap(keyCountcs0M);
-                size_ts().swap(keyCountDiffsM);
-
-                cuckooFilter.returnKey(keycsM,keyActioncsM,mL0, keyCountcs,keyCountcs0,keyCountDiffs,keyCountcsM,
-                                       keyCountcs0M,keyCountDiffsM);
-                /*for(int i = 0; i < 10; i++)
-                cout<<keyCountcsM[i]<<" "<<keyCountcs0M[i]<<" "<<keyCountDiffsM[i]<<"     ";
-                cout<<endl;*/
-                /*for(size_t i = 0; i < keycsM.size(); i++)
-                {
-                    keyCountfileEst<<keyCountcsM[i]<<" ";
-                    //keyCountfileAll<<keyCountcsM[i]<<" ";
-                }
-                //keyCountfileAll<<endl;
-                for(size_t i = 0; i < keycsM.size(); i++)
-                {
-                    keyCountfile<<keyCountcs0M[i]<<" ";
-                    //keyCountfileAll<<keyCountcs0M[i]<<" ";
-                }
-                //keyCountfileAll<<endl;
-                for(size_t i = 0; i < keycsM.size(); i++)
-                {
-                    keyCountfileDiff<<keyCountDiffsM[i]<<" ";
-                    //keyCountfileAll<<keyCountDiffsM[i]<<" ";
-                    / *if(keyCountDiffsM[i]!=0)
-                    {
-                        cout<<"Diff: "<<keyCountDiffsM[i]<<endl;
-                    }* /
-                }
-                //keyCountfileAll<<endl;
-                keyCountfile<<endl;
-                keyCountfileEst<<endl;
-                keyCountfileDiff<<endl;*/
-
-                // ------------------------------------
-                // print haoOvers
-                /*for(int i = 0; i< actionSize; i++)
-                    cout<<"Action: "<<i <<" haoOver: "<<" "<<haoOvers[i]<<" ";
-                cout<<endl;*/
-
-                // ------------------------------------
-                // aggregation
-                //isInit = 1;
-                /*if(line >= 20000000 && line%20000000 == 0 && haoFalsePosTotal > overTarget)
-                {
-
-                //trie->deleteChild(trie->root);
-                //delete trie;
-                //trie = new Trie();            // define tree
-
-                    aggregation(keys,keyprefixlengths,keyActions, \
-                            mask, actionSize, storage, isInit, finger,uniqueAggPrefix, blackKeys, blackKeyNos, haoOvers, overTarget);
-                }*/
-
-
-                strings().swap(blackKeys);
-                vector<size_t>().swap(blackKeyNos);
-                vector<int>().swap(blackActions);
-            }
 
             strings().swap(flows);
             vector<size_t>().swap(flowNos);
@@ -855,10 +813,10 @@ int main(int argc, char * argv[])
     /*clear the data structure*/
     mask.clear();
 
-    cuckooFilter.ClearTable();
-    cuckooBlackKeyTable.ClearTable();
-    cuckooTableKey.ClearTable();
-    cuckooAggrKeyTable.ClearTable();
+    //cuckooFilter.ClearTable();
+    //cuckooBlackKeyTable.ClearTable();
+    //cuckooTableKey.ClearTable();
+    //cuckooAggrKeyTable.ClearTable();
 
     (keyCountfile.close());
     keyCountfileDiff.close();
@@ -1185,69 +1143,75 @@ void updateBlacklist(vector<string>& overBigKeys, vector<int>& overActions, RLea
 
 
 }
-void feedbackBlackkeyRL(vector<string>& overBigKeys, vector<int>& overActions, RLearn* rLearn[],
-int actionSize, size_ts& slotNums, size_t line)
+void feedbackBlackkeyRL(VBkInfo& vBkInfo, RLearn* rLearn[],
+int actionSize, int switchNum, size_ts& slotNums, size_t line)
 {
 
     // -------------------------------------------
     // load the previous blackkeys for each action
-    ifstream blackKeyFileIn;
-    blackKeyFileIn.open(BLACKFILENAME.c_str());
-
-    vector<string> blackkeyPres;
-    vector<int> actionPres;
-    string blackKeyStr;
-    int prefix = 32;
-    int actionInt = 0;
-
-    while(blackKeyFileIn>>blackKeyStr>>prefix>>actionInt)
+    for(int si = 0; si < switchNum; si++)
     {
-        blackkeyPres.push_back(blackKeyStr);
-        actionPres.push_back(actionInt);
+        string blackFileName = BLACKFILENAME + num2str(si);
+        ifstream blackKeyFileIn;
+        blackKeyFileIn.open(blackFileName.c_str());
 
-    }
-    blackKeyFileIn.clear();
-    blackKeyFileIn.close();
+        vector<string> blackkeyPres;
+        vector<int> actionPres;
+        string blackKeyStr;
+        int prefix = 32;
+        int actionInt = 0;
 
+        while(blackKeyFileIn>>blackKeyStr>>prefix>>actionInt)
+        {
+            blackkeyPres.push_back(blackKeyStr);
+            actionPres.push_back(actionInt);
 
-    // -------------------------------------------
-    // Add blackkey to cuckooTable
-    //cout<<"* Add balckkey to cuckooTable!"<<endl;
-    float loadFactor = 0.9f;
-    int slotNo = 4;
-    size_t blackKeySize = CUCKOO_BLACK_SIZE;
-    size_t bucketSize = int(blackKeySize/(loadFactor*slotNo))+1;
-    int fingerprintNew = 12;
-    long MaxKickoutNum = 1000;
-    cuckooBlackKeyTable.ClearTable();
-    cuckooBlackKeyTable.CuckooTableInit(bucketSize,fingerprintNew,slotNo, \
-                                        MaxKickoutNum);
+        }
+        blackKeyFileIn.clear();
+        blackKeyFileIn.close();
 
-    // write to history files
-    ofstream blackKeyFileOut;
-    blackKeyFileOut.open(BLACKFILENAME.c_str());
+        // -------------------------------------------
+        // Add blackkey to cuckooTable
+        //cout<<"* Add balckkey to cuckooTable!"<<endl;
+        float loadFactor = 0.9f;
+        int slotNo = 4;
+        size_t blackKeySize = CUCKOO_BLACK_SIZE;
+        size_t bucketSize = int(blackKeySize/(loadFactor*slotNo))+1;
+        int fingerprintNew = 12;
+        long MaxKickoutNum = 1000;
+        cuckooBlackKeyTable[si].ClearTable();
+        cuckooBlackKeyTable[si].CuckooTableInit(bucketSize,fingerprintNew,slotNo, \
+                                            MaxKickoutNum);
 
-    /*if(line < 80000)
-    {
-        for(int i = 0; i < actionSize; i++)
-        slotNums[i] = CUCKOO_BLACK_SIZE/4;
-    }
-    else*/
+        // write to history files
+        ofstream blackKeyFileOut;
+        blackKeyFileOut.open(blackFileName.c_str());
+
+        /*if(line < 80000)
+        {
+            for(int i = 0; i < actionSize; i++)
+            slotNums[i] = CUCKOO_BLACK_SIZE/4;
+        }
+        else*/
         selectAction(rLearn, actionSize, slotNums);
 
-    printVec(slotNums);
+        printVec(slotNums);
 
-    for(int i = 0; i < actionSize; i++)
-    {
 
-        updateBlacklist(overBigKeys, overActions, rLearn[i], i, blackkeyPres, actionPres,
-        blackKeyFileOut, slotNums[i]);
+        for(int i = 0; i < actionSize; i++)
+        {
+            strings overBigKeys = vBkInfo[si].bks;
+            ints overActions = vBkInfo[si].bkActions;
+
+            updateBlacklist(overBigKeys, overActions, rLearn[si][i], i, blackkeyPres, actionPres,
+            blackKeyFileOut, slotNums[si][i]);
+        }
+
+        outfileR<<endl;
+
+        blackKeyFileOut.clear();
+        blackKeyFileOut.close();
     }
-
-    outfileR<<endl;
-
-    blackKeyFileOut.clear();
-    blackKeyFileOut.close();
 
 
 }
@@ -1267,47 +1231,49 @@ void printQList(RLearn* rLearn)
     }
 }
 
-void selectAction(RLearn* rLearn[], int actionSize, size_ts& slotNums)
+void selectAction(RLearn* rLearn[], int actionSize, int switchNum, size_ts& slotNums)
 {
     //if()
     vector<vector<QEntry> > qVecs;
 
     //range
-    int iMin[actionSize], iMax[actionSize];
-
-    for(int i = 0; i < actionSize; i++)
+    int iMin[switchNum*actionSize], iMax[switchNum*actionSize];
+    for(int si = 0; si < switchNum; si++)
     {
-        int stateIndex = rLearn[i]->findIndex(rLearn[i]->_states,rLearn[i]->_state);
-        //cout<<"* stateIndex: "<<stateIndex<<endl;
-
-        qVecs.push_back(rLearn[i]->qList[stateIndex]);
-
-        int randNum = (int(rand())%100);
-        float randx = float(randNum)/100.0;
-        cout<<"* randNum: "<<randNum<<endl;
-
-        // random action
-        if(randx < EPSILON0)
+        for(int i = 0; i < actionSize; i++)
         {
-            int randa = -1;
-            while(rLearn[i]->qList[stateIndex][randa].qValue==-100 || randa == -1 || randa == 0)
+            int stateIndex = rLearn[si][i]->findIndex(rLearn[si][i]->_states,rLearn[si][i]->_state);
+            //cout<<"* stateIndex: "<<stateIndex<<endl;
+
+            qVecs.push_back(rLearn[si][i]->qList[stateIndex]);
+
+            int randNum = (int(rand())%100);
+            float randx = float(randNum)/100.0;
+            cout<<"* randNum: "<<randNum<<endl;
+
+            // random action
+            if(randx < EPSILON0)
             {
-                //if(stateQStart > 0 && stateQStart < _numS-1)
-                randa =rand()%COLNUM;
-                iMin[i] = randa;
-                iMax[i] = randa + 1;
+                int randa = -1;
+                while(rLearn[si][i]->qList[stateIndex][randa].qValue==-100 || randa == -1 || randa == 0)
+                {
+                    //if(stateQStart > 0 && stateQStart < _numS-1)
+                    randa =rand()%COLNUM;
+                    iMin[si*switchNum+i] = randa;
+                    iMax[si*switchNum+i] = randa + 1;
+
+                }
 
             }
-
-        }
-        else  // max action
-        {
-            iMin[i] = 0;
-            iMax[i] = COLNUM;
+            else  // max action
+            {
+                iMin[si*switchNum+i] = 0;
+                iMax[si*switchNum+i] = COLNUM;
+            }
         }
     }
 
-    if(maxHaoOver>0.01)
+    /*if(maxHaoOver>0.01)
     {
         iMin[indexHaoOver] = COLNUM-1;
         iMax[indexHaoOver] = COLNUM;
@@ -1322,7 +1288,7 @@ void selectAction(RLearn* rLearn[], int actionSize, size_ts& slotNums)
     {
         iMin[indexMinHaoOver] = 2;
         iMax[indexMinHaoOver] = 3;
-    }
+    }*/
 
     vector<QSum> qSums;
     for (int i1 = iMin[0]; i1 < iMax[0]; i1++)
@@ -1334,37 +1300,49 @@ void selectAction(RLearn* rLearn[], int actionSize, size_ts& slotNums)
             {
                 for(int i4 = iMin[3]; i4 < iMax[3]; i4++)
                 {
-                    bool isValid = (qVecs[0][i1].qValue != -100) && (qVecs[1][i2].qValue != -100) &&
-                    (qVecs[2][i3].qValue != -100) && (qVecs[3][i4].qValue != -100);
-
-                    // no qvalue is -100
-                    if(isValid)
+                    for(int i5 = iMin[4]; i5 < iMax[4]; i5++)
                     {
+                        for(int i6 = iMin[5]; i6 < iMax[5]; i6++)
+                        {
+                            bool isValid = (qVecs[0][i1].qValue != -100) && (qVecs[1][i2].qValue != -100) &&
+                            (qVecs[2][i3].qValue != -100) && (qVecs[3][i4].qValue != -100 && (qVecs[4][i5].qValue != -100
+                            && (qVecs[5][i6].qValue != -100);
 
-                        QSum qSum;
+                            // no qvalue is -100
+                            if(isValid)
+                            {
 
-                        // state
-                        qSum.states[0] = qVecs[0][i1].state;
-                        qSum.states[1] = qVecs[1][i2].state;
-                        qSum.states[2] = qVecs[2][i3].state;
-                        qSum.states[3] = qVecs[3][i4].state;
+                                QSum qSum;
 
-                        // action
-                        qSum.actions[0] = qVecs[0][i1].action;
-                        qSum.actions[1] = qVecs[1][i2].action;
-                        qSum.actions[2] = qVecs[2][i3].action;
-                        qSum.actions[3] = qVecs[3][i4].action;
+                                // state
+                                qSum.states[0] = qVecs[0][i1].state;
+                                qSum.states[1] = qVecs[1][i2].state;
+                                qSum.states[2] = qVecs[2][i3].state;
+                                qSum.states[3] = qVecs[3][i4].state;
+                                qSum.states[4] = qVecs[4][i5].state;
+                                qSum.states[5] = qVecs[5][i6].state;
 
-                        // actionsum
-                        qSum.actionSum = qVecs[0][i1].action + qVecs[1][i2].action
-                        + qVecs[2][i3].action + qVecs[3][i4].action;
+                                // action
+                                qSum.actions[0] = qVecs[0][i1].action;
+                                qSum.actions[1] = qVecs[1][i2].action;
+                                qSum.actions[2] = qVecs[2][i3].action;
+                                qSum.actions[3] = qVecs[3][i4].action;
+                                qSum.actions[4] = qVecs[4][i5].action;
+                                qSum.actions[5] = qVecs[5][i6].action;
 
-                        //sum
-                        qSum.sum = qVecs[0][i1].qValue + qVecs[1][i2].qValue + qVecs[2][i3].qValue + qVecs[3][i4].qValue;
+                                // actionsum
+                                qSum.actionSum = qVecs[0][i1].action + qVecs[1][i2].action
+                                + qVecs[2][i3].action + qVecs[3][i4].action+ qVecs[4][i5].action + qVecs[5][i6].action;
 
-                        // all actions should be constrainted by the blacklist volume
-                        if(qSum.actionSum <= CUCKOO_BLACK_SIZE)
-                            qSums.push_back(qSum);
+                                //sum
+                                qSum.sum = qVecs[0][i1].qValue + qVecs[1][i2].qValue + qVecs[2][i3].qValue + qVecs[3][i4].qValue
+                                + qVecs[4][i5].qValue + qVecs[5][i6].qValue;
+
+                                // all actions should be constrainted by the blacklist volume
+                                if(qSum.actionSum <= CUCKOO_BLACK_SIZE)
+                                    qSums.push_back(qSum);
+                            }
+                        }
                     }
                 }
 
@@ -1375,17 +1353,18 @@ void selectAction(RLearn* rLearn[], int actionSize, size_ts& slotNums)
     // find the peak assignment
     if(qSums.size() == 0) // the old srategy
     {
-        for (int i = 0; i < actionSize; i++)
-            slotNums[i] = qVecs[i][0].action;
+        for(int si = 0; si < switchNum; si++)
+            for (int i = 0; i < actionSize; i++)
+                slotNums[si][i] = qVecs[si*switchNum+i][0].action;
     }
     else
-    findMax(qSums, slotNums, actionSize);
+        findMax(qSums, slotNums, actionSize);
 
     vector<QSum>().swap(qSums);
     vector<vector<QEntry> >().swap(qVecs);
 }
 
-void findMax(vector<QSum>& qSums, size_ts& slotNums, int actionSize )
+void findMax(vector<QSum>& qSums, size_tss& slotNums, int actionSize )
 {
     size_t qSumSize = qSums.size();
 
@@ -1413,8 +1392,9 @@ void findMax(vector<QSum>& qSums, size_ts& slotNums, int actionSize )
         }
     }
 
-    for(int i = 0; i < actionSize; i++)
-        slotNums[i] = qSums[index].actions[i];
+    for(int si = 0; si < switchNum; si++)
+        for(int i = 0; i < actionSize; i++)
+            slotNums[si][i] = qSums[index].actions[si*switchNum+i];
 }
 
 void printVec(vector<size_t>& vec)
@@ -1427,7 +1407,7 @@ void printVec(vector<size_t>& vec)
     cout<<endl;
 }
 
-void loadKeys2Filter( string& inFileName, vector<size_t>& mask, intss& vuniquePrefix, intss& vuniqueAggPrefix)
+void loadKeys2Filter(string& inFileName, vector<size_t>& mask, VUPrefix& vuniquePrefix, VUPrefix& vuniqueAggPrefix)
 {
     // ------------------------------
     int switchNum = 3;
@@ -1573,8 +1553,14 @@ void loadKeys2Filter( string& inFileName, vector<size_t>& mask, intss& vuniquePr
                         mask, actionSize, storage, isInit, finger,uniqueAggPrefix,mL0,cuckooFilter[si], cuckooAggrKeyTable[si]);
 
         // output
-        vuniquePrefix.push_back(uniquePrefix);
-        vuniqueAggPrefix.push_back(uniqueAggPrefix);
+        UPrefix uPrefix;
+        uPrefix.uPres  = uniquePrefix;
+        vuniquePrefix.push_back(uPrefix);
+
+        uPrefix.uPres.clear();
+        uPrefix.uPres  = uniqueAggPrefix;
+
+        vuniqueAggPrefix.push_back(uPrefix);
     }// end si
 }
 
