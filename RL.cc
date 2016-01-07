@@ -10,6 +10,7 @@ RLearn::RLearn()
 {
         qList.clear();
         _indexCur = 0;
+        _actionSuggestIndex = 0;
 
 
 }
@@ -94,25 +95,30 @@ void RLearn::qLearn()
 
     // Find Q(S',A') max;
     // find the index of next state
+    cout<<"* q learn!"<<endl;
     size_t stateIndexNest = findIndex(_states,_nextState);
+
+    cout<<"* stateIndexNest: "<<stateIndexNest<<endl;
 
     // find the action with maximum q values
     size_t index;
     QEntry qEntry = maxEntry(stateIndexNest, _nextState, index);
     _qmax = qEntry.qValue;
 
+    cout<<"* index: "<<index<<" _actionSuggestIndex: "<<_actionSuggestIndex<<endl;
+
 
     float qcur = 0.0;
     float total = _reward + GAMMA*_qmax;
 
-    // cout<<"* _indexCur: "<<_indexCur<<" * Q value: "<<qList[_indexCur][_actionSuggestIndex].qValue<<endl;
+    cout<<"* _indexCur: "<<_indexCur<<" * Q value: "<<qList[_indexCur][_actionSuggestIndex].qValue<<endl;
 
     qcur = (1-ALPHA)*qList[_indexCur][_actionSuggestIndex].qValue+ ALPHA*total;
 
     // update the entry in table
     qList[_indexCur][_actionSuggestIndex].qValue = qcur;
     //_qold = qcur;
-    //cout<<"* _indexCur: "<<_indexCur<<" * Q value: "<<qcur<<endl;
+
     //return qcur;
     _state = _nextState;
 }
@@ -245,7 +251,7 @@ size_t RLearn::findIndex(vector<float>& vec, float value)
 
     if(index == -1)
     {
-        cout<<"* RLearn::maxEntry:wrong!"<<endl;
+        cout<<"* RLearn::findIndex:wrong!"<<endl;
     }
 
     //cout<<"* vecSize: "<<vecSize<<" * RLearn::findIndex:index+++++++++++++++++++++++++++: "<<index<<endl;

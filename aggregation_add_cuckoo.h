@@ -42,7 +42,7 @@ extern CuckooFilter cuckooFilterFlowEst[3];
 
 
 int initCuckoo(vector<string> &keys,vector<int> &keyPrefixes,
-                vector<int> &keyActions,float &storage, int& finger, char mL0[][4][20], CuckooFilter& cuck, CuckooFilter& cuck0);
+                vector<int> &keyActions,float &storage, int& finger, char mL0[][ACTIONSIZE][20], CuckooFilter& cuck, CuckooFilter& cuck0);
 
 bool addCuckooFilter(vector<string> &keys, vector<int> &keyPrefixes,
                       vector<int> &keyActions, CuckooFilter& cuck, CuckooFilter& cuck0);
@@ -50,9 +50,9 @@ bool addCuckooFilter(vector<string> &keys, vector<int> &keyPrefixes,
 bool addCuckooFilter(vector<string> &keys, vector<int> &keyActions, CuckooFilter& cuck);
 
 bool addCuckooFilter0(vector<string> &keys, vector<int> &keyPrefixes,
-                      vector<int> &keyActions, char mL0[][4][20], CuckooFilter& cuck, CuckooFilter& cuck0);
+                      vector<int> &keyActions, char mL0[][ACTIONSIZE][20], CuckooFilter& cuck, CuckooFilter& cuck0);
 
-bool addCuckooFiltermL(vector<string> &keys, vector<int> &keyActions,char mL0[][4][20] , CuckooFilter& cuck);
+bool addCuckooFiltermL(vector<string> &keys, vector<int> &keyActions,char mL0[][ACTIONSIZE][20] , CuckooFilter& cuck);
 
 bool kickoutBlack(vector<size_t> &mask, vector<string> &flow,
                   vector<string> &flow_cnt, vector<string> &keyprefixlength,
@@ -72,7 +72,7 @@ bool comWeightKeytype(vector<string> &flow_cnt, vector<string> &keytypestr,
                       vector<double> &weight,vector<keyType> &keytype);
 
 bool clusterAction(vector<string> &flow, vector<int> &flowaction,
-                   vector<size_t> &mask, vector<size_t> &index);
+                   vector<size_t> &mask, vector<size_t> &index, vector<int>& flowactionunique);
 
 bool sortUniqueFlow(vector<string> &flow_in, vector<size_t> &flow_cnt_in);
 
@@ -87,7 +87,7 @@ bool assignAction(vector<string> &key,vector<int> &keyaction,int &actionSize);
 size_t initAggregation(vector<string> &keyin,vector<int> &keyprefix,
                         vector<int> &keyactionin,vector<size_t> &mask, int actionSize,
                         float &storage, bool isInit, int& finger,
-                        vector<int> &UniqueAggPrefix,char mL0[][4][20], CuckooFilter cuck, CuckooTable cuckAggr);
+                        vector<int> &UniqueAggPrefix,char mL0[][ACTIONSIZE][20], CuckooFilter& cuck, CuckooTable& cuckAggr);
 
 size_t aggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
                         vector<int> &keyActionIns, vector<size_t> &maskes,
@@ -102,7 +102,7 @@ void assignAction(vector<string> &flow,vector<size_t> &flow_cnt,
 
 bool insertWordTrieSimple(Trie *bTrie, int trieNum, vector<size_t> &index,
                           vector<string> &flow,vector<int> &keyprefixlength,
-                          vector<int> &flowaction);
+                          vector<int> &flowaction, vector<int>& flowactionunique);
 
 void prefixNum(vector<int> &keyprefix, vector<int> &UniquePrefix);
 

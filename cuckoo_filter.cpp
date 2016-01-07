@@ -193,7 +193,7 @@ bool CuckooFilter::AddKey(const string& key,int action)
 
 }
 
-bool CuckooFilter::AddKeyCount(const string& key,int action, char mL0[][4][20])
+bool CuckooFilter::AddKeyCount(const string& key,int action, char mL0[][ACTIONSIZE][20])
 {
 
     //define variables
@@ -549,7 +549,7 @@ int CuckooFilter::LookUpKeyActions(const string& key,vector<int>& action)
 }
 
 int CuckooFilter::LookUpKeyActionsCount(const string& key,vector<int>& action, size_t& flowNo
-                              ,char mL0[][4][20], vector<vector<size_t> >& mcount, vector<vector<size_t> >& mcount0,
+                              ,char mL0[][ACTIONSIZE][20], vector<vector<size_t> >& mcount, vector<vector<size_t> >& mcount0,
                             vector<vector<size_t> >& mcountdiff, long& hBuck, int& slot_i)
 {
 
@@ -642,10 +642,10 @@ int CuckooFilter::LookUpKeyActionsCount(const string& key,vector<int>& action, s
     }
 
     returnValue = action.size();
-    if(!returnValue && hBuck>=0)
+    /*if(!returnValue && hBuck>=0)
     {
         cout<<"wrong!"<<endl;
-    }
+    }*/
 
     return returnValue;
 }
@@ -938,7 +938,7 @@ bool CuckooFilter::InitHashFunction()
 }
 
 void CuckooFilter::returnKey(vector<string>& keys,vector<int>& keyActions,
-                              char mL0[][4][20], vector<vector<size_t> >& mcount, vector<vector<size_t> >& mcount0,
+                              char mL0[][ACTIONSIZE][20], vector<vector<size_t> >& mcount, vector<vector<size_t> >& mcount0,
                             vector<vector<size_t> >& mcountdiff,vector<size_t>& keyCounts, vector<size_t>& keyCounts0,
                             vector<size_t>& keyCountDiffs)
 {

@@ -88,7 +88,7 @@ public:
 
     bool AddKey(const string& key,int action);
 
-    bool AddKeyCount(const string& key,int action, char mL0[][4][20]);
+    bool AddKeyCount(const string& key,int action, char mL0[][ACTIONSIZE][20]);
 
     bool LookUpKey(const string& key);
 
@@ -97,7 +97,7 @@ public:
     int LookUpKeyActions(const string& key,vector<int>& action);
 
     int LookUpKeyActionsCount(const string& key,vector<int>& action, size_t& flowNo
-                              ,char mL0[][4][20], vector<vector<size_t> >& mcount, vector<vector<size_t> >& mcount0,
+                              ,char mL0[][ACTIONSIZE][20], vector<vector<size_t> >& mcount, vector<vector<size_t> >& mcount0,
                             vector<vector<size_t> >& mcountdiff, long& hBuck, int& slot_i);
 
     int LookUpKeyBack(const string& key, long& posx, int posy);
@@ -107,7 +107,7 @@ public:
     bool RemovePos(long& xPos, int& yPos);
 
     void returnKey(vector<string>& keys, vector<int>& keyActions,
-                              char mL0[][4][20], vector<vector<size_t> >& mcount, vector<vector<size_t> >& mcount0,
+                              char mL0[][ACTIONSIZE][20], vector<vector<size_t> >& mcount, vector<vector<size_t> >& mcount0,
                             vector<vector<size_t> >& mcountdiff,vector<size_t>& keyCounts, vector<size_t>& keyCounts0,
                             vector<size_t>& keyCountDiffs);
 

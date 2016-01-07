@@ -56,11 +56,11 @@ void printQList(RLearn* rLearn);
 
 void selectAction(RLearn** rLearn[], int actionSize, int switchNum, size_tss& slotNums);
 
-void findMax(vector<QSum>& qSums, size_tss& slotNums, int actionSize, int switchNum );
+void findMax(vector<QSum>& qSums, size_ts& slotNums, int actionSize, int switchNum );
 
 void printVec(vector<size_t>& vec);
 
 void loadKeys2Filter(string& inFileName, vector<size_t>& mask, VUPrefix& vuniquePrefix,
-VUPrefix& vuniqueAggPrefix, char mL0[][4][20], char * argv[], int& finger, int& finger0);
+VUPrefix& vuniqueAggPrefix, char mL0[][ACTIONSIZE][20], char * argv[], int& finger, int& finger0,int switchNum, int actionSize);
 
 

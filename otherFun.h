@@ -60,6 +60,8 @@ extern vector<long> g_vcountblackkey;
 extern vector<long> g_vcountkey_init; //initial value
 extern vector<double> g_vblackkey_weight_sum;
 
+const int ACTIONSIZE = 2;
+
 enum keyType
 {
     iskey = 1,

@@ -49,7 +49,7 @@ struct CmpMassInt
 
 
 int initCuckoo(vector<string> &keys,vector<int> &keyPrefixes,
-                vector<int> &keyActions,float &storage, int& finger, char mL0[][4][20], CuckooFilter& cuck, CuckooFilter& cuck0)
+                vector<int> &keyActions,float &storage, int& finger, char mL0[][ACTIONSIZE][20], CuckooFilter& cuck, CuckooFilter& cuck0)
 {
     //-----------------------------------------------------------
     // Parameters for cuckoo filter
@@ -84,12 +84,13 @@ The first aggregation
 size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
                         vector<int> &keyActionIns, vector<size_t> &maskes,
                       int actionSize, float &storage, bool isInit,
-                      int &fingerprintOld,vector<int> &uniqueAggKeyprefixes,char mL0[][4][20], CuckooFilter cuck, CuckooTable cuckAggr)
+                      int &fingerprintOld,vector<int> &uniqueAggKeyprefixes,char mL0[][ACTIONSIZE][20], CuckooFilter& cuck, CuckooTable& cuckAggr)
 {
     // ----------------------------------------
     // Get indexes
     vector<size_t> indexes;
-    clusterAction(keyIns, keyActionIns, maskes,indexes);
+    vector<int> flowactionunique;
+    clusterAction(keyIns, keyActionIns, maskes,indexes, flowactionunique);
 
     // ----------------------------------------------------------
     // Define tries
@@ -100,7 +101,7 @@ size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
     // ---------------------------------------------------------
     /* Insert keys to trie */
     insertWordTrieSimple(bTrie, trieNum, indexes, keyIns, keyPrefixIns,
-                         keyActionIns);
+                         keyActionIns, flowactionunique);
 
     // --------------------------------------------------------
     // classify tree according to action
@@ -115,7 +116,7 @@ size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
     {
         for (int ti = 0; ti < indexes.size(); ti++)
         {
-            if (bTrie[ti].maction == ai)
+            if (bTrie[ti].maction == flowactionunique[ai])
             {
                 actionOrder[ai].aTrieOder.push_back(ti);
             }
@@ -165,7 +166,7 @@ size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
         return 0;
     }
        // return 0;
-    int aggrprefixlength = 19;
+    int aggrprefixlength = 18;
     while(fingerprint<fingerprintTarget)
     {
         //fingerprintTarget --;
@@ -176,7 +177,7 @@ size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
         int maxIteration = 50;
         for(int ai = 0; ai < actionSize; ai++ )
         {
-            g_vweightThld[ai] =  0.000012+ 0.00002*ai;
+            g_vweightThld[ai] =  0.000012+0.00001*ai;
         }
         while(fingerprint!=fingerprintTarget && iteartion<maxIteration)
         {
@@ -202,10 +203,10 @@ size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
                 g_vcountkey[ai] = 0;
                 g_vcountblackkey[ai] = 0;
                 if(fingerprint>fingerprintTarget && iteartion!=1) // decompree, increase threshold
-                    g_vweightThld[ai] +=  0.1*g_vweightThld[ai]*(fingerprint - fingerprintTarget)*(1+1) ;
+                    g_vweightThld[ai] +=  0.1*g_vweightThld[ai]*(fingerprint - fingerprintTarget)*(1) ;
                 else if( g_vweightThld[ai] > 0&& iteartion!=1)
                 {
-                    g_vweightThld[ai] +=  0.02*g_vweightThld[ai]*(fingerprint - fingerprintTarget)*(1+1) ;
+                    g_vweightThld[ai] +=  0.02*g_vweightThld[ai]*(fingerprint - fingerprintTarget)*(1) ;
                     if(g_vweightThld[ai]<pow(10,-6.5))
                         g_vweightThld[ai] = pow(10,-6.5);
 
@@ -713,7 +714,7 @@ size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
 }*/
 
 bool clusterAction(vector<string> &flow, vector<int> &flowaction,
-                   vector<size_t> &mask, vector<size_t> &index)
+                   vector<size_t> &mask, vector<size_t> &index, vector<int>& flowactionunique)
 {
     vector<string> subIpBinary;
     size_t ip_num = flow.size();
@@ -760,7 +761,7 @@ bool clusterAction(vector<string> &flow, vector<int> &flowaction,
 
     //---------------------------------------------------------------
     // Cluster according to actions
-    vector<int> flowactionunique;
+
     flowactionunique = flowaction;
     {
         vector<int>::iterator it;
@@ -795,7 +796,7 @@ bool clusterAction(vector<string> &flow, vector<int> &flowaction,
     // Release space
     vector<size_t>().swap(index2);
     vector<string>().swap(subIPv8);
-    vector<int>().swap(flowactionunique);
+    //vector<int>().swap(flowactionunique);
     vector<string>().swap(subIpBinary);
     return 1;
 }
@@ -868,7 +869,7 @@ bool addCuckooFilter(vector<string> &keys, vector<int> &keyActions, CuckooFilter
 
 }
 
-bool addCuckooFiltermL(vector<string> &keys, vector<int> &keyActions,char mL0[][4][20] , CuckooFilter& cuck)
+bool addCuckooFiltermL(vector<string> &keys, vector<int> &keyActions,char mL0[][ACTIONSIZE][20] , CuckooFilter& cuck)
 {
     // define variables
     cout<<"* Cuckoo filter adding ..."<<endl;
@@ -897,7 +898,7 @@ bool addCuckooFiltermL(vector<string> &keys, vector<int> &keyActions,char mL0[][
 }
 
 bool addCuckooFilter0(vector<string> &keys, vector<int> &keyPrefixes,
-                      vector<int> &keyActions, char mL0[][4][20], CuckooFilter& cuck, CuckooFilter& cuck0)
+                      vector<int> &keyActions, char mL0[][ACTIONSIZE][20], CuckooFilter& cuck, CuckooFilter& cuck0)
 {
     cout<<"* Cuckoo filter adding ..."<<endl;
 
@@ -939,7 +940,7 @@ bool addCuckooFilter0(vector<string> &keys, vector<int> &keyPrefixes,
 
 bool insertWordTrieSimple(Trie *bTrie, int trieNum, vector<size_t> &index,
                           vector<string> &flow,vector<int> &keyprefixlength,
-                          vector<int> &flowaction)
+                          vector<int> &flowaction, vector<int>& flowactionunique)
 {
     cout<<"* Trie insert word ... ..."<<endl;
     vector<string> subIPvtmp;
@@ -951,7 +952,7 @@ bool insertWordTrieSimple(Trie *bTrie, int trieNum, vector<size_t> &index,
     for(uint16_t ti = 0; ti<trieNum; ti++)
     {
         if (ti == 0)
-            bTrie[ti].maction = 0;//(ti)/64;
+            bTrie[ti].maction = flowactionunique[0];//(ti)/64;
         else
             bTrie[ti].maction = (flowaction[index[ti-1]]);
 
