@@ -66,7 +66,25 @@ int main(int argc, char * argv[])
     int finger = 0;
     int finger0 = 0;
 
-    loadKeys2Filter(inFileName, mask, vuniquePrefix, vuniqueAggPrefix, mL0, argv, finger, finger0, switchNum, actionSize);
+    intss flowactionunique;
+    flowactionunique.resize(switchNum);
+
+    ints flowActions0; // action 0 1 2
+    for(int i = 0; i < actionSize+1; i++)
+    {
+        flowActions0.push_back(i);
+    }
+
+    loadKeys2Filter(inFileName, mask, vuniquePrefix, vuniqueAggPrefix, mL0, argv, finger, finger0, switchNum, actionSize,flowactionunique);
+
+    for(int si = 0; si < switchNum ; si ++)
+    {
+        for(int ai = 0; ai < actionSize; ai ++)
+        {
+            cout<<"* A: "<<flowactionunique[si][ai]<<" ";
+        }
+        cout<<endl;
+    }
 
     // ----------------------------------------------------------------------80
     vector<vector<size_t> > keyCountcs = vector<vector<size_t> > (but, vector<size_t>(actionSize, 0));
@@ -157,6 +175,9 @@ int main(int argc, char * argv[])
     {
         haoOversInv[si].assign(actionSize, 0);
     }
+
+    floats haoOversAction;
+    haoOversAction.assign(actionSize+1,0);
 
     size_ts countNum;
     size_ts countNum0;
@@ -333,7 +354,7 @@ int main(int argc, char * argv[])
                     // lookup  key
                     {
                         int prefix;
-                        int flag_look,flag_look0, flag_lookkey;
+                        int flag_look,flag_look0, flag_lookkey[switchNum];
                         bool flag_lookblack = 0;
                         uint32_t subIP;
                         string flowstr;
@@ -396,11 +417,11 @@ int main(int argc, char * argv[])
                             }
                         }
 
-                        // ------------------------------
-                        flag_look = 0;
+                        // ---------------------------------------------------80
                         if (flag_lookblack == 0) // not a blackkey
                         {
                             // look up key
+                            flag_look = 0;
                             for(int si = 0; si < switchNum; si++)
                             {
                                 for(int mi = vuniquePrefix[si].uPres.size()-1; mi >=0; mi--)
@@ -411,9 +432,9 @@ int main(int argc, char * argv[])
                                     prefix = vuniquePrefix[si].uPres[mi];
 
 
-                                    flag_lookkey = cuckooTableKey[si].LookUpKeyActionCount(flowstr,
+                                    flag_lookkey[si] = cuckooTableKey[si].LookUpKeyActionCount(flowstr,
                                                    prefix,iflowaction,flowNoInt);
-                                    if (flag_lookkey)
+                                    if (flag_lookkey[si])
                                     {
                                         keyType_cur = "1";
                                         flow_action_str = num2str(iflowaction);
@@ -421,7 +442,7 @@ int main(int argc, char * argv[])
                                         keySumLocal[si] += (flowNoInt);
                                         for(int ai = 0; ai <actionSize; ai++)
                                         {
-                                            if(iflowaction == ai)
+                                            if(iflowaction == ai)  // ?
                                             {
                                                 //#pragma omp atomic
                                                 keySumsLocal[si][ai] += (flowNoInt);
@@ -433,16 +454,17 @@ int main(int argc, char * argv[])
                                 }
                             }
 
-                            // -------------------------------
+                            // -----------------------------------------------80
                             // lookup key from cuckoo filter
                             vector<int> iactions;
-                            bool isAKey = 0;
+                            bool overbigFlag[switchNum];
 
                             for(int si = 0; si < switchNum; si++)
                             {
+                                bool isAKey = 0;
                                 for(int mi = 0; mi < vuniqueAggPrefix[si].uPres.size(); mi++)
                                 {
-                                    bool overbigFlag = 0;
+                                    overbigFlag[si] = 0;
                                     subIP = ip & mask[vuniqueAggPrefix[si].uPres[mi]-8];
                                     flowstr = parsedec2IPV4(subIP)+"/"+num2str(vuniqueAggPrefix[si].uPres[mi]);
                                     iactions.clear();
@@ -475,9 +497,9 @@ int main(int argc, char * argv[])
                                         }
 
                                         // overselection count
-                                        if(!flag_lookkey && !overbigFlag)
+                                        if(!flag_lookkey[si] && !overbigFlag[si])
                                         {
-                                            overbigFlag = 1;
+                                            overbigFlag[si] = 1;
                                             #pragma omp critical
                                             {
                                                 trie[si]->addWordCountNum(DecToBin(flowInt),32, isnonkey, iactions[0], countIPLocal[si]); // ?
@@ -488,20 +510,20 @@ int main(int argc, char * argv[])
                                 }
                             }
 
-                            // -------------------------------
+                            // ---------------------------------------------------80
                             // look up aggregate key
-                            bool isAggregatekey = 0;
+
                             //if(cuckooAggrKeyTable.mm > 1)
                             for(int si = 0; si < switchNum; si++)
-
                             {
+                                bool isAggregatekey = 0;
                                 for(int mi = vuniqueAggPrefix[si].uPres.size()-1; mi >=0; mi--)
                                 {
                                     subIP = ip & mask[vuniqueAggPrefix[si].uPres[mi]-8];
                                     flowstr = parsedec2IPV4(subIP);
                                     prefix = vuniqueAggPrefix[si].uPres[mi];
                                     isAggregatekey = cuckooAggrKeyTable[si].LookUpKey(flowstr,prefix);
-                                    if (isAggregatekey && !flag_lookkey)
+                                    if (isAggregatekey && !flag_lookkey[si])
                                     {
                                         //#pragma omp atomic
                                         aggrSumLocal[si] += (flowNoInt);
@@ -513,7 +535,7 @@ int main(int argc, char * argv[])
 
                         }
 
-                        // -------------------------------
+                        // -------------------------------------------------------80
                         // lookup key from cuckoo filterInit0
                         vector<int> iactions;
                         for(int si = 0; si < switchNum; si++)
@@ -537,7 +559,7 @@ int main(int argc, char * argv[])
                         }
                         // lookup key end
 
-                        // ---------------------------------------------
+                        // -------------------------------------------------------80
                         // update global variable
                         line ++;
 
@@ -581,7 +603,7 @@ int main(int argc, char * argv[])
                     isEndFlag = 1; // end read flag
                 }
 
-                // ---------------------------------
+                // -----------------------------------------------------------80
                 // update rates and write to file
                 #pragma omp critical
                 {
@@ -595,7 +617,7 @@ int main(int argc, char * argv[])
                             keySumTotal[si] = keySumTotalOff[si] + keySum[si];
                             pktSumTotal[si] = pktSumTotalOff[si] + pktSum[si];
 
-                            // --------------------------------------------
+                            // -----------------------------------------------80
                             // overselection rate
                             // ----------------------------------------------
                             if ((pktSum[si] - keySum[si]) != 0)
@@ -635,13 +657,13 @@ int main(int argc, char * argv[])
                         if(size_t(line)%updateInvDis == 0 || line%flowNum == 0)
                         {
 
-                            // ------------------------------------------------
+                            // -----------------------------------------------80
                             // Display and write to file
                             outfile0[si]<<"line,"<<line<<",total,"<<haoFalsePosTotal[si]<<",total0,"<<haoFalsePos0Total[si]<<",false,"<<
                                         falsePos[si]<<",over,"<<haoFalsePos[si]<<",false0,"<<falsePos0[si]<<",over0,"<<
                                         haoFalsePos0[si]<<",overaggr,"<<overAggr[si]<<",overcuckoo,"<<(haoFalsePosTotal[si]-overAggr[si])<<",";
                             for(int ai = 0; ai < actionSize; ai++)
-                                outfile0[si]<<"over_ai,"<<haoOversInv[si][ai]<<",";
+                                outfile0[si]<<"over_ai,"<<haoOversAction[flowactionunique[si][ai]]<<",";
                             for(int ai = 0; ai < actionSize; ai++)
                                 outfile0[si]<<"over_ai,"<<haoOvers[si][ai]<<",";
 
@@ -655,7 +677,7 @@ int main(int argc, char * argv[])
                                 haoFalsePos0[si]<<" overaggr "<<overAggr[si]<<" overcuckoo "<<(haoFalsePosTotal[si]-overAggr[si])<<endl;
 
                             for(int ai = 0; ai < actionSize; ai++)
-                                cout<<"over_ai "<<haoOversInv[si][ai]<<" ";
+                                cout<<"over_ai "<<haoOversAction[flowactionunique[si][ai]]<<" ";
                             for(int ai = 0; ai < actionSize; ai++)
                                 cout<<"over_ai,"<<haoOvers[si][ai]<<",";
 
@@ -668,14 +690,13 @@ int main(int argc, char * argv[])
 
             }
 
-            // ---------------------------------------------
+            // ---------------------------------------------------------------80
             // feed back portionFeedBack% overselections and overselection rates for actions
             //if(size_t(line)%2000000 == 0 )
             {
 
-                // ---------------------------
+                // -----------------------------------------------------------80
                 // the overselects for feedback
-
                 for(int si = 0; si < switchNum; si++)
                 {
                     blackKeys.clear();
@@ -714,8 +735,31 @@ int main(int argc, char * argv[])
                     vBkInfo.push_back(bkInfo);
                 }
 
+                // -----------------------------------------------------------80
+                // Get the ovs for a receiver
 
-                // -----------------------------
+                for (int ai = 0; ai < flowActions0.size(); ai++)
+                {
+                    float countIPsSum = 0;
+                    float keySumsSum = 0;
+
+                    for(int si = 0; si < switchNum; si++)
+                    {
+                        for(int ri = 0; ri < actionSize; ri++)
+                        {
+                            countIPsSum += countIPs[si][ri];
+                            keySumsSum += keySums[si][ri];
+
+                            if (flowactionunique[si][ri] == flowActions0[ai])
+                            {
+                                haoOversAction[ai] = float(countIPs[si][ai]-keySums[si][ai])/float(keySums[si][ai]);
+                            }
+                        }
+
+                    }
+                    haoOversAction[ai] = (countIPsSum - keySumsSum)/keySumsSum;
+                }
+                // -----------------------------------------------------------80
                 // Get instant reward and Q learn
                 //cout<<"* Q learn!"<<endl;
                 for(int si = 0; si < switchNum; si++)
@@ -723,7 +767,7 @@ int main(int argc, char * argv[])
                     for(int ri = 0; ri < actionSize; ri++)
                     {
                         //cout<<rLearn[ri]<<endl;
-                        rLearn[si][ri]->update(slotNums[si][ri],haoOvers[si][ri]);
+                        rLearn[si][ri]->update(slotNums[si][ri],haoOversAction[flowactionunique[si][ri]]);
                         //cout<<"* qleran!"<<endl;
 
                         // compute ebuse0
@@ -741,14 +785,14 @@ int main(int argc, char * argv[])
                 }
 
 
-                // ------------------------------------
+                // -----------------------------------------------------------80
                 // feedback
                 // ------------------------------------
 
                 //time before calling function
                 gettimeofday(&gen_start, &tzp);
 
-                // ---------------------------------
+                // -----------------------------------------------------------80
                 // call function
                 cout<<"* feedback bks!"<<endl;
                 feedbackBlackkeyRL(vBkInfo, rLearn, actionSize,switchNum,slotNums, line);
@@ -776,7 +820,7 @@ int main(int argc, char * argv[])
         infile.close();
     } //for fi
 
-    //-------------------------------------------------------------
+    // -----------------------------------------------------------------------80
     /*clear the data structure*/
     mask.clear();
 
@@ -1267,7 +1311,8 @@ void printVec(vector<size_t>& vec)
 }
 
 void loadKeys2Filter(string& inFileName, vector<size_t>& mask, VUPrefix& vuniquePrefix,
-                     VUPrefix& vuniqueAggPrefix, char mL0[][ACTIONSIZE][20], char * argv[], int& finger, int& finger0,int switchNum, int actionSize)
+                     VUPrefix& vuniqueAggPrefix, char mL0[][ACTIONSIZE][20], char * argv[],
+                     int& finger, int& finger0,int switchNum, int actionSize, intss& uniqueActs)
 {
 
     // ------------------------------
@@ -1397,8 +1442,8 @@ void loadKeys2Filter(string& inFileName, vector<size_t>& mask, VUPrefix& vunique
         // Init aggregation
         bool isInit = 1;
 
-        initAggregation(keys,keyprefixlengths,keyActions,
-                        mask, actionSize, storage, isInit, finger,uniqueAggPrefix,mL0,cuckooFilter[si], cuckooAggrKeyTable[si]);
+        initAggregation(keys,keyprefixlengths,keyActions, mask, actionSize, storage,
+        isInit, finger,uniqueAggPrefix,mL0,cuckooFilter[si], cuckooAggrKeyTable[si], uniqueActs[si]);
 
         // output
         UPrefix uPrefix;

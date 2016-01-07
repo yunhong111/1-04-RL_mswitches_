@@ -84,12 +84,13 @@ The first aggregation
 size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
                         vector<int> &keyActionIns, vector<size_t> &maskes,
                       int actionSize, float &storage, bool isInit,
-                      int &fingerprintOld,vector<int> &uniqueAggKeyprefixes,char mL0[][ACTIONSIZE][20], CuckooFilter& cuck, CuckooTable& cuckAggr)
+                      int &fingerprintOld,vector<int> &uniqueAggKeyprefixes,char mL0[][ACTIONSIZE][20],
+                      CuckooFilter& cuck, CuckooTable& cuckAggr, ints& flowactionunique)
 {
     // ----------------------------------------
     // Get indexes
     vector<size_t> indexes;
-    vector<int> flowactionunique;
+    //vector<int> flowactionunique;
     clusterAction(keyIns, keyActionIns, maskes,indexes, flowactionunique);
 
     // ----------------------------------------------------------

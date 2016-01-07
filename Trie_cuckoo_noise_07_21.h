@@ -61,6 +61,7 @@ void findMax(vector<QSum>& qSums, size_ts& slotNums, int actionSize, int switchN
 void printVec(vector<size_t>& vec);
 
 void loadKeys2Filter(string& inFileName, vector<size_t>& mask, VUPrefix& vuniquePrefix,
-VUPrefix& vuniqueAggPrefix, char mL0[][ACTIONSIZE][20], char * argv[], int& finger, int& finger0,int switchNum, int actionSize);
+VUPrefix& vuniqueAggPrefix, char mL0[][ACTIONSIZE][20], char * argv[], int& finger, int& finger0,int switchNum,
+int actionSize, intss& uniqueActs);
 
 

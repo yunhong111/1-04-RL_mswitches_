@@ -87,7 +87,7 @@ bool assignAction(vector<string> &key,vector<int> &keyaction,int &actionSize);
 size_t initAggregation(vector<string> &keyin,vector<int> &keyprefix,
                         vector<int> &keyactionin,vector<size_t> &mask, int actionSize,
                         float &storage, bool isInit, int& finger,
-                        vector<int> &UniqueAggPrefix,char mL0[][ACTIONSIZE][20], CuckooFilter& cuck, CuckooTable& cuckAggr);
+                        vector<int> &UniqueAggPrefix,char mL0[][ACTIONSIZE][20], CuckooFilter& cuck, CuckooTable& cuckAggr, vector<int>& flowactionunique);
 
 size_t aggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
                         vector<int> &keyActionIns, vector<size_t> &maskes,
