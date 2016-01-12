@@ -1066,7 +1066,6 @@ void updateBlacklist(vector<string>& overBigKeys, vector<int>& overActions, RLea
         blackKeyFileOut<<blackkeyPresOld[i]<<" "<<32<<" "<<actionPresOld[i]<<endl;
 
 
-
 }
 void feedbackBlackkeyRL(VBkInfo& vBkInfo, RLearn** rLearn[],
                         int actionSize, int switchNum, size_tss& slotNums, intss& flowActionUnique, size_t line)
@@ -1133,6 +1132,10 @@ void feedbackBlackkeyRL(VBkInfo& vBkInfo, RLearn** rLearn[],
 
             updateBlacklist(overBigKeys, overActions, rLearn[si][i], flowActionUnique[si][i], blackkeyPres, actionPres,
                             blackKeyFileOut, slotNums[si][i], si);
+
+            // cuckoo black table occupy rate
+            cout<<"* cuckooBlackKeyTable[si].occupyRate(): "<<cuckooBlackKeyTable[si].occupyRate()<<endl;
+
         }
 
         outfileR[si]<<endl;

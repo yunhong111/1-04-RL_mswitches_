@@ -737,3 +737,22 @@ void CuckooTable::returnKey(vector<string>& keys, vector<size_t>& keyNos,
     }
 }
 
+float CuckooTable::occupyRate()
+{
+    // Search for key in list(hk)
+    float num = 0.0f;
+    for(size_t h = 0; h < mm; h++)
+    {
+        for (int i = 0; i<mbc; i++)
+        {
+            if((mL[h][i]) != 0)
+            {
+                num += 1.0f;
+            }
+
+        }
+    }
+
+    float ocyRate = num/float(mm*mbc);
+}
+
