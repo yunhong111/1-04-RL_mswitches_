@@ -185,6 +185,9 @@ int main(int argc, char * argv[])
     floats haoOversAction;
     haoOversAction.assign(actionSize+1,0);
 
+    floats haoOversActionTtl;
+    haoOversActionTtl.assign(actionSize+1,0);
+
     size_ts countNum;
     size_ts countNum0;
     doubles countIP;
@@ -312,6 +315,38 @@ int main(int argc, char * argv[])
                     countIPsInv[si].clear();
                     keySumsInv[si].assign(actionSize,0);
                     countIPsInv[si].assign(actionSize,0);
+            }
+
+            if(runTime < 10)
+            {
+                countNum.assign(switchNum, 0);
+                countNum0.assign(switchNum, 0);
+                countIP.assign(switchNum, 0);
+                countIP0.assign(switchNum, 0);
+                countBlack.assign(switchNum, 0);
+
+                countIPTotal.assign(switchNum, 0);
+                countIP0Total.assign(switchNum, 0);
+                keySum.assign(switchNum, 0);
+                pktSum.assign(switchNum, 0);
+                keySumTotal.assign(switchNum, 0);
+                pktSumTotal.assign(switchNum, 0);
+                countIPTotalOff.assign(switchNum, 0);
+                countIP0TotalOff.assign(switchNum, 0);
+                keySumTotalOff.assign(switchNum, 0);
+                pktSumTotalOff.assign(switchNum, 0);
+                aggrSum.assign(switchNum, 0);
+
+
+                keySums.resize(switchNum);
+                countIPs.resize(switchNum);
+
+                for(int si = 0; si < switchNum; si++)
+                {
+                    keySums[si].assign(actionSize,0);
+                    countIPs[si].assign(actionSize,0);
+                }
+
             }
 
             if(line < 100000)
@@ -464,87 +499,88 @@ int main(int argc, char * argv[])
                                         break;
                                     }
                                 }
-                            }
 
-                            // -----------------------------------------------80
-                            // lookup key from cuckoo filter
-                            vector<int> iactions;
-                            bool overbigFlag[switchNum];
 
-                            //for(int si = 0; si < switchNum; si++)
-                            {
-                                bool isAKey = 0;
-                                for(int mi = 0; mi < vuniqueAggPrefix[si].uPres.size(); mi++)
+                                // -----------------------------------------------80
+                                // lookup key from cuckoo filter
+                                vector<int> iactions;
+                                bool overbigFlag[switchNum];
+
+                                //for(int si = 0; si < switchNum; si++)
                                 {
-                                    overbigFlag[si] = 0;
-                                    subIP = ip & mask[vuniqueAggPrefix[si].uPres[mi]-8];
-                                    flowstr = parsedec2IPV4(subIP)+"/"+num2str(vuniqueAggPrefix[si].uPres[mi]);
-                                    iactions.clear();
-                                    hBuckhit = -1;
-                                    slot_ihit = -1;
-                                    flag_look = cuckooFilter[si].LookUpKeyActionsCount(flowstr,iactions,flowNoInt, mL0,
-                                                keyCountcs,  keyCountcs0, keyCountDiffs,hBuckhit,slot_ihit);
-                                    if(hBuckhit!= -1 && slot_ihit!= -1)
+                                    bool isAKey = 0;
+                                    for(int mi = 0; mi < vuniqueAggPrefix[si].uPres.size(); mi++)
                                     {
-                                        hBuck = hBuckhit;
-                                        slot_i = slot_ihit;
-                                    }
-                                    if (flag_look != 0)
-                                    {
-                                        isAKey = 1;
-                                        countNumLocal[si] += flag_look;
-                                        countIPLocal[si] += flag_look*(flowNoInt);
-
-                                        // each action lookups
-                                        for(int ai = 0; ai <actionSize; ai++)
+                                        overbigFlag[si] = 0;
+                                        subIP = ip & mask[vuniqueAggPrefix[si].uPres[mi]-8];
+                                        flowstr = parsedec2IPV4(subIP)+"/"+num2str(vuniqueAggPrefix[si].uPres[mi]);
+                                        iactions.clear();
+                                        hBuckhit = -1;
+                                        slot_ihit = -1;
+                                        flag_look = cuckooFilter[si].LookUpKeyActionsCount(flowstr,iactions,flowNoInt, mL0,
+                                                    keyCountcs,  keyCountcs0, keyCountDiffs,hBuckhit,slot_ihit);
+                                        if(hBuckhit!= -1 && slot_ihit!= -1)
                                         {
-                                            for(int li = 0; li < iactions.size(); li++)
+                                            hBuck = hBuckhit;
+                                            slot_i = slot_ihit;
+                                        }
+                                        if (flag_look != 0)
+                                        {
+                                            isAKey = 1;
+                                            countNumLocal[si] += flag_look;
+                                            countIPLocal[si] += flag_look*(flowNoInt);
+
+                                            // each action lookups
+                                            for(int ai = 0; ai <actionSize; ai++)
                                             {
-                                                if(iactions[li] == flowactionunique[si][ai])
+                                                for(int li = 0; li < iactions.size(); li++)
                                                 {
-                                                    countIPsLocal[si][ai] += (flowNoInt);
+                                                    if(iactions[li] == flowactionunique[si][ai])
+                                                    {
+                                                        countIPsLocal[si][ai] += (flowNoInt);
+                                                    }
+
+                                                }
+                                            }
+
+                                            // overselection count
+                                            if(!flag_lookkey[si] && !overbigFlag[si])
+                                            {
+                                                overbigFlag[si] = 1;
+                                                #pragma omp critical
+                                                {
+                                                    trie[si]->addWordCountNum(DecToBin(flowInt),32, isnonkey, iactions[0], countIPLocal[si]); // ?
                                                 }
 
                                             }
                                         }
+                                    }
+                                }
 
-                                        // overselection count
-                                        if(!flag_lookkey[si] && !overbigFlag[si])
+                                // ---------------------------------------------------80
+                                // look up aggregate key
+
+                                //if(cuckooAggrKeyTable.mm > 1)
+                                //for(int si = 0; si < switchNum; si++)
+                                {
+                                    bool isAggregatekey = 0;
+                                    for(int mi = vuniqueAggPrefix[si].uPres.size()-1; mi >=0; mi--)
+                                    {
+                                        subIP = ip & mask[vuniqueAggPrefix[si].uPres[mi]-8];
+                                        flowstr = parsedec2IPV4(subIP);
+                                        prefix = vuniqueAggPrefix[si].uPres[mi];
+                                        isAggregatekey = cuckooAggrKeyTable[si].LookUpKey(flowstr,prefix);
+                                        if (isAggregatekey && !flag_lookkey[si])
                                         {
-                                            overbigFlag[si] = 1;
-                                            #pragma omp critical
-                                            {
-                                                trie[si]->addWordCountNum(DecToBin(flowInt),32, isnonkey, iactions[0], countIPLocal[si]); // ?
-                                            }
+                                            //#pragma omp atomic
+                                            aggrSumLocal[si] += (flowNoInt);
+                                            break;
 
                                         }
                                     }
                                 }
+
                             }
-
-                            // ---------------------------------------------------80
-                            // look up aggregate key
-
-                            //if(cuckooAggrKeyTable.mm > 1)
-                            //for(int si = 0; si < switchNum; si++)
-                            {
-                                bool isAggregatekey = 0;
-                                for(int mi = vuniqueAggPrefix[si].uPres.size()-1; mi >=0; mi--)
-                                {
-                                    subIP = ip & mask[vuniqueAggPrefix[si].uPres[mi]-8];
-                                    flowstr = parsedec2IPV4(subIP);
-                                    prefix = vuniqueAggPrefix[si].uPres[mi];
-                                    isAggregatekey = cuckooAggrKeyTable[si].LookUpKey(flowstr,prefix);
-                                    if (isAggregatekey && !flag_lookkey[si])
-                                    {
-                                        //#pragma omp atomic
-                                        aggrSumLocal[si] += (flowNoInt);
-                                        break;
-
-                                    }
-                                }
-                            }
-
                         }
 
                         // -------------------------------------------------------80
@@ -664,9 +700,45 @@ int main(int argc, char * argv[])
                             }
 
                             if(keySumTotal[si] != 0)
-                            overAggr[si] = aggrSum[si]/keySumTotal[si];
+                                overAggr[si] = aggrSum[si]/keySumTotal[si];
+
                         }
 
+                    }
+
+                    // -----------------------------------------------------------80
+                    // Get the ovs for a receiver
+                    for (int ai = 0; ai < flowActions0.size(); ai++)
+                    {
+                        float countIPsSum = 0;
+                        float keySumsSum = 0;
+
+                        float countIPsSumTtl = 0;
+                        float keySumsSumTtl = 0;
+
+                        for(int si = 0; si < switchNum; si++)
+                        {
+                            for(int ri = 0; ri < actionSize; ri++)
+                            {
+
+                                if (flowactionunique[si][ri] == flowActions0[ai])
+                                {
+                                    countIPsSum += countIPsInv[si][ri];
+                                    keySumsSum += keySumsInv[si][ri];
+
+                                    countIPsSumTtl += countIPs[si][ri];
+                                    keySumsSumTtl += keySums[si][ri];
+
+                                }
+                            }
+
+                        }
+
+                        if(keySumsSum != 0)
+                            haoOversAction[ai] = (countIPsSum - keySumsSum)/keySumsSum;
+
+                        if(keySumsSumTtl != 0)
+                            haoOversActionTtl[ai] = (countIPsSumTtl - keySumsSumTtl)/keySumsSumTtl;
                     }
                 }
 
@@ -682,6 +754,8 @@ int main(int argc, char * argv[])
                 for(int ai = 0; ai < actionSize; ai++)
                     outfile0[si]<<"over_uai,"<<haoOversAction[flowactionunique[si][ai]]<<",";
                 for(int ai = 0; ai < actionSize; ai++)
+                    outfile0[si]<<"over_utai,"<<haoOversActionTtl[flowactionunique[si][ai]]<<",";
+                for(int ai = 0; ai < actionSize; ai++)
                     outfile0[si]<<"over_ai,"<<haoOvers[si][ai]<<",";
 
                 outfile0[si]<<"countIP,"<<countIPTotal[si]<<",countIP0,"<<countIP0Total[si]<<",keysum,"<<keySumTotal[si]<<
@@ -695,6 +769,8 @@ int main(int argc, char * argv[])
 
                 for(int ai = 0; ai < actionSize; ai++)
                     cout<<"over_uai "<<haoOversAction[flowactionunique[si][ai]]<<" ";
+                for(int ai = 0; ai < actionSize; ai++)
+                    cout<<"over_utai,"<<haoOversActionTtl[flowactionunique[si][ai]]<<",";
                 for(int ai = 0; ai < actionSize; ai++)
                     cout<<"over_ai,"<<haoOvers[si][ai]<<",";
 
@@ -751,30 +827,7 @@ int main(int argc, char * argv[])
                     vBkInfo.push_back(bkInfo);
                 }
 
-                // -----------------------------------------------------------80
-                // Get the ovs for a receiver
 
-                for (int ai = 0; ai < flowActions0.size(); ai++)
-                {
-                    float countIPsSum = 0;
-                    float keySumsSum = 0;
-
-                    for(int si = 0; si < switchNum; si++)
-                    {
-                        for(int ri = 0; ri < actionSize; ri++)
-                        {
-
-                            if (flowactionunique[si][ri] == flowActions0[ai])
-                            {
-                                countIPsSum += countIPsInv[si][ri];
-                                keySumsSum += keySumsInv[si][ri];
-                            }
-                        }
-
-                    }
-                    if(keySumsSum != 0)
-                    haoOversAction[ai] = (countIPsSum - keySumsSum)/keySumsSum;
-                }
                 // -----------------------------------------------------------80
                 // Get instant reward and Q learn
                 //cout<<"* Q learn!"<<endl;
@@ -783,13 +836,17 @@ int main(int argc, char * argv[])
                     for(int ri = 0; ri < actionSize; ri++)
                     {
                         //cout<<rLearn[ri]<<endl;
-                        rLearn[si][ri]->update(slotNums[si][ri],haoOversAction[flowactionunique[si][ri]]);
+                        rLearn[si][ri]->update(slotNums[si][ri],haoOversActionTtl[flowactionunique[si][ri]]);
                         //cout<<"* qleran!"<<endl;
 
                         // compute ebuse0
-                        if(line<1000000)
+                        if(runTime<20)
                         {
                             EPSILON0 = 1.0;
+                        }
+                        else if(runTime<50)
+                        {
+                            EPSILON0 = 0.6;
                         }
                         else
                         {
@@ -910,9 +967,9 @@ void initRLearn(RLearn* rLearn)
     // build a RL for rev1
 
     // create a qlist and initialize it
-    float minState = 320;
+    float minState = 20;
     float maxState = 820;   // ovs
-    float minAction = 320;
+    float minAction = 20;
     float maxAction = 820; // #slots
 
     float state = minState;
@@ -920,8 +977,8 @@ void initRLearn(RLearn* rLearn)
     float ovs = 0;
     float ovsTarget = 0.01;
 
-    size_t numS = 5;
-    size_t numA = 5;
+    size_t numS = 8;
+    size_t numA = 8;
 
     //float initState = 500;
     //float initAction = 500;
@@ -987,7 +1044,7 @@ void updateBlacklist(vector<string>& overBigKeys, vector<int>& overActions, RLea
     }
 
     size_t blackKeysRecvSize = blackKeysRecv.size();
-    //cout<<"* action: "<<actionSeq<<" #cur blackkeys: "<<blackKeysRecvSize<<endl;
+    cout<<"* action: "<<actionSeq<<" #cur blackkeys: "<<blackKeysRecvSize<<endl;
 
     // --------------------------------------------
     // put current blackkeys to cuckoo table
@@ -1044,7 +1101,7 @@ void updateBlacklist(vector<string>& overBigKeys, vector<int>& overActions, RLea
     }
     for(size_t i = keysPreSeq-1; i < keyPresNum; i++)
     {
-        if(blackActionPres[i] == actionSeq && keysNum<CUCKOO_BLACK_SIZE)
+        if(blackActionPres[i] == actionSeq)
         {
             blackkeyPresOld.push_back(blackkeyPres[i]);
             actionPresOld.push_back(blackActionPres[i]);
@@ -1432,7 +1489,7 @@ void loadKeys2Filter(string& inFileName, vector<size_t>& mask, VUPrefix& vunique
         // init cuckooFilter for flow estimation
         long flowEstSize = FLOW_EST_SIZE;
         m = flowEstSize/(a*bc)+1;
-        f = 14;
+        f = 16;
         cuckooFilterFlowEst[si].ClearTable();
         cuckooFilterFlowEst[si].cuckooFilterInit(m,f,bc,MaxNumKicks);
 

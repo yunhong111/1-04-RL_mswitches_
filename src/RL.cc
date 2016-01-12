@@ -74,24 +74,96 @@ void RLearn::update(float state, float ovs)
 }*/
 
 // positive reward function
-void RLearn::reward(float ovs)
+/*void RLearn::reward(float ovs)
 {
     float C1 = (ovs - _ovsTarget);
     if(fabs(C1) < 0.0005)
     {
         //_reward = 0.0001*1.0/float(pow(0.0005,2.0));
-        _reward = exp(-pow(C1*10.0,2.0)*10000.0);
+        _reward = exp(-pow(C1*100.0,2.0));
     }
     else if(fabs(C1) < 0.001 && C1 < 0) // small reward
-        _reward = exp(-pow(C1*10.0,2.0)*10000.0);
+        _reward = exp(-pow(C1*100.0,2.0));
 
     else if(ovs > _ovsTarget)
     {
-        _reward = exp(-pow(C1*10.0,2.0)*10000.0);
+        _reward = -0.1*exp(fabs(C1*100.0));
     }
     else
     {
-        _reward = exp(-pow(C1*10.0,2.0)*10000.0);
+        _reward = exp(-pow(C1*100.0,2.0));
+    }
+
+}*/
+
+// positive reward function
+void RLearn::reward(float ovs)
+{
+    float C1 = (ovs - _ovsTarget);
+    if(fabs(C1) < 0.0005)
+    {
+        switch(_actionSuggestIndex)
+        {
+        case 0:
+            _reward = 2.0;
+            break;
+        case 1:
+            _reward = 0.0;
+            break;
+        case 2:
+            _reward = 0.0;
+            break;
+        case 3:
+            _reward = 0.0;
+            break;
+        case 4:
+            _reward = 0.0;
+            break;
+        }
+    }
+    else if(ovs > _ovsTarget)
+    {
+        switch(_actionSuggestIndex)
+        {
+        case 0:
+            _reward = -0.5;
+            break;
+        case 1:
+            _reward = -1.0;
+            break;
+        case 2:
+            _reward = -2.0;
+            break;
+        case 3:
+            _reward = 1.0;
+            break;
+        case 4:
+            _reward = 2.0;
+            break;
+        }
+        //_reward = -0.1*exp(fabs(C1*100.0));
+    }
+    else
+    {
+        switch(_actionSuggestIndex)
+        {
+        case 0:
+            _reward = -0.5;
+            break;
+        case 1:
+            _reward = 1.0;
+            break;
+        case 2:
+            _reward = 2.0;
+            break;
+        case 3:
+            _reward = -1.0;
+            break;
+        case 4:
+            _reward = -2.0;
+            break;
+        }
+       // _reward = exp(-pow(C1*100.0,2.0));
     }
 
 }

@@ -148,12 +148,12 @@ size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
 
     for(int ai = 0; ai < actionSize; ai++ )
     {
-        g_vweightThld[ai] =  0.0003+ 0.0001*ai;
+        g_vweightThld[ai] =  0.0001+ 0.0001/*ai*/;
     }
 
     countKey = keyIns.size();
     int fingerprint = (storage*1024.0f*8.0f-(cuckooBlackSize)*39/0.9-FLOW_EST_SIZE*17/0.9)*loadFactor/(countKey) -3;
-    int fingerprintTarget = 14;
+    int fingerprintTarget = 15;
 
     // no need to compress
     if(fingerprint+2>=fingerprintTarget)
@@ -167,7 +167,7 @@ size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
         return 0;
     }
        // return 0;
-    int aggrprefixlength = 18;
+    int aggrprefixlength = 19;
     while(fingerprint<fingerprintTarget)
     {
         //fingerprintTarget --;
@@ -175,10 +175,15 @@ size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
 
         cout<<"prefixlength "<<aggrprefixlength<<endl;
         int iteartion = 0;
-        int maxIteration = 50;
+        int maxIteration = 70;
         for(int ai = 0; ai < actionSize; ai++ )
         {
-            g_vweightThld[ai] =  0.000012+0.00001*ai;
+            g_vweightThld[ai] =  0.000004+0.000001;
+
+            if(flowactionunique[ai] == 1)
+            {
+                g_vweightThld[ai] =  0.00001+0.000001;
+            }
         }
         while(fingerprint!=fingerprintTarget && iteartion<maxIteration)
         {
@@ -207,7 +212,7 @@ size_t initAggregation(vector<string> &keyIns,vector<int> &keyPrefixIns,
                     g_vweightThld[ai] +=  0.1*g_vweightThld[ai]*(fingerprint - fingerprintTarget)*(1) ;
                 else if( g_vweightThld[ai] > 0&& iteartion!=1)
                 {
-                    g_vweightThld[ai] +=  0.02*g_vweightThld[ai]*(fingerprint - fingerprintTarget)*(1) ;
+                    g_vweightThld[ai] +=  0.01*g_vweightThld[ai]*(fingerprint - fingerprintTarget)*(1) ;
                     if(g_vweightThld[ai]<pow(10,-6.5))
                         g_vweightThld[ai] = pow(10,-6.5);
 

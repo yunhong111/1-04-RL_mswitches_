@@ -16,7 +16,7 @@ blackKeySize=(500 1000 1500 2000 4000 8000)
 for i in $(seq 0 0)
 
 do
-	export OMP_NUM_THREADS=4
+	export OMP_NUM_THREADS=8
 
 	./trieNoiseMain ${keyFile} ${memSize[i]} ${ipfileFolder} ${feedbackPortion[2]} ${interval[0]} ${blackKeySize[1]}
 
