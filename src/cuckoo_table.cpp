@@ -754,5 +754,6 @@ float CuckooTable::occupyRate()
     }
 
     float ocyRate = num/float(mm*mbc);
+    return ocyRate;
 }
 

@@ -255,68 +255,68 @@ Print Qlist!
 /home/yunhong/Research/PCAP/mapped_caida_trace/mapped-caida-1
 /home/yunhong/Research/PCAP/mapped_caida_trace/mapped-caida-1
 
-line 16770 total 0.166631 total0 0.45088 false 0.0296878 over 0.166631 false0 0.0803311 over0 0.45088 overaggr 0.121324 overcuckoo 0.0453063
-over_uai 0 over_uai 0 over_ai,0.193676,over_ai,0.0241819,countIP 3.00085e+07 countIP0 3.73201e+07 keysum 2.57224e+07 pktSum 1.70096e+08 aggrSum 3.12075e+06 blackkey_num 0 feedback 0 feedsumportion 5.60519e-45 finger0 9 finger 14 time 0,runTime,1
+line 16778 total 0.165834 total0 0.450559 false 0.0295296 over 0.165834 false0 0.0802298 over0 0.450559 overaggr 0.121355 overcuckoo 0.044479
+over_uai 0 over_uai 0 over_ai,0.192759,over_ai,0.0239993,countIP 2.99951e+07 countIP0 3.73206e+07 keysum 2.57284e+07 pktSum 1.70216e+08 aggrSum 3.12228e+06 blackkey_num 0 feedback 0 feedsumportion 5.60519e-45 finger0 9 finger 14 time 0,runTime,1.00001
 
 
-line 16770 total 0.137906 total0 0.396089 false 0.0431185 over 0.137906 false0 0.123843 over0 0.396089 overaggr 0.127023 overcuckoo 0.0108832
-over_uai 0 over_uai 0 over_ai,0.261768,over_ai,0.101796,countIP 4.61027e+07 countIP0 5.65631e+07 keysum 4.05154e+07 pktSum 1.70096e+08 aggrSum 5.14639e+06 blackkey_num 0 feedback 0 feedsumportion 4.2039e-45 finger0 9 finger 14 time 0,runTime,1
+line 16778 total 0.137613 total0 0.400829 false 0.0430459 over 0.137613 false0 0.125381 over0 0.400829 overaggr 0.126907 overcuckoo 0.0107058
+over_uai 0 over_uai 0 over_ai,0.260937,over_ai,0.101645,countIP 4.6139e+07 countIP0 5.68144e+07 keysum 4.05577e+07 pktSum 1.70216e+08 aggrSum 5.14705e+06 blackkey_num 0 feedback 0 feedsumportion 4.2039e-45 finger0 9 finger 14 time 0,runTime,1.00001
 
 
-line 16770 total 0.133878 total0 0.718742 false 0.0349042 over 0.133878 false0 0.187388 over0 0.718742 overaggr 0.129043 overcuckoo 0.00483523
-over_uai 0 over_uai 0 over_ai,0.108129,over_ai,0.177651,countIP 3.98852e+07 countIP0 6.04583e+07 keysum 3.51759e+07 pktSum 1.70096e+08 aggrSum 4.5392e+06 blackkey_num 0 feedback 0 feedsumportion -4.01403e-25 finger0 9 finger 14 time 0,runTime,1
+line 16778 total 0.134245 total0 0.704714 false 0.0349813 over 0.134245 false0 0.183633 over0 0.704714 overaggr 0.129096 overcuckoo 0.00514951
+over_uai 0 over_uai 0 over_ai,0.108625,over_ai,0.177776,countIP 3.99093e+07 countIP0 5.99817e+07 keysum 3.51858e+07 pktSum 1.70216e+08 aggrSum 4.54234e+06 blackkey_num 0 feedback 0 feedsumportion -4.21658e+21 finger0 9 finger 14 time 0,runTime,1.00001
 
 
-line 33280 total 0.208962 total0 0.42446 false 0.0357747 over 0.208962 false0 0.0726683 over0 0.42446 overaggr 0.158059 overcuckoo 0.0509033
-over_uai 0 over_uai 0 over_ai,0.241341,over_ai,0.0327943,countIP 6.0976e+07 countIP0 7.1845e+07 keysum 5.04366e+07 pktSum 3.4504e+08 aggrSum 7.97194e+06 blackkey_num 0 feedback 0 feedsumportion 5.60519e-45 finger0 9 finger 14 time 0,runTime,2
+line 33293 total 0.208268 total0 0.424696 false 0.0356394 over 0.208268 false0 0.0726752 over0 0.424696 overaggr 0.1582 overcuckoo 0.0500683
+over_uai 0 over_uai 0 over_ai,0.240613,over_ai,0.0325629,countIP 6.09708e+07 countIP0 7.1892e+07 keysum 5.04613e+07 pktSum 3.45344e+08 aggrSum 7.98295e+06 blackkey_num 0 feedback 0 feedsumportion 5.60519e-45 finger0 9 finger 14 time 0,runTime,2.00001
 
 
-line 33280 total 0.120683 total0 0.389112 false 0.0381382 over 0.120683 false0 0.122967 over0 0.389113 overaggr 0.112308 overcuckoo 0.00837453
-over_uai 0 over_uai 0 over_ai,0.269489,over_ai,0.079634,countIP 9.28547e+07 countIP0 1.15096e+08 keysum 8.28554e+07 pktSum 3.4504e+08 aggrSum 9.30536e+06 blackkey_num 0 feedback 0 feedsumportion 4.2039e-45 finger0 9 finger 14 time 0,runTime,2
+line 33293 total 0.120721 total0 0.392116 false 0.0381289 over 0.120721 false0 0.123847 over0 0.392116 overaggr 0.11245 overcuckoo 0.00827093
+over_uai 0 over_uai 0 over_ai,0.269775,over_ai,0.079592,countIP 9.29003e+07 countIP0 1.15397e+08 keysum 8.28933e+07 pktSum 3.45344e+08 aggrSum 9.32136e+06 blackkey_num 0 feedback 0 feedsumportion 4.2039e-45 finger0 9 finger 14 time 0,runTime,2.00001
 
 
-line 33280 total 0.125824 total0 0.736478 false 0.0330727 over 0.125824 false0 0.193582 over0 0.736478 overaggr 0.121171 overcuckoo 0.00465342
-over_uai 0 over_uai 0 over_ai,0.107842,over_ai,0.152683,countIP 8.08526e+07 countIP0 1.24708e+08 keysum 7.18164e+07 pktSum 3.4504e+08 aggrSum 8.70204e+06 blackkey_num 0 feedback 0 feedsumportion -4.01403e-25 finger0 9 finger 14 time 0,runTime,2
+line 33293 total 0.126269 total0 0.72253 false 0.0331924 over 0.126269 false0 0.189932 over0 0.72253 overaggr 0.121325 overcuckoo 0.00494429
+over_uai 0 over_uai 0 over_ai,0.108659,over_ai,0.152588,countIP 8.09614e+07 countIP0 1.23823e+08 keysum 7.18846e+07 pktSum 3.45344e+08 aggrSum 8.72138e+06 blackkey_num 0 feedback 0 feedsumportion -4.21658e+21 finger0 9 finger 14 time 0,runTime,2.00001
 
 
-line 49931 total 0.194284 total0 0.412497 false 0.0348674 over 0.194284 false0 0.0740291 over0 0.412497 overaggr 0.156822 overcuckoo 0.0374624
-over_uai 0 over_uai 0 over_ai,0.221451,over_ai,0.0315183,countIP 9.46899e+07 countIP0 1.11991e+08 keysum 7.92859e+07 pktSum 5.21073e+08 aggrSum 1.24338e+07 blackkey_num 0 feedback 0 feedsumportion 5.60519e-45 finger0 9 finger 14 time 0,runTime,3
+line 49925 total 0.193557 total0 0.412477 false 0.0347384 over 0.193557 false0 0.0740288 over0 0.412477 overaggr 0.156804 overcuckoo 0.0367527
+over_uai 0 over_uai 0 over_ai,0.220647,over_ai,0.0312502,countIP 9.46321e+07 countIP0 1.11989e+08 keysum 7.92858e+07 pktSum 5.21053e+08 aggrSum 1.24323e+07 blackkey_num 0 feedback 0 feedsumportion 5.60519e-45 finger0 9 finger 14 time 0,runTime,3.00001
 
 
-line 49931 total 0.110021 total0 0.413001 false 0.0350134 over 0.110021 false0 0.131435 over0 0.413001 overaggr 0.102594 overcuckoo 0.00742706
-over_uai 0 over_uai 0 over_ai,0.236671,over_ai,0.0749225,countIP 1.39635e+08 countIP0 1.77749e+08 keysum 1.25795e+08 pktSum 5.21073e+08 aggrSum 1.29058e+07 blackkey_num 0 feedback 0 feedsumportion 4.2039e-45 finger0 9 finger 14 time 0,runTime,3
+line 49925 total 0.109915 total0 0.415865 false 0.0349808 over 0.109915 false0 0.132351 over0 0.415865 overaggr 0.102595 overcuckoo 0.00731995
+over_uai 0 over_uai 0 over_ai,0.236313,over_ai,0.0748865,countIP 1.3962e+08 countIP0 1.78106e+08 keysum 1.25793e+08 pktSum 5.21053e+08 aggrSum 1.29057e+07 blackkey_num 0 feedback 0 feedsumportion 4.2039e-45 finger0 9 finger 14 time 0,runTime,3.00001
 
 
-line 49931 total 0.132703 total0 0.80956 false 0.0337595 over 0.132703 false0 0.205952 over0 0.80956 overaggr 0.126641 overcuckoo 0.00606139
-over_uai 0 over_uai 0 over_ai,0.112819,over_ai,0.162759,countIP 1.197e+08 countIP0 1.91229e+08 keysum 1.05677e+08 pktSum 5.21073e+08 aggrSum 1.3383e+07 blackkey_num 0 feedback 0 feedsumportion -4.01403e-25 finger0 9 finger 14 time 0,runTime,3
+line 49925 total 0.132958 total0 0.795786 false 0.0338213 over 0.132958 false0 0.202429 over0 0.795786 overaggr 0.126655 overcuckoo 0.0063033
+over_uai 0 over_uai 0 over_ai,0.113236,over_ai,0.162779,countIP 1.19714e+08 countIP0 1.89751e+08 keysum 1.05665e+08 pktSum 5.21053e+08 aggrSum 1.3383e+07 blackkey_num 0 feedback 0 feedsumportion -4.21658e+21 finger0 9 finger 14 time 0,runTime,3.00001
 
 
-line 66523 total 0.189682 total0 0.400701 false 0.0344874 over 0.189682 false0 0.0728542 over0 0.400701 overaggr 0.158644 overcuckoo 0.0310381
-over_uai 0 over_uai 0 over_ai,0.215258,over_ai,0.0325779,countIP 1.2657e+08 countIP0 1.4902e+08 keysum 1.0639e+08 pktSum 6.91536e+08 aggrSum 1.6878e+07 blackkey_num 0 feedback 0 feedsumportion 5.60519e-45 finger0 9 finger 14 time 0,runTime,4.00001
+line 66549 total 0.188953 total0 0.400862 false 0.0343576 over 0.188953 false0 0.0728892 over0 0.400862 overaggr 0.158621 overcuckoo 0.0303317
+over_uai 0 over_uai 0 over_ai,0.214406,over_ai,0.0325379,countIP 1.26557e+08 countIP0 1.49113e+08 keysum 1.06444e+08 pktSum 6.91842e+08 aggrSum 1.68842e+07 blackkey_num 0 feedback 0 feedsumportion 5.60519e-45 finger0 9 finger 14 time 0,runTime,4.00001
 
 
-line 66523 total 0.114349 total0 0.438906 false 0.0349233 over 0.114349 false0 0.134046 over0 0.438906 overaggr 0.107099 overcuckoo 0.00724946
-over_uai 0 over_uai 0 over_ai,0.261628,over_ai,0.0717978,countIP 1.8029e+08 countIP0 2.328e+08 keysum 1.6179e+08 pktSum 6.91536e+08 aggrSum 1.73276e+07 blackkey_num 0 feedback 0 feedsumportion 4.2039e-45 finger0 9 finger 14 time 0,runTime,4.00001
+line 66549 total 0.114192 total0 0.440485 false 0.0348762 over 0.114192 false0 0.134532 over0 0.440485 overaggr 0.107063 overcuckoo 0.00712884
+over_uai 0 over_uai 0 over_ai,0.261132,over_ai,0.0717453,countIP 1.80348e+08 countIP0 2.33163e+08 keysum 1.61864e+08 pktSum 6.91842e+08 aggrSum 1.73297e+07 blackkey_num 0 feedback 0 feedsumportion 4.2039e-45 finger0 9 finger 14 time 0,runTime,4.00001
 
 
-line 66523 total 0.134862 total0 0.786959 false 0.034962 over 0.134862 false0 0.204014 over0 0.786959 overaggr 0.129223 overcuckoo 0.0056387
-over_uai 0 over_uai 0 over_ai,0.10645,over_ai,0.178672,countIP 1.61568e+08 countIP0 2.54406e+08 keysum 1.42368e+08 pktSum 6.91536e+08 aggrSum 1.83972e+07 blackkey_num 0 feedback 0 feedsumportion -4.01403e-25 finger0 9 finger 14 time 0,runTime,4.00001
+line 66549 total 0.135118 total0 0.775306 false 0.0350267 over 0.135118 false0 0.200982 over0 0.775306 overaggr 0.129257 overcuckoo 0.00586121
+over_uai 0 over_uai 0 over_ai,0.106854,over_ai,0.178696,countIP 1.61669e+08 countIP0 2.52848e+08 keysum 1.42425e+08 pktSum 6.91842e+08 aggrSum 1.84095e+07 blackkey_num 0 feedback 0 feedsumportion -4.21658e+21 finger0 9 finger 14 time 0,runTime,4.00001
 
 
-line 82999 total 0.181508 total0 0.392518 false 0.0335662 over 0.181508 false0 0.072588 over0 0.392518 overaggr 0.153623 overcuckoo 0.0278849
-over_uai 0 over_uai 0 over_ai,0.206827,over_ai,0.0291303,countIP 1.58267e+08 countIP0 1.86533e+08 keysum 1.33954e+08 pktSum 8.58305e+08 aggrSum 2.05784e+07 blackkey_num 0 feedback 0 feedsumportion 5.60519e-45 finger0 9 finger 14 time 0,runTime,5.00001
+line 82987 total 0.180807 total0 0.392585 false 0.0334359 over 0.180807 false0 0.0725991 over0 0.392585 overaggr 0.153623 overcuckoo 0.027184
+over_uai 0 over_uai 0 over_ai,0.206028,over_ai,0.0290081,countIP 1.58173e+08 countIP0 1.86542e+08 keysum 1.33954e+08 pktSum 8.58319e+08 aggrSum 2.05784e+07 blackkey_num 0 feedback 0 feedsumportion 5.60519e-45 finger0 9 finger 14 time 0,runTime,5.00001
 
 
-line 82999 total 0.104057 total0 0.452731 false 0.0314324 over 0.104057 false0 0.136756 over0 0.452731 overaggr 0.0968622 overcuckoo 0.00719488
-over_uai 0 over_uai 0 over_ai,0.232405,over_ai,0.0667325,countIP 2.19839e+08 countIP0 2.89267e+08 keysum 1.9912e+08 pktSum 8.58305e+08 aggrSum 1.92872e+07 blackkey_num 0 feedback 0 feedsumportion 4.2039e-45 finger0 9 finger 14 time 0,runTime,5.00001
+line 82987 total 0.103917 total0 0.452836 false 0.0313894 over 0.103917 false0 0.136785 over0 0.452836 overaggr 0.0968622 overcuckoo 0.0070546
+over_uai 0 over_uai 0 over_ai,0.231887,over_ai,0.0667009,countIP 2.19812e+08 countIP0 2.89288e+08 keysum 1.9912e+08 pktSum 8.58319e+08 aggrSum 1.92872e+07 blackkey_num 0 feedback 0 feedsumportion 4.2039e-45 finger0 9 finger 14 time 0,runTime,5.00001
 
 
-line 82999 total 0.145991 total0 0.7799 false 0.0378013 over 0.145991 false0 0.201939 over0 0.7799 overaggr 0.140231 overcuckoo 0.00576001
-over_uai 0 over_uai 0 over_ai,0.108748,over_ai,0.203393,countIP 2.02303e+08 countIP0 3.14208e+08 keysum 1.76531e+08 pktSum 8.58305e+08 aggrSum 2.47551e+07 blackkey_num 0 feedback 0 feedsumportion -4.01403e-25 finger0 9 finger 14 time 0,runTime,5.00001
+line 82987 total 0.146233 total0 0.767029 false 0.0378644 over 0.146233 false0 0.198609 over0 0.767029 overaggr 0.140227 overcuckoo 0.00600563
+over_uai 0 over_uai 0 over_ai,0.109153,over_ai,0.203389,countIP 2.02351e+08 countIP0 3.11944e+08 keysum 1.76536e+08 pktSum 8.58319e+08 aggrSum 2.47551e+07 blackkey_num 0 feedback 0 feedsumportion -4.21658e+21 finger0 9 finger 14 time 0,runTime,5.00001
 
-* feedback sum: 2.32747e+07 num: 133
-* feedback sum: 1.97404e+07 num: 138
-* feedback sum: 2.48246e+07 num: 149
+* feedback sum: 2.31935e+07 num: 133
+* feedback sum: 1.97233e+07 num: 138
+* feedback sum: 2.48184e+07 num: 148
  states size: 5 state: 520
 * state: 520 * action: 320 * stateIndexCur: 2
 * _indexCur: 2 * action: 320
@@ -387,720 +387,890 @@ over_uai 0 over_uai 0 over_ai,0.108748,over_ai,0.203393,countIP 2.02303e+08 coun
 * si: 0 ai: 0
 * stateIndex: 0
 * actionVec: 
-* randNum: 18
-* randa: 0
+* randNum: 53
+* randa: 3
 * si: 0 ai: 1
 * stateIndex: 0
 * actionVec: 
-* randNum: 84
-* randa: 2
-* randa: 1
-* randa: 3
+* randNum: 98
+* randa: 4
 * si: 1 ai: 0
 * stateIndex: 0
 * actionVec: 
-* randNum: 72
-* randa: 4
-* si: 1 ai: 1
-* stateIndex: 0
-* actionVec: 
-* randNum: 68
-* randa: 2
-* randa: 1
+* randNum: 45
 * randa: 3
-* si: 2 ai: 0
-* stateIndex: 0
-* actionVec: 
-* randNum: 27
-* randa: 1
-* randa: 2
-* randa: 4
-* si: 2 ai: 1
-* stateIndex: 0
-* actionVec: 
-* randNum: 44
-* randa: 0
-* find max actions!
-* find slotNums!
-* find the index of selected action!
-320 420 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 3
-520 420 
-* rLearn[si][ai]->_actionSuggestIndex: 4
-* rLearn[si][ai]->_actionSuggestIndex: 3
-520 320 
-* rLearn[si][ai]->_actionSuggestIndex: 4
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* feedbackBlackkeyRL:si: 0
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* feedbackBlackkeyRL:si: 1
-* suggested action++++++++++++++++++++++++++++++++++: 520
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* feedbackBlackkeyRL:si: 2
-* suggested action++++++++++++++++++++++++++++++++++: 520
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* feedback bks end!
-
-line 99457 total 0.182581 total0 0.400075 false 0.0333035 over 0.182581 false0 0.0729753 over0 0.400075 overaggr 0.13976 overcuckoo 0.0428207
-over_uai 0.102558 over_uai 0.101259 over_ai,0.207646,over_ai,0.0332117,countIP 1.87196e+08 countIP0 2.21625e+08 keysum 1.58295e+08 pktSum 1.02612e+09 aggrSum 2.21233e+07 blackkey_num 4229614 feedback 149 feedsumportion 0.960463 finger0 9 finger 14 time 106816,runTime,6.00002
-
-
-line 99457 total 0.11257 total0 0.458031 false 0.033429 over 0.11257 false0 0.136018 over0 0.458031 overaggr 0.0890659 overcuckoo 0.0235039
-over_uai 0.229425 over_uai 0.102558 over_ai,0.263008,over_ai,0.0684718,countIP 2.61396e+08 countIP0 3.42562e+08 keysum 2.34948e+08 pktSum 1.02612e+09 aggrSum 2.09259e+07 blackkey_num 5628569 feedback 149 feedsumportion 0.957266 finger0 9 finger 14 time 106816,runTime,6.00002
-
-
-line 99457 total 0.143473 total0 0.778835 false 0.0370471 over 0.143473 false0 0.201108 over0 0.778835 overaggr 0.118213 overcuckoo 0.0252603
-over_uai 0.101259 over_uai 0.229425 over_ai,0.109463,over_ai,0.194657,countIP 2.40798e+08 countIP0 3.74595e+08 keysum 2.10585e+08 pktSum 1.02612e+09 aggrSum 2.48937e+07 blackkey_num 4289715 feedback 149 feedsumportion 0.963991 finger0 9 finger 14 time 106816,runTime,6.00002
-
-
-line 116020 total 0.178537 total0 0.394551 false 0.0331083 over 0.178537 false0 0.0731663 over0 0.394551 overaggr 0.12623 overcuckoo 0.0523072
-over_uai 0.102558 over_uai 0.101259 over_ai,0.202829,over_ai,0.0333151,countIP 2.19982e+08 countIP0 2.60302e+08 keysum 1.86657e+08 pktSum 1.19321e+09 aggrSum 2.35617e+07 blackkey_num 8277035 feedback 149 feedsumportion 0.960463 finger0 9 finger 14 time 106816,runTime,7.00002
-
-
-line 116020 total 0.111931 total0 0.4662 false 0.0327465 over 0.111931 false0 0.13639 over0 0.4662 overaggr 0.0796019 overcuckoo 0.0323296
-over_uai 0.229425 over_uai 0.102558 over_ai,0.26159,over_ai,0.0674765,countIP 3.00301e+08 countIP0 3.95978e+08 keysum 2.70071e+08 pktSum 1.19321e+09 aggrSum 2.14982e+07 blackkey_num 9317691 feedback 149 feedsumportion 0.957266 finger0 9 finger 14 time 106816,runTime,7.00002
-
-
-line 116020 total 0.141611 total0 0.772654 false 0.0367603 over 0.141611 false0 0.200571 over0 0.772654 overaggr 0.102056 overcuckoo 0.0395546
-over_uai 0.101259 over_uai 0.229425 over_ai,0.1094,over_ai,0.189995,countIP 2.8073e+08 countIP0 4.35908e+08 keysum 2.45907e+08 pktSum 1.19321e+09 aggrSum 2.50963e+07 blackkey_num 8690520 feedback 149 feedsumportion 0.963991 finger0 9 finger 14 time 106816,runTime,7.00002
-
-
-line 132046 total 0.171342 total0 0.389999 false 0.0320032 over 0.171342 false0 0.072844 over0 0.389999 overaggr 0.116875 overcuckoo 0.0544672
-over_uai 0.102558 over_uai 0.101259 over_ai,0.194184,over_ai,0.0334763,countIP 2.52819e+08 countIP0 3.00013e+08 keysum 2.15837e+08 pktSum 1.3714e+09 aggrSum 2.52259e+07 blackkey_num 11782445 feedback 149 feedsumportion 0.960463 finger0 9 finger 14 time 106816,runTime,8.00002
-
-
-line 132046 total 0.111303 total0 0.467928 false 0.0319903 over 0.111303 false0 0.134491 over0 0.467928 overaggr 0.0727868 overcuckoo 0.0385159
-over_uai 0.229425 over_uai 0.102558 over_ai,0.265405,over_ai,0.0646992,countIP 3.40245e+08 countIP0 4.49432e+08 keysum 3.06168e+08 pktSum 1.3714e+09 aggrSum 2.2285e+07 blackkey_num 13065813 feedback 149 feedsumportion 0.957266 finger0 9 finger 14 time 106816,runTime,8.00002
-
-
-line 132046 total 0.13465 total0 0.741476 false 0.0358936 over 0.13465 false0 0.197654 over0 0.741476 overaggr 0.0873798 overcuckoo 0.0472706
-over_uai 0.101259 over_uai 0.229425 over_ai,0.104445,over_ai,0.181302,countIP 3.27497e+08 countIP0 5.02647e+08 keysum 2.88633e+08 pktSum 1.3714e+09 aggrSum 2.52207e+07 blackkey_num 12577825 feedback 149 feedsumportion 0.963991 finger0 9 finger 14 time 106816,runTime,8.00002
-
-
-line 147814 total 0.16647 total0 0.381173 false 0.0316752 over 0.16647 false0 0.0725283 over0 0.381173 overaggr 0.105877 overcuckoo 0.0605923
-over_uai 0.102558 over_uai 0.101259 over_ai,0.188834,over_ai,0.0330143,countIP 2.88663e+08 countIP0 3.41796e+08 keysum 2.47468e+08 pktSum 1.54804e+09 aggrSum 2.62012e+07 blackkey_num 15759215 feedback 149 feedsumportion 0.960463 finger0 9 finger 14 time 106816,runTime,9.00002
-
-
-line 147814 total 0.105693 total0 0.463929 false 0.0306109 over 0.105693 false0 0.134364 over0 0.463929 overaggr 0.0661272 overcuckoo 0.0395657
-over_uai 0.229425 over_uai 0.102558 over_ai,0.250561,over_ai,0.061395,countIP 3.84401e+08 countIP0 5.08944e+08 keysum 3.47656e+08 pktSum 1.54804e+09 aggrSum 2.29895e+07 blackkey_num 15630164 feedback 149 feedsumportion 0.957266 finger0 9 finger 14 time 106816,runTime,9.00002
-
-
-line 147814 total 0.129464 total0 0.72005 false 0.0354517 over 0.129463 false0 0.197175 over0 0.720049 overaggr 0.0760709 overcuckoo 0.0533926
-over_uai 0.101259 over_uai 0.229425 over_ai,0.100932,over_ai,0.173741,countIP 3.75863e+08 countIP0 5.72398e+08 keysum 3.3278e+08 pktSum 1.54804e+09 aggrSum 2.53149e+07 blackkey_num 16686480 feedback 149 feedsumportion 0.963991 finger0 9 finger 14 time 106816,runTime,9.00002
-
-
-line 164073 total 0.164828 total0 0.38532 false 0.0314025 over 0.164828 false0 0.0734098 over0 0.38532 overaggr 0.102755 overcuckoo 0.0620733
-over_uai 0.102558 over_uai 0.101259 over_ai,0.187505,over_ai,0.0331351,countIP 3.20412e+08 countIP0 3.81063e+08 keysum 2.75072e+08 pktSum 1.7189e+09 aggrSum 2.8265e+07 blackkey_num 19509607 feedback 149 feedsumportion 0.960463 finger0 9 finger 14 time 106816,runTime,10
-
-
-line 164073 total 0.105383 total0 0.466658 false 0.0305453 over 0.105383 false0 0.135261 over0 0.466658 overaggr 0.0604097 overcuckoo 0.0449728
-over_uai 0.229425 over_uai 0.102558 over_ai,0.255133,over_ai,0.0589598,countIP 4.26971e+08 countIP0 5.66519e+08 keysum 3.86265e+08 pktSum 1.7189e+09 aggrSum 2.33341e+07 blackkey_num 19484513 feedback 149 feedsumportion 0.957266 finger0 9 finger 14 time 106816,runTime,10
-
-
-line 164073 total 0.127332 total0 0.712673 false 0.0350932 over 0.127332 false0 0.196415 over0 0.712673 overaggr 0.068544 overcuckoo 0.0587883
-over_uai 0.101259 over_uai 0.229425 over_ai,0.0990971,over_ai,0.172175,countIP 4.18669e+08 countIP0 6.36052e+08 keysum 3.7138e+08 pktSum 1.7189e+09 aggrSum 2.54559e+07 blackkey_num 20738607 feedback 149 feedsumportion 0.963991 finger0 9 finger 14 time 106816,runTime,10
-
-* feedback sum: 8.91977e+06 num: 120
-* feedback sum: 4.16016e+06 num: 128
-* feedback sum: 487905 num: 109
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 3
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 520 * nextstate: 520 * Reward: 0
-* q learn!
-* stateIndexNest: 2
-* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 4
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 3
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 520 * nextstate: 520 * Reward: 0
-* q learn!
-* stateIndexNest: 2
-* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 4
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 0 * Q value: 0
-* feedback bks!
-* si: 0 ai: 0
-* stateIndex: 0
-* actionVec: 
-* randNum: 22
-* randa: 2
-* randa: 0
-* si: 0 ai: 1
-* stateIndex: 1
-* actionVec: 
-* randNum: 50
-* randa: 2
-* si: 1 ai: 0
-* stateIndex: 2
-* actionVec: 
-* randNum: 41
-* randa: 0
 * si: 1 ai: 1
-* stateIndex: 1
-* actionVec: 
-* randNum: 86
-* randa: 2
-* si: 2 ai: 0
-* stateIndex: 2
-* actionVec: 
-* randNum: 30
-* randa: 2
-* si: 2 ai: 1
-* stateIndex: 0
-* actionVec: 
-* randNum: 26
-* randa: 4
-* find max actions!
-* find slotNums!
-* find the index of selected action!
-320 320 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 2
-520 320 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 2
-420 520 
-* rLearn[si][ai]->_actionSuggestIndex: 2
-* rLearn[si][ai]->_actionSuggestIndex: 4
-* feedbackBlackkeyRL:si: 0
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* feedbackBlackkeyRL:si: 1
-* suggested action++++++++++++++++++++++++++++++++++: 520
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* feedbackBlackkeyRL:si: 2
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* suggested action++++++++++++++++++++++++++++++++++: 520
-* feedback bks end!
-
-line 180495 total 0.162727 total0 0.385948 false 0.0309607 over 0.162727 false0 0.0734311 over0 0.385948 overaggr 0.0972428 overcuckoo 0.0654841
-over_uai 0.0977401 over_uai 0.0764103 over_ai,0.185929,over_ai,0.0320893,countIP 3.50615e+08 countIP0 4.17926e+08 keysum 3.01545e+08 pktSum 1.88644e+09 aggrSum 2.93231e+07 blackkey_num 23063334 feedback 109 feedsumportion 0.941446 finger0 9 finger 14 time 103670,runTime,11
-
-
-line 180495 total 0.100498 total0 0.464397 false 0.0293628 over 0.100498 false0 0.135684 over0 0.464397 overaggr 0.0573894 overcuckoo 0.0431087
-over_uai 0.215345 over_uai 0.0977401 over_ai,0.237622,over_ai,0.0578522,countIP 4.69409e+08 countIP0 6.24628e+08 keysum 4.26543e+08 pktSum 1.88644e+09 aggrSum 2.4479e+07 blackkey_num 21555325 feedback 109 feedsumportion 0.894392 finger0 9 finger 14 time 103670,runTime,11
-
-
-line 180495 total 0.127894 total0 0.713776 false 0.035278 over 0.127894 false0 0.196887 over0 0.713776 overaggr 0.0628736 overcuckoo 0.0650203
-over_uai 0.0764103 over_uai 0.215345 over_ai,0.0999726,over_ai,0.172414,countIP 4.60014e+08 countIP0 6.98967e+08 keysum 4.07852e+08 pktSum 1.88644e+09 aggrSum 2.56431e+07 blackkey_num 25368300 feedback 109 feedsumportion 0.645938 finger0 9 finger 14 time 103670,runTime,11
-
-
-line 196851 total 0.161288 total0 0.387818 false 0.0308016 over 0.161288 false0 0.0740626 over0 0.387818 overaggr 0.0935783 overcuckoo 0.0677102
-over_uai 0.0977401 over_uai 0.0764103 over_ai,0.184207,over_ai,0.032016,countIP 3.82422e+08 countIP0 4.57021e+08 keysum 3.29309e+08 pktSum 2.05369e+09 aggrSum 3.08161e+07 blackkey_num 26936057 feedback 109 feedsumportion 0.941446 finger0 9 finger 14 time 103670,runTime,12
-
-
-line 196851 total 0.101874 total0 0.462568 false 0.0295812 over 0.101874 false0 0.134317 over0 0.462568 overaggr 0.0552054 overcuckoo 0.0466682
-over_uai 0.215345 over_uai 0.0977401 over_ai,0.249332,over_ai,0.0564602,countIP 5.0922e+08 countIP0 6.75912e+08 keysum 4.6214e+08 pktSum 2.05369e+09 aggrSum 2.55126e+07 blackkey_num 25732894 feedback 109 feedsumportion 0.894392 finger0 9 finger 14 time 103670,runTime,12
-
-
-line 196851 total 0.128038 total0 0.705436 false 0.035523 over 0.128038 false0 0.195717 over0 0.705436 overaggr 0.0578686 overcuckoo 0.0701694
-over_uai 0.0764103 over_uai 0.215345 over_ai,0.0993477,over_ai,0.173775,countIP 5.03139e+08 countIP0 7.60676e+08 keysum 4.46031e+08 pktSum 2.05369e+09 aggrSum 2.58112e+07 blackkey_num 30138641 feedback 109 feedsumportion 0.645938 finger0 9 finger 14 time 103670,runTime,12
-
-
-line 212988 total 0.161303 total0 0.40203 false 0.0306956 over 0.161303 false0 0.0765052 over0 0.40203 overaggr 0.089666 overcuckoo 0.0716375
-over_uai 0.0977401 over_uai 0.0764103 over_ai,0.184193,over_ai,0.031181,countIP 4.13282e+08 countIP0 4.98952e+08 keysum 3.55878e+08 pktSum 2.226e+09 aggrSum 3.19102e+07 blackkey_num 30989713 feedback 109 feedsumportion 0.941446 finger0 9 finger 14 time 103670,runTime,13
-
-
-line 212988 total 0.0992821 total0 0.463154 false 0.0288117 over 0.0992821 false0 0.134408 over0 0.463154 overaggr 0.054134 overcuckoo 0.0451481
-over_uai 0.215345 over_uai 0.0977401 over_ai,0.244694,over_ai,0.0552507,countIP 5.50395e+08 countIP0 7.3258e+08 keysum 5.00686e+08 pktSum 2.226e+09 aggrSum 2.71041e+07 blackkey_num 28324862 feedback 109 feedsumportion 0.894392 finger0 9 finger 14 time 103670,runTime,13
-
-
-line 212988 total 0.128595 total0 0.703492 false 0.03575 over 0.128595 false0 0.195574 over0 0.703492 overaggr 0.0536818 overcuckoo 0.0749131
-over_uai 0.0764103 over_uai 0.215345 over_ai,0.0994186,over_ai,0.175023,countIP 5.4649e+08 countIP0 8.24868e+08 keysum 4.84222e+08 pktSum 2.226e+09 aggrSum 2.59939e+07 blackkey_num 35101702 feedback 109 feedsumportion 0.645938 finger0 9 finger 14 time 103670,runTime,13
-
-
-line 229282 total 0.162414 total0 0.415695 false 0.0307505 over 0.162414 false0 0.0787053 over0 0.415695 overaggr 0.088003 overcuckoo 0.0744108
-over_uai 0.0977401 over_uai 0.0764103 over_ai,0.185823,over_ai,0.0307922,countIP 4.43504e+08 countIP0 5.4014e+08 keysum 3.81537e+08 pktSum 2.39668e+09 aggrSum 3.35764e+07 blackkey_num 35382448 feedback 109 feedsumportion 0.941446 finger0 9 finger 14 time 103670,runTime,14
-
-
-line 229282 total 0.101514 total0 0.465924 false 0.0293456 over 0.101514 false0 0.134689 over0 0.465924 overaggr 0.0521843 overcuckoo 0.0493297
-over_uai 0.215345 over_uai 0.0977401 over_ai,0.260189,over_ai,0.0537623,countIP 5.92023e+08 countIP0 7.87879e+08 keysum 5.37463e+08 pktSum 2.39668e+09 aggrSum 2.80471e+07 blackkey_num 33155717 feedback 109 feedsumportion 0.894392 finger0 9 finger 14 time 103670,runTime,14
-
-
-line 229282 total 0.128978 total0 0.703428 false 0.0359884 over 0.128978 false0 0.196275 over0 0.703428 overaggr 0.0506163 overcuckoo 0.078362
-over_uai 0.0764103 over_uai 0.215345 over_ai,0.0991945,over_ai,0.176028,countIP 5.90286e+08 countIP0 8.90638e+08 keysum 5.2285e+08 pktSum 2.39668e+09 aggrSum 2.64647e+07 blackkey_num 39781547 feedback 109 feedsumportion 0.645938 finger0 9 finger 14 time 103670,runTime,14
-
-
-line 245502 total 0.167526 total0 0.419878 false 0.03137 over 0.167526 false0 0.078624 over0 0.419878 overaggr 0.0897007 overcuckoo 0.0778256
-over_uai 0.0977401 over_uai 0.0764103 over_ai,0.192006,over_ai,0.030767,countIP 4.72888e+08 countIP0 5.75099e+08 keysum 4.05034e+08 pktSum 2.56805e+09 aggrSum 3.63319e+07 blackkey_num 40861423 feedback 109 feedsumportion 0.941446 finger0 9 finger 14 time 103670,runTime,15
-
-
-line 245502 total 0.100444 total0 0.468757 false 0.0289599 over 0.100444 false0 0.135152 over0 0.468757 overaggr 0.0510619 overcuckoo 0.049382
-over_uai 0.215345 over_uai 0.0977401 over_ai,0.262425,over_ai,0.0520947,countIP 6.32444e+08 countIP0 8.4412e+08 keysum 5.74717e+08 pktSum 2.56805e+09 aggrSum 2.93461e+07 blackkey_num 36329051 feedback 109 feedsumportion 0.894392 finger0 9 finger 14 time 103670,runTime,15
-
-
-line 245502 total 0.128746 total0 0.700535 false 0.0362046 over 0.128746 false0 0.196997 over0 0.700535 overaggr 0.0476425 overcuckoo 0.0811035
-over_uai 0.0764103 over_uai 0.215345 over_ai,0.099182,over_ai,0.17518,countIP 6.36224e+08 countIP0 9.58516e+08 keysum 5.63655e+08 pktSum 2.56805e+09 aggrSum 2.6854e+07 blackkey_num 44455306 feedback 109 feedsumportion 0.645938 finger0 9 finger 14 time 103670,runTime,15
-
-* feedback sum: 1.08231e+07 num: 121
-* feedback sum: 5.92685e+06 num: 131
-* feedback sum: 1.23703e+06 num: 108
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 420
-* state: 420 * action: 320 * stateIndexCur: 1
-* _indexCur: 1 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 2
-* _indexCur: 1 * Q value: 0
- states size: 5 state: 520
-* state: 520 * action: 320 * stateIndexCur: 2
-* _indexCur: 2 * action: 320
-* input: 520 * nextstate: 520 * Reward: 0
-* q learn!
-* stateIndexNest: 2
-* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 2 * Q value: 0
- states size: 5 state: 420
-* state: 420 * action: 320 * stateIndexCur: 1
-* _indexCur: 1 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 2
-* _indexCur: 1 * Q value: 0
- states size: 5 state: 520
-* state: 520 * action: 320 * stateIndexCur: 2
-* _indexCur: 2 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 2
-* _indexCur: 2 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 520 * nextstate: 520 * Reward: 0
-* q learn!
-* stateIndexNest: 2
-* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 4
-* _indexCur: 0 * Q value: 0
-* feedback bks!
-* si: 0 ai: 0
-* stateIndex: 0
-* actionVec: 
-* randNum: 31
-* randa: 2
-* randa: 0
-* si: 0 ai: 1
-* stateIndex: 0
-* actionVec: 
-* randNum: 41
-* randa: 0
-* si: 1 ai: 0
-* stateIndex: 2
-* actionVec: 
-* randNum: 68
-* randa: 2
-* si: 1 ai: 1
-* stateIndex: 0
-* actionVec: 
-* randNum: 6
-* randa: 3
-* si: 2 ai: 0
-* stateIndex: 1
-* actionVec: 
-* randNum: 67
-* randa: 0
-* si: 2 ai: 1
-* stateIndex: 2
-* actionVec: 
-* randNum: 52
-* randa: 3
-* find max actions!
-* find slotNums!
-* find the index of selected action!
-320 320 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 0
-420 420 
-* rLearn[si][ai]->_actionSuggestIndex: 2
-* rLearn[si][ai]->_actionSuggestIndex: 3
-420 520 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* feedbackBlackkeyRL:si: 0
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* feedbackBlackkeyRL:si: 1
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* feedbackBlackkeyRL:si: 2
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* suggested action++++++++++++++++++++++++++++++++++: 520
-* feedback bks end!
-
-line 261817 total 0.170242 total0 0.43137 false 0.031667 over 0.170242 false0 0.08024 over0 0.43137 overaggr 0.0894791 overcuckoo 0.0807624
-over_uai 0.134775 over_uai 0.0895425 over_ai,0.195133,over_ai,0.0316371,countIP 5.02949e+08 countIP0 6.15177e+08 keysum 4.29782e+08 pktSum 2.74029e+09 aggrSum 3.84566e+07 blackkey_num 45975862 feedback 108 feedsumportion 0.955999 finger0 9 finger 14 time 106360,runTime,16
-
-
-line 261817 total 0.102825 total0 0.465771 false 0.0295273 over 0.102825 false0 0.133752 over0 0.465771 overaggr 0.0536711 overcuckoo 0.0491535
-over_uai 0.207411 over_uai 0.134775 over_ai,0.277983,over_ai,0.0508207,countIP 6.74212e+08 countIP0 8.96099e+08 keysum 6.1135e+08 pktSum 2.74029e+09 aggrSum 3.28118e+07 blackkey_num 42696363 feedback 108 feedsumportion 0.918592 finger0 9 finger 14 time 106360,runTime,16
-
-
-line 261817 total 0.127537 total0 0.695616 false 0.0359828 over 0.127537 false0 0.196258 over0 0.695616 overaggr 0.0448003 overcuckoo 0.0827367
-over_uai 0.0895425 over_uai 0.207411 over_ai,0.0979983,over_ai,0.174051,countIP 6.7991e+08 countIP0 1.02246e+09 keysum 6.03005e+08 pktSum 2.74029e+09 aggrSum 2.70148e+07 blackkey_num 48619121 feedback 108 feedsumportion 0.800695 finger0 9 finger 14 time 106360,runTime,16
-
-
-line 277993 total 0.17046 total0 0.432946 false 0.0316729 over 0.17046 false0 0.080445 over0 0.432946 overaggr 0.08786 overcuckoo 0.0826001
-over_uai 0.134775 over_uai 0.0895425 over_ai,0.195272,over_ai,0.0325094,countIP 5.34959e+08 countIP0 6.54929e+08 keysum 4.57051e+08 pktSum 2.91684e+09 aggrSum 4.01565e+07 blackkey_num 50205231 feedback 108 feedsumportion 0.955999 finger0 9 finger 14 time 106360,runTime,17
-
-
-line 277993 total 0.103195 total0 0.464405 false 0.0296158 over 0.103195 false0 0.133278 over0 0.464405 overaggr 0.052104 overcuckoo 0.0510914
-over_uai 0.207411 over_uai 0.134775 over_ai,0.282563,over_ai,0.0501653,countIP 7.17554e+08 countIP0 9.52496e+08 keysum 6.50432e+08 pktSum 2.91684e+09 aggrSum 3.38901e+07 blackkey_num 50129795 feedback 108 feedsumportion 0.918592 finger0 9 finger 14 time 106360,runTime,17
-
-
-line 277993 total 0.127757 total0 0.688414 false 0.0363152 over 0.127757 false0 0.195683 over0 0.688414 overaggr 0.0429197 overcuckoo 0.0848373
-over_uai 0.0895425 over_uai 0.207411 over_ai,0.0974527,over_ai,0.175619,countIP 7.28085e+08 countIP0 1.09005e+09 keysum 6.45605e+08 pktSum 2.91684e+09 aggrSum 2.77091e+07 blackkey_num 53493773 feedback 108 feedsumportion 0.800695 finger0 9 finger 14 time 106360,runTime,17
-
-
-line 294495 total 0.170835 total0 0.439218 false 0.0315478 over 0.170835 false0 0.0811094 over0 0.439218 overaggr 0.0855066 overcuckoo 0.0853286
-over_uai 0.134775 over_uai 0.0895425 over_ai,0.195758,over_ai,0.0324462,countIP 5.63519e+08 countIP0 6.92691e+08 keysum 4.81297e+08 pktSum 3.08758e+09 aggrSum 4.1154e+07 blackkey_num 54264576 feedback 108 feedsumportion 0.955999 finger0 9 finger 14 time 106360,runTime,18.0001
-
-
-line 294495 total 0.100188 total0 0.461351 false 0.0289317 over 0.100188 false0 0.133226 over0 0.461351 overaggr 0.0507258 overcuckoo 0.0494627
-over_uai 0.207411 over_uai 0.134775 over_ai,0.271443,over_ai,0.0494093,countIP 7.61142e+08 countIP0 1.011e+09 keysum 6.91828e+08 pktSum 3.08758e+09 aggrSum 3.50935e+07 blackkey_num 52284678 feedback 108 feedsumportion 0.918592 finger0 9 finger 14 time 106360,runTime,18.0001
-
-
-line 294495 total 0.130231 total0 0.691188 false 0.0369265 over 0.130231 false0 0.195985 over0 0.691188 overaggr 0.041682 overcuckoo 0.0885485
-over_uai 0.0895425 over_uai 0.207411 over_ai,0.0976158,over_ai,0.181601,countIP 7.70902e+08 countIP0 1.15352e+09 keysum 6.82075e+08 pktSum 3.08758e+09 aggrSum 2.84302e+07 blackkey_num 59111077 feedback 108 feedsumportion 0.800695 finger0 9 finger 14 time 106360,runTime,18.0001
-
-
-line 310966 total 0.170417 total0 0.443546 false 0.0314374 over 0.170417 false0 0.0818226 over0 0.443546 overaggr 0.0819868 overcuckoo 0.0884298
-over_uai 0.134775 over_uai 0.0895425 over_ai,0.195069,over_ai,0.0322594,countIP 5.93657e+08 countIP0 7.32194e+08 keysum 5.07219e+08 pktSum 3.25677e+09 aggrSum 4.15852e+07 blackkey_num 58365670 feedback 108 feedsumportion 0.955999 finger0 9 finger 14 time 106360,runTime,19.0001
-
-
-line 310966 total 0.100148 total0 0.460518 false 0.0290158 over 0.100148 false0 0.133425 over0 0.460518 overaggr 0.0490727 overcuckoo 0.0510756
-over_uai 0.207411 over_uai 0.134775 over_ai,0.274921,over_ai,0.0483059,countIP 8.04878e+08 countIP0 1.06853e+09 keysum 7.31609e+08 pktSum 3.25677e+09 aggrSum 3.59021e+07 blackkey_num 56190204 feedback 108 feedsumportion 0.918592 finger0 9 finger 14 time 106360,runTime,19.0001
-
-
-line 310966 total 0.130913 total0 0.694533 false 0.0371465 over 0.130913 false0 0.197073 over0 0.694533 overaggr 0.0405074 overcuckoo 0.090406
-over_uai 0.0895425 over_uai 0.207411 over_ai,0.09768,over_ai,0.182791,countIP 8.14085e+08 countIP0 1.21981e+09 keysum 7.19847e+08 pktSum 3.25677e+09 aggrSum 2.91591e+07 blackkey_num 63782451 feedback 108 feedsumportion 0.800695 finger0 9 finger 14 time 106360,runTime,19.0001
-
-
-line 327397 total 0.171537 total0 0.439432 false 0.0316273 over 0.171537 false0 0.0810208 over0 0.439432 overaggr 0.0792997 overcuckoo 0.0922373
-over_uai 0.134775 over_uai 0.0895425 over_ai,0.196202,over_ai,0.032821,countIP 6.2496e+08 countIP0 7.6787e+08 keysum 5.33453e+08 pktSum 3.42674e+09 aggrSum 4.23027e+07 blackkey_num 63268208 feedback 108 feedsumportion 0.955999 finger0 9 finger 14 time 106360,runTime,20.0001
-
-
-line 327397 total 0.100067 total0 0.460129 false 0.0290794 over 0.100067 false0 0.133714 over0 0.460129 overaggr 0.047744 overcuckoo 0.0523226
-over_uai 0.207411 over_uai 0.134775 over_ai,0.274694,over_ai,0.0477876,countIP 8.488e+08 countIP0 1.12662e+09 keysum 7.71589e+08 pktSum 3.42674e+09 aggrSum 3.68388e+07 blackkey_num 60067400 feedback 108 feedsumportion 0.918592 finger0 9 finger 14 time 106360,runTime,20.0001
-
-
-line 327397 total 0.131103 total0 0.694969 false 0.0371862 over 0.131103 false0 0.197122 over0 0.694969 overaggr 0.0391406 overcuckoo 0.0919619
-over_uai 0.0895425 over_uai 0.207411 over_ai,0.0974351,over_ai,0.183863,countIP 8.56466e+08 countIP0 1.28342e+09 keysum 7.57196e+08 pktSum 3.42674e+09 aggrSum 2.96371e+07 blackkey_num 68328252 feedback 108 feedsumportion 0.800695 finger0 9 finger 14 time 106360,runTime,20.0001
-
-* feedback sum: 7.78994e+06 num: 118
-* feedback sum: 7.28166e+06 num: 122
-* feedback sum: 2.54616e+06 num: 109
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 520
-* state: 520 * action: 320 * stateIndexCur: 2
-* _indexCur: 2 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 2
-* _indexCur: 2 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 3
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 420
-* state: 420 * action: 320 * stateIndexCur: 1
-* _indexCur: 1 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 1 * Q value: 0
- states size: 5 state: 520
-* state: 520 * action: 320 * stateIndexCur: 2
-* _indexCur: 2 * action: 320
-* input: 520 * nextstate: 520 * Reward: 0
-* q learn!
-* stateIndexNest: 2
-* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 2 * Q value: 0
-* feedback bks!
-* si: 0 ai: 0
 * stateIndex: 0
 * actionVec: 
 * randNum: 35
 * randa: 2
+* randa: 1
 * randa: 2
-* randa: 0
-* si: 0 ai: 1
+* randa: 1
+* randa: 3
+* si: 2 ai: 0
 * stateIndex: 0
 * actionVec: 
-* randNum: 22
+* randNum: 75
+* randa: 4
+* si: 2 ai: 1
+* stateIndex: 0
+* actionVec: 
+* randNum: 88
+* randa: 4
+* find max actions!
+* find slotNums!
+* find the index of selected action!
+420 520 
+* rLearn[si][ai]->_actionSuggestIndex: 3
+* rLearn[si][ai]->_actionSuggestIndex: 4
+420 420 
+* rLearn[si][ai]->_actionSuggestIndex: 3
+* rLearn[si][ai]->_actionSuggestIndex: 3
+320 320 
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* feedbackBlackkeyRL:si: 0
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 0
+* suggested action++++++++++++++++++++++++++++++++++: 520
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
+* feedbackBlackkeyRL:si: 1
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 0
+* feedbackBlackkeyRL:si: 2
+* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
+* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
+* feedback bks end!
+
+line 99457 total 0.181823 total0 0.400179 false 0.0331643 over 0.181823 false0 0.0729921 over0 0.400179 overaggr 0.139844 overcuckoo 0.0419795
+over_uai 0.102256 over_uai 0.101536 over_ai,0.206801,over_ai,0.0329662,countIP 1.87102e+08 countIP0 2.21671e+08 keysum 1.58317e+08 pktSum 1.02629e+09 aggrSum 2.21396e+07 blackkey_num 4227783 feedback 148 feedsumportion 0.960925 finger0 9 finger 14 time 132644,runTime,6.00002
+
+
+line 99457 total 0.112405 total0 0.457786 false 0.0333834 over 0.112405 false0 0.135958 over0 0.457786 overaggr 0.0890049 overcuckoo 0.0234005
+over_uai 0.229163 over_uai 0.102256 over_ai,0.262445,over_ai,0.0684275,countIP 2.61419e+08 countIP0 3.42585e+08 keysum 2.35003e+08 pktSum 1.02629e+09 aggrSum 2.09165e+07 blackkey_num 5644532 feedback 148 feedsumportion 0.95774 finger0 9 finger 14 time 132644,runTime,6.00002
+
+
+line 99457 total 0.143759 total0 0.766857 false 0.0371182 over 0.143759 false0 0.198 over0 0.766857 overaggr 0.118333 overcuckoo 0.0254266
+over_uai 0.101536 over_uai 0.229163 over_ai,0.109878,over_ai,0.194746,countIP 2.40882e+08 countIP0 3.7211e+08 keysum 2.10606e+08 pktSum 1.02629e+09 aggrSum 2.49216e+07 blackkey_num 4275388 feedback 148 feedsumportion 0.96362 finger0 9 finger 14 time 132644,runTime,6.00002
+
+
+line 116006 total 0.177818 total0 0.394717 false 0.0329725 over 0.177818 false0 0.0731918 over0 0.394717 overaggr 0.1263 overcuckoo 0.0515178
+over_uai 0.102256 over_uai 0.101536 over_ai,0.20203,over_ai,0.0330777,countIP 2.19822e+08 countIP0 2.60303e+08 keysum 1.86635e+08 pktSum 1.19314e+09 aggrSum 2.35721e+07 blackkey_num 8300654 feedback 148 feedsumportion 0.960925 finger0 9 finger 14 time 132644,runTime,7.00002
+
+
+line 116006 total 0.111794 total0 0.466071 false 0.0327054 over 0.111794 false0 0.13635 over0 0.466071 overaggr 0.0794743 overcuckoo 0.0323192
+over_uai 0.229163 over_uai 0.102256 over_ai,0.261056,over_ai,0.0674531,countIP 3.00242e+08 countIP0 3.95916e+08 keysum 2.70052e+08 pktSum 1.19314e+09 aggrSum 2.14622e+07 blackkey_num 9348364 feedback 148 feedsumportion 0.95774 finger0 9 finger 14 time 132644,runTime,7.00002
+
+
+line 116006 total 0.141818 total0 0.76123 false 0.0368145 over 0.141818 false0 0.197607 over0 0.76123 overaggr 0.102314 overcuckoo 0.0395042
+over_uai 0.101536 over_uai 0.229163 over_ai,0.109737,over_ai,0.190012,countIP 2.80768e+08 countIP0 4.33078e+08 keysum 2.45895e+08 pktSum 1.19314e+09 aggrSum 2.51586e+07 blackkey_num 8626660 feedback 148 feedsumportion 0.96362 finger0 9 finger 14 time 132644,runTime,7.00002
+
+
+line 132000 total 0.170598 total0 0.390144 false 0.0318581 over 0.170597 false0 0.0728572 over0 0.390144 overaggr 0.116907 overcuckoo 0.0536908
+over_uai 0.102256 over_uai 0.101536 over_ai,0.193342,over_ai,0.0332796,countIP 2.52531e+08 countIP0 2.99893e+08 keysum 2.15728e+08 pktSum 1.37093e+09 aggrSum 2.52201e+07 blackkey_num 11786288 feedback 148 feedsumportion 0.960925 finger0 9 finger 14 time 132644,runTime,8.00002
+
+
+line 132000 total 0.111207 total0 0.468559 false 0.0319624 over 0.111207 false0 0.134671 over0 0.468559 overaggr 0.0726724 overcuckoo 0.0385341
+over_uai 0.229163 over_uai 0.102256 over_ai,0.264997,over_ai,0.064687,countIP 3.40096e+08 countIP0 4.49467e+08 keysum 3.0606e+08 pktSum 1.37093e+09 aggrSum 2.22421e+07 blackkey_num 13105467 feedback 148 feedsumportion 0.95774 finger0 9 finger 14 time 132644,runTime,8.00002
+
+
+line 132000 total 0.13473 total0 0.729166 false 0.0359128 over 0.13473 false0 0.194363 over0 0.729166 overaggr 0.0877071 overcuckoo 0.0470225
+over_uai 0.101536 over_uai 0.229163 over_ai,0.104518,over_ai,0.181418,countIP 3.27394e+08 countIP0 4.98902e+08 keysum 2.88522e+08 pktSum 1.37093e+09 aggrSum 2.53054e+07 blackkey_num 12447291 feedback 148 feedsumportion 0.96362 finger0 9 finger 14 time 132644,runTime,8.00002
+
+
+line 147772 total 0.165828 total0 0.380839 false 0.0315444 over 0.165828 false0 0.0724446 over0 0.380839 overaggr 0.105123 overcuckoo 0.0607047
+over_uai 0.102256 over_uai 0.101536 over_ai,0.188069,over_ai,0.0328862,countIP 2.883e+08 countIP0 3.41471e+08 keysum 2.47292e+08 pktSum 1.5473e+09 aggrSum 2.59962e+07 blackkey_num 15825202 feedback 148 feedsumportion 0.960925 finger0 9 finger 14 time 132644,runTime,9.00003
+
+
+line 147772 total 0.105605 total0 0.465259 false 0.0305865 over 0.105605 false0 0.134753 over0 0.465259 overaggr 0.0659958 overcuckoo 0.0396096
+over_uai 0.229163 over_uai 0.102256 over_ai,0.250115,over_ai,0.0613993,countIP 3.84196e+08 countIP0 5.09176e+08 keysum 3.47499e+08 pktSum 1.5473e+09 aggrSum 2.29335e+07 blackkey_num 15691616 feedback 148 feedsumportion 0.95774 finger0 9 finger 14 time 132644,runTime,9.00003
+
+
+line 147772 total 0.1296 total0 0.707765 false 0.0354958 over 0.1296 false0 0.193848 over0 0.707765 overaggr 0.0765191 overcuckoo 0.0530809
+over_uai 0.101536 over_uai 0.229163 over_ai,0.101195,over_ai,0.173685,countIP 3.75786e+08 countIP0 5.68125e+08 keysum 3.32671e+08 pktSum 1.5473e+09 aggrSum 2.54557e+07 blackkey_num 16474432 feedback 148 feedsumportion 0.96362 finger0 9 finger 14 time 132644,runTime,9.00003
+
+
+line 164044 total 0.164144 total0 0.385392 false 0.031274 over 0.164144 false0 0.073428 over0 0.385392 overaggr 0.101556 overcuckoo 0.0625882
+over_uai 0.102256 over_uai 0.101536 over_ai,0.186728,over_ai,0.0329516,countIP 3.20164e+08 countIP0 3.81011e+08 keysum 2.75021e+08 pktSum 1.71848e+09 aggrSum 2.79299e+07 blackkey_num 19605845 feedback 148 feedsumportion 0.960925 finger0 9 finger 14 time 132644,runTime,10
+
+
+line 164044 total 0.105269 total0 0.469009 false 0.0305145 over 0.105269 false0 0.135952 over0 0.469009 overaggr 0.0602118 overcuckoo 0.0450573
+over_uai 0.229163 over_uai 0.102256 over_ai,0.254702,over_ai,0.0589433,countIP 4.26848e+08 countIP0 5.67322e+08 keysum 3.86193e+08 pktSum 1.71848e+09 aggrSum 2.32534e+07 blackkey_num 19562610 feedback 148 feedsumportion 0.95774 finger0 9 finger 14 time 132644,runTime,10
+
+
+line 164044 total 0.12746 total0 0.700401 false 0.0351256 over 0.12746 false0 0.193017 over0 0.700401 overaggr 0.0692916 overcuckoo 0.0581687
+over_uai 0.101536 over_uai 0.229163 over_ai,0.0993383,over_ai,0.172137,countIP 4.18589e+08 countIP0 6.31303e+08 keysum 3.71267e+08 pktSum 1.71848e+09 aggrSum 2.57257e+07 blackkey_num 20394550 feedback 148 feedsumportion 0.96362 finger0 9 finger 14 time 132644,runTime,10
+
+* feedback sum: 8.51167e+06 num: 119
+* feedback sum: 4.09565e+06 num: 125
+* feedback sum: 743334 num: 116
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 420 * nextstate: 420 * Reward: 0
+* q learn!
+* stateIndexNest: 1
+* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 3
+* _indexCur: 0 * Q value: 0
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 520 * nextstate: 520 * Reward: 0
+* q learn!
+* stateIndexNest: 2
+* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 4
+* _indexCur: 0 * Q value: 0
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 420 * nextstate: 420 * Reward: 0
+* q learn!
+* stateIndexNest: 1
+* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 3
+* _indexCur: 0 * Q value: 0
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 420 * nextstate: 420 * Reward: 0
+* q learn!
+* stateIndexNest: 1
+* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 3
+* _indexCur: 0 * Q value: 0
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 320 * nextstate: 320 * Reward: 0
+* q learn!
+* stateIndexNest: 0
+* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 0 * Q value: 0
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 320 * nextstate: 320 * Reward: 0
+* q learn!
+* stateIndexNest: 0
+* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 0 * Q value: 0
+* feedback bks!
+* si: 0 ai: 0
+* stateIndex: 1
+* actionVec: 
+* randNum: 86
 * randa: 0
+* si: 0 ai: 1
+* stateIndex: 2
+* actionVec: 
+* randNum: 19
+* randa: 4
 * si: 1 ai: 0
 * stateIndex: 1
 * actionVec: 
-* randNum: 83
+* randNum: 38
 * randa: 3
 * si: 1 ai: 1
 * stateIndex: 1
 * actionVec: 
-* randNum: 61
+* randNum: 75
 * randa: 1
-* randa: 4
-* si: 2 ai: 0
-* stateIndex: 1
-* actionVec: 
-* randNum: 86
-* randa: 1
-* randa: 2
-* si: 2 ai: 1
-* stateIndex: 2
-* actionVec: 
-* randNum: 7
 * randa: 3
+* si: 2 ai: 0
+* stateIndex: 0
+* actionVec: 
+* randNum: 79
+* randa: 0
+* si: 2 ai: 1
+* stateIndex: 0
+* actionVec: 
+* randNum: 37
+* randa: 1
+* randa: 0
 * find max actions!
 * find slotNums!
 * find the index of selected action!
-320 320 
+420 520 
 * rLearn[si][ai]->_actionSuggestIndex: 0
 * rLearn[si][ai]->_actionSuggestIndex: 0
 420 420 
 * rLearn[si][ai]->_actionSuggestIndex: 0
 * rLearn[si][ai]->_actionSuggestIndex: 0
+320 320 
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* feedbackBlackkeyRL:si: 0
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 0
+* suggested action++++++++++++++++++++++++++++++++++: 520
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
+* feedbackBlackkeyRL:si: 1
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 0
+* feedbackBlackkeyRL:si: 2
+* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
+* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
+* feedback bks end!
+
+line 180465 total 0.161932 total0 0.385996 false 0.0308157 over 0.161932 false0 0.0734553 over0 0.385996 overaggr 0.0960998 overcuckoo 0.065832
+over_uai 0.0972817 over_uai 0.0763083 over_ai,0.185021,over_ai,0.0319298,countIP 3.50317e+08 countIP0 4.17871e+08 keysum 3.01495e+08 pktSum 1.88581e+09 aggrSum 2.89736e+07 blackkey_num 23140442 feedback 116 feedsumportion 0.941178 finger0 9 finger 14 time 129745,runTime,11
+
+
+line 180465 total 0.100387 total0 0.467077 false 0.0293345 over 0.100387 false0 0.136486 over0 0.467077 overaggr 0.0571832 overcuckoo 0.043204
+over_uai 0.215347 over_uai 0.0972817 over_ai,0.23723,over_ai,0.0578346,countIP 4.69255e+08 countIP0 6.25628e+08 keysum 4.26445e+08 pktSum 1.88581e+09 aggrSum 2.43855e+07 blackkey_num 21644622 feedback 116 feedsumportion 0.900574 finger0 9 finger 14 time 129745,runTime,11
+
+
+line 180465 total 0.128034 total0 0.701875 false 0.0353147 over 0.128034 false0 0.193593 over0 0.701875 overaggr 0.0633606 overcuckoo 0.0646732
+over_uai 0.0763083 over_uai 0.215347 over_ai,0.100143,over_ai,0.172519,countIP 4.59896e+08 countIP0 6.9385e+08 keysum 4.07697e+08 pktSum 1.88581e+09 aggrSum 2.5832e+07 blackkey_num 25152540 feedback 116 feedsumportion 0.688413 finger0 9 finger 14 time 129745,runTime,11
+
+
+line 196879 total 0.160634 total0 0.38788 false 0.0306729 over 0.160634 false0 0.0740654 over0 0.38788 overaggr 0.0918935 overcuckoo 0.0687401
+over_uai 0.0972817 over_uai 0.0763083 over_ai,0.183466,over_ai,0.0318647,countIP 3.82226e+08 countIP0 4.57064e+08 keysum 3.29325e+08 pktSum 2.054e+09 aggrSum 3.02629e+07 blackkey_num 27117925 feedback 116 feedsumportion 0.941178 finger0 9 finger 14 time 129745,runTime,12
+
+
+line 196879 total 0.101728 total0 0.464999 false 0.0295393 over 0.101728 false0 0.135025 over0 0.464999 overaggr 0.0549854 overcuckoo 0.0467422
+over_uai 0.215347 over_uai 0.0972817 over_ai,0.248847,over_ai,0.0564253,countIP 5.09236e+08 countIP0 6.77146e+08 keysum 4.62216e+08 pktSum 2.054e+09 aggrSum 2.54151e+07 blackkey_num 25839633 feedback 116 feedsumportion 0.900574 finger0 9 finger 14 time 129745,runTime,12
+
+
+line 196879 total 0.128232 total0 0.693446 false 0.0355766 over 0.128232 false0 0.19239 over0 0.693446 overaggr 0.0581374 overcuckoo 0.0700943
+over_uai 0.0763083 over_uai 0.215347 over_ai,0.0996567,over_ai,0.173776,countIP 5.033e+08 countIP0 7.55441e+08 keysum 4.46097e+08 pktSum 2.054e+09 aggrSum 2.59349e+07 blackkey_num 30040423 feedback 116 feedsumportion 0.688413 finger0 9 finger 14 time 129745,runTime,12
+
+
+line 213015 total 0.16058 total0 0.401992 false 0.0305571 over 0.16058 false0 0.0764956 over0 0.401992 overaggr 0.0873188 overcuckoo 0.0732615
+over_uai 0.0972817 over_uai 0.0763083 over_ai,0.183364,over_ai,0.0310604,countIP 4.1304e+08 countIP0 4.98956e+08 keysum 3.55891e+08 pktSum 2.22613e+09 aggrSum 3.1076e+07 blackkey_num 31237135 feedback 116 feedsumportion 0.941178 finger0 9 finger 14 time 129745,runTime,13
+
+
+line 213015 total 0.0991459 total0 0.465345 false 0.0287736 over 0.0991459 false0 0.13505 over0 0.465345 overaggr 0.0538962 overcuckoo 0.0452497
+over_uai 0.215347 over_uai 0.0972817 over_ai,0.244202,over_ai,0.0552219,countIP 5.50382e+08 countIP0 7.33751e+08 keysum 5.00736e+08 pktSum 2.22613e+09 aggrSum 2.69878e+07 blackkey_num 28437777 feedback 116 feedsumportion 0.900574 finger0 9 finger 14 time 129745,runTime,13
+
+
+line 213015 total 0.128758 total0 0.691293 false 0.0357958 over 0.128758 false0 0.192186 over0 0.691293 overaggr 0.0538812 overcuckoo 0.0748765
+over_uai 0.0763083 over_uai 0.215347 over_ai,0.0996823,over_ai,0.175027,countIP 5.46609e+08 countIP0 8.19021e+08 keysum 4.84257e+08 pktSum 2.22613e+09 aggrSum 2.60923e+07 blackkey_num 35003960 feedback 116 feedsumportion 0.688413 finger0 9 finger 14 time 129745,runTime,13
+
+
+line 229292 total 0.16171 total0 0.415622 false 0.030618 over 0.16171 false0 0.0786935 over0 0.415622 overaggr 0.0857088 overcuckoo 0.0760009
+over_uai 0.0972817 over_uai 0.0763083 over_ai,0.185016,over_ai,0.0306613,countIP 4.43215e+08 countIP0 5.40087e+08 keysum 3.81519e+08 pktSum 2.39652e+09 aggrSum 3.26996e+07 blackkey_num 35666664 feedback 116 feedsumportion 0.941178 finger0 9 finger 14 time 129745,runTime,14
+
+
+line 229292 total 0.101396 total0 0.468022 false 0.029311 over 0.101396 false0 0.135294 over0 0.468022 overaggr 0.0518955 overcuckoo 0.0495
+over_uai 0.215347 over_uai 0.0972817 over_ai,0.259784,over_ai,0.0537369,countIP 5.91914e+08 countIP0 7.88947e+08 keysum 5.37422e+08 pktSum 2.39652e+09 aggrSum 2.78898e+07 blackkey_num 33275543 feedback 116 feedsumportion 0.900574 finger0 9 finger 14 time 129745,runTime,14
+
+
+line 229292 total 0.129173 total0 0.691346 false 0.0360447 over 0.129173 false0 0.192915 over0 0.691346 overaggr 0.0507782 overcuckoo 0.0783948
+over_uai 0.0763083 over_uai 0.215347 over_ai,0.0995072,over_ai,0.176036,countIP 5.90374e+08 countIP0 8.843e+08 keysum 5.22838e+08 pktSum 2.39652e+09 aggrSum 2.65487e+07 blackkey_num 39693684 feedback 116 feedsumportion 0.688413 finger0 9 finger 14 time 129745,runTime,14
+
+
+line 245507 total 0.166865 total0 0.419841 false 0.0312475 over 0.166865 false0 0.0786205 over0 0.419841 overaggr 0.0869713 overcuckoo 0.0798935
+over_uai 0.0972817 over_uai 0.0763083 over_ai,0.191251,over_ai,0.0306449,countIP 4.72564e+08 countIP0 5.75015e+08 keysum 4.04986e+08 pktSum 2.56765e+09 aggrSum 3.52221e+07 blackkey_num 41399031 feedback 116 feedsumportion 0.941178 finger0 9 finger 14 time 129745,runTime,15
+
+
+line 245507 total 0.100337 total0 0.47071 false 0.0289256 over 0.100337 false0 0.135698 over0 0.47071 overaggr 0.0507853 overcuckoo 0.0495518
+over_uai 0.215347 over_uai 0.0972817 over_ai,0.261966,over_ai,0.0520852,countIP 6.32223e+08 countIP0 8.4503e+08 keysum 5.74573e+08 pktSum 2.56765e+09 aggrSum 2.91798e+07 blackkey_num 36468202 feedback 116 feedsumportion 0.900574 finger0 9 finger 14 time 129745,runTime,15
+
+
+line 245507 total 0.128948 total0 0.688801 false 0.0362612 over 0.128948 false0 0.193697 over0 0.688801 overaggr 0.0477242 overcuckoo 0.0812234
+over_uai 0.0763083 over_uai 0.215347 over_ai,0.0994864,over_ai,0.175222,countIP 6.36235e+08 countIP0 9.51749e+08 keysum 5.63565e+08 pktSum 2.56765e+09 aggrSum 2.68957e+07 blackkey_num 44454455 feedback 116 feedsumportion 0.688413 finger0 9 finger 14 time 129745,runTime,15
+
+* feedback sum: 1.00075e+07 num: 121
+* feedback sum: 5.84932e+06 num: 129
+* feedback sum: 910818 num: 112
+ states size: 5 state: 420
+* state: 420 * action: 320 * stateIndexCur: 1
+* _indexCur: 1 * action: 320
+* input: 420 * nextstate: 420 * Reward: 0
+* q learn!
+* stateIndexNest: 1
+* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 1 * Q value: 0
+ states size: 5 state: 520
+* state: 520 * action: 320 * stateIndexCur: 2
+* _indexCur: 2 * action: 320
+* input: 520 * nextstate: 520 * Reward: 0
+* q learn!
+* stateIndexNest: 2
+* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 2 * Q value: 0
+ states size: 5 state: 420
+* state: 420 * action: 320 * stateIndexCur: 1
+* _indexCur: 1 * action: 320
+* input: 420 * nextstate: 420 * Reward: 0
+* q learn!
+* stateIndexNest: 1
+* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 1 * Q value: 0
+ states size: 5 state: 420
+* state: 420 * action: 320 * stateIndexCur: 1
+* _indexCur: 1 * action: 320
+* input: 420 * nextstate: 420 * Reward: 0
+* q learn!
+* stateIndexNest: 1
+* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 1 * Q value: 0
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 320 * nextstate: 320 * Reward: 0
+* q learn!
+* stateIndexNest: 0
+* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 0 * Q value: 0
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 320 * nextstate: 320 * Reward: 0
+* q learn!
+* stateIndexNest: 0
+* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 0 * Q value: 0
+* feedback bks!
+* si: 0 ai: 0
+* stateIndex: 1
+* actionVec: 
+* randNum: 77
+* randa: 4
+* si: 0 ai: 1
+* stateIndex: 2
+* actionVec: 
+* randNum: 46
+* randa: 0
+* si: 1 ai: 0
+* stateIndex: 1
+* actionVec: 
+* randNum: 84
+* randa: 2
+* si: 1 ai: 1
+* stateIndex: 1
+* actionVec: 
+* randNum: 78
+* randa: 1
+* randa: 0
+* si: 2 ai: 0
+* stateIndex: 0
+* actionVec: 
+* randNum: 62
+* randa: 2
+* randa: 2
+* randa: 4
+* si: 2 ai: 1
+* stateIndex: 0
+* actionVec: 
+* randNum: 42
+* randa: 2
+* randa: 1
+* randa: 2
+* randa: 4
+* find max actions!
+* find slotNums!
+* find the index of selected action!
+420 520 
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* rLearn[si][ai]->_actionSuggestIndex: 0
+320 420 
+* rLearn[si][ai]->_actionSuggestIndex: 2
+* rLearn[si][ai]->_actionSuggestIndex: 0
+320 320 
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* feedbackBlackkeyRL:si: 0
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 0
+* suggested action++++++++++++++++++++++++++++++++++: 520
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
+* feedbackBlackkeyRL:si: 1
+* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 0
+* feedbackBlackkeyRL:si: 2
+* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
+* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
+* feedback bks end!
+
+line 261852 total 0.169601 total0 0.431236 false 0.0315474 over 0.169601 false0 0.0802137 over0 0.431236 overaggr 0.0872711 overcuckoo 0.08233
+over_uai 0.135084 over_uai 0.0897045 over_ai,0.194401,over_ai,0.0315176,countIP 5.02699e+08 countIP0 6.1515e+08 keysum 4.29804e+08 pktSum 2.74046e+09 aggrSum 3.75094e+07 blackkey_num 46526661 feedback 112 feedsumportion 0.954531 finger0 9 finger 14 time 116720,runTime,16
+
+
+line 261852 total 0.102695 total0 0.467578 false 0.0294911 over 0.102695 false0 0.134275 over0 0.467578 overaggr 0.0534312 overcuckoo 0.0492638
+over_uai 0.207359 over_uai 0.135084 over_ai,0.277532,over_ai,0.0507923,countIP 6.74194e+08 countIP0 8.97285e+08 keysum 6.11405e+08 pktSum 2.74046e+09 aggrSum 3.26681e+07 blackkey_num 42822628 feedback 112 feedsumportion 0.92212 finger0 9 finger 14 time 116720,runTime,16
+
+
+line 261852 total 0.127791 total0 0.683991 false 0.0360543 over 0.127791 false0 0.192977 over0 0.683991 overaggr 0.0448984 overcuckoo 0.0828931
+over_uai 0.0897045 over_uai 0.207359 over_ai,0.0983168,over_ai,0.174205,countIP 6.80102e+08 countIP0 1.01551e+09 keysum 6.03039e+08 pktSum 2.74046e+09 aggrSum 2.70755e+07 blackkey_num 48636270 feedback 112 feedsumportion 0.743604 finger0 9 finger 14 time 116720,runTime,16
+
+
+line 278059 total 0.169848 total0 0.432911 false 0.0315561 over 0.169848 false0 0.0804306 over0 0.432911 overaggr 0.0860007 overcuckoo 0.0838472
+over_uai 0.135084 over_uai 0.0897045 over_ai,0.194569,over_ai,0.0324024,countIP 5.34805e+08 countIP0 6.55067e+08 keysum 4.57158e+08 pktSum 2.91777e+09 aggrSum 3.93159e+07 blackkey_num 50832596 feedback 112 feedsumportion 0.954531 finger0 9 finger 14 time 116720,runTime,17
+
+
+line 278059 total 0.10313 total0 0.46636 false 0.0295946 over 0.10313 false0 0.133828 over0 0.46636 overaggr 0.0519133 overcuckoo 0.0512167
+over_uai 0.207359 over_uai 0.135084 over_ai,0.282047,over_ai,0.0502296,countIP 7.17693e+08 countIP0 9.54009e+08 keysum 6.50597e+08 pktSum 2.91777e+09 aggrSum 3.37747e+07 blackkey_num 50314861 feedback 112 feedsumportion 0.92212 finger0 9 finger 14 time 116720,runTime,17
+
+
+line 278059 total 0.127963 total0 0.677014 false 0.0363742 over 0.127963 false0 0.192445 over0 0.677014 overaggr 0.0430639 overcuckoo 0.0848991
+over_uai 0.0897045 over_uai 0.207359 over_ai,0.0977942,over_ai,0.175601,countIP 7.28457e+08 countIP0 1.08304e+09 keysum 6.45816e+08 pktSum 2.91777e+09 aggrSum 2.78114e+07 blackkey_num 53465171 feedback 112 feedsumportion 0.743604 finger0 9 finger 14 time 116720,runTime,17
+
+
+line 294582 total 0.17022 total0 0.439176 false 0.0314334 over 0.17022 false0 0.0810998 over0 0.439176 overaggr 0.0839592 overcuckoo 0.0862608
+over_uai 0.135084 over_uai 0.0897045 over_ai,0.195053,over_ai,0.0323446,countIP 5.63446e+08 countIP0 6.92946e+08 keysum 4.81488e+08 pktSum 3.08887e+09 aggrSum 4.04253e+07 blackkey_num 54887394 feedback 112 feedsumportion 0.954531 finger0 9 finger 14 time 116720,runTime,18.0001
+
+
+line 294582 total 0.10002 total0 0.463789 false 0.0288871 over 0.10002 false0 0.133949 over0 0.463789 overaggr 0.0505282 overcuckoo 0.0494914
+over_uai 0.207359 over_uai 0.135084 over_ai,0.270847,over_ai,0.0493662,countIP 7.61427e+08 countIP0 1.01323e+09 keysum 6.92194e+08 pktSum 3.08887e+09 aggrSum 3.49754e+07 blackkey_num 52416229 feedback 112 feedsumportion 0.92212 finger0 9 finger 14 time 116720,runTime,18.0001
+
+
+line 294582 total 0.130432 total0 0.680031 false 0.0369876 over 0.130432 false0 0.192841 over0 0.680031 overaggr 0.0418317 overcuckoo 0.0886006
+over_uai 0.0897045 over_uai 0.207359 over_ai,0.0979046,over_ai,0.181686,countIP 7.71423e+08 countIP0 1.14648e+09 keysum 6.82414e+08 pktSum 3.08887e+09 aggrSum 2.85465e+07 blackkey_num 59086761 feedback 112 feedsumportion 0.743604 finger0 9 finger 14 time 116720,runTime,18.0001
+
+
+line 311029 total 0.169844 total0 0.443506 false 0.0313276 over 0.169844 false0 0.0818045 over0 0.443506 overaggr 0.0809517 overcuckoo 0.0888918
+over_uai 0.135084 over_uai 0.0897045 over_ai,0.19444,over_ai,0.0321254,countIP 5.93578e+08 countIP0 7.32434e+08 keysum 5.07399e+08 pktSum 3.25828e+09 aggrSum 4.10749e+07 blackkey_num 58977632 feedback 112 feedsumportion 0.954531 finger0 9 finger 14 time 116720,runTime,19.0001
+
+
+line 311029 total 0.100007 total0 0.463711 false 0.0289773 over 0.100007 false0 0.134361 over0 0.463711 overaggr 0.0489274 overcuckoo 0.0510797
+over_uai 0.207359 over_uai 0.135084 over_ai,0.274346,over_ai,0.048271,countIP 8.05202e+08 countIP0 1.07143e+09 keysum 7.31997e+08 pktSum 3.25828e+09 aggrSum 3.58147e+07 blackkey_num 56306773 feedback 112 feedsumportion 0.92212 finger0 9 finger 14 time 116720,runTime,19.0001
+
+
+line 311029 total 0.131088 total0 0.683904 false 0.0371927 over 0.131088 false0 0.19404 over0 0.683904 overaggr 0.0406711 overcuckoo 0.0904168
+over_uai 0.0897045 over_uai 0.207359 over_ai,0.097965,over_ai,0.182794,countIP 8.14533e+08 countIP0 1.21263e+09 keysum 7.20132e+08 pktSum 3.25828e+09 aggrSum 2.92885e+07 blackkey_num 63718151 feedback 112 feedsumportion 0.743604 finger0 9 finger 14 time 116720,runTime,19.0001
+
+
+line 327480 total 0.170985 total0 0.439291 false 0.0315327 over 0.170985 false0 0.0810133 over0 0.439291 overaggr 0.0787024 overcuckoo 0.0922825
+over_uai 0.135084 over_uai 0.0897045 over_ai,0.195548,over_ai,0.0327844,countIP 6.25112e+08 countIP0 7.68343e+08 keysum 5.33834e+08 pktSum 3.42853e+09 aggrSum 4.20141e+07 blackkey_num 63884597 feedback 112 feedsumportion 0.954531 finger0 9 finger 14 time 116720,runTime,20.0001
+
+
+line 327480 total 0.100284 total0 0.46385 false 0.0291384 over 0.100284 false0 0.134776 over0 0.46385 overaggr 0.0477717 overcuckoo 0.052512
+over_uai 0.207359 over_uai 0.135084 over_ai,0.27564,over_ai,0.0477922,countIP 8.49317e+08 countIP0 1.12996e+09 keysum 7.71907e+08 pktSum 3.42853e+09 aggrSum 3.68753e+07 blackkey_num 60393211 feedback 112 feedsumportion 0.92212 finger0 9 finger 14 time 116720,runTime,20.0001
+
+
+line 327480 total 0.131306 total0 0.684549 false 0.0372326 over 0.131305 false0 0.194109 over0 0.684549 overaggr 0.0399583 overcuckoo 0.0913472
+over_uai 0.0897045 over_uai 0.207359 over_ai,0.0976941,over_ai,0.183982,countIP 8.56866e+08 countIP0 1.2759e+09 keysum 7.57414e+08 pktSum 3.42853e+09 aggrSum 3.0265e+07 blackkey_num 67772720 feedback 112 feedsumportion 0.743604 finger0 9 finger 14 time 116720,runTime,20.0001
+
+* feedback sum: 8.62472e+06 num: 119
+* feedback sum: 7.46898e+06 num: 123
+* feedback sum: 3.11166e+06 num: 116
+ states size: 5 state: 420
+* state: 420 * action: 320 * stateIndexCur: 1
+* _indexCur: 1 * action: 320
+* input: 420 * nextstate: 420 * Reward: 0
+* q learn!
+* stateIndexNest: 1
+* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 1 * Q value: 0
+ states size: 5 state: 520
+* state: 520 * action: 320 * stateIndexCur: 2
+* _indexCur: 2 * action: 320
+* input: 520 * nextstate: 520 * Reward: 0
+* q learn!
+* stateIndexNest: 2
+* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 2 * Q value: 0
+ states size: 5 state: 420
+* state: 420 * action: 320 * stateIndexCur: 1
+* _indexCur: 1 * action: 320
+* input: 320 * nextstate: 320 * Reward: 0
+* q learn!
+* stateIndexNest: 0
+* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 2
+* _indexCur: 1 * Q value: 0
+ states size: 5 state: 420
+* state: 420 * action: 320 * stateIndexCur: 1
+* _indexCur: 1 * action: 320
+* input: 420 * nextstate: 420 * Reward: 0
+* q learn!
+* stateIndexNest: 1
+* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 1 * Q value: 0
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 320 * nextstate: 320 * Reward: 0
+* q learn!
+* stateIndexNest: 0
+* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 0 * Q value: 0
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 320 * nextstate: 320 * Reward: 0
+* q learn!
+* stateIndexNest: 0
+* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 0 * Q value: 0
+* feedback bks!
+* si: 0 ai: 0
+* stateIndex: 1
+* actionVec: 
+* randNum: 65
+* randa: 1
+* randa: 2
+* si: 0 ai: 1
+* stateIndex: 2
+* actionVec: 
+* randNum: 70
+* randa: 4
+* si: 1 ai: 0
+* stateIndex: 0
+* actionVec: 
+* randNum: 61
+* randa: 3
+* si: 1 ai: 1
+* stateIndex: 1
+* actionVec: 
+* randNum: 77
+* randa: 3
+* si: 2 ai: 0
+* stateIndex: 0
+* actionVec: 
+* randNum: 18
+* randa: 0
+* si: 2 ai: 1
+* stateIndex: 0
+* actionVec: 
+* randNum: 37
+* randa: 0
+* find max actions!
+* find slotNums!
+* find the index of selected action!
+420 520 
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* rLearn[si][ai]->_actionSuggestIndex: 0
+420 520 
+* rLearn[si][ai]->_actionSuggestIndex: 3
+* rLearn[si][ai]->_actionSuggestIndex: 3
+320 320 
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* feedbackBlackkeyRL:si: 0
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 0
+* suggested action++++++++++++++++++++++++++++++++++: 520
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
+* feedbackBlackkeyRL:si: 1
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
+* suggested action++++++++++++++++++++++++++++++++++: 520
+* cuckooBlackKeyTable[si].occupyRate(): 0
+* feedbackBlackkeyRL:si: 2
+* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
+* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
+* feedback bks end!
+
+line 343748 total 0.169046 total0 0.437185 false 0.0313123 over 0.169046 false0 0.0809792 over0 0.437185 overaggr 0.076126 overcuckoo 0.0929204
+over_uai 0.115958 over_uai 0.0863978 over_ai,0.193311,over_ai,0.0324647,countIP 6.57468e+08 countIP0 8.08268e+08 keysum 5.62397e+08 pktSum 3.59862e+09 aggrSum 4.2813e+07 blackkey_num 67501469 feedback 116 feedsumportion 0.946265 finger0 9 finger 14 time 130477,runTime,21.0001
+
+
+line 343748 total 0.098967 total0 0.464639 false 0.0287972 over 0.098967 false0 0.1352 over0 0.464639 overaggr 0.0469905 overcuckoo 0.0519766
+over_uai 0.245938 over_uai 0.115958 over_ai,0.269949,over_ai,0.0478954,countIP 8.91379e+08 countIP0 1.18798e+09 keysum 8.11106e+08 pktSum 3.59862e+09 aggrSum 3.81143e+07 blackkey_num 63209291 feedback 116 feedsumportion 0.942164 finger0 9 finger 14 time 130477,runTime,21.0001
+
+
+line 343748 total 0.131007 total0 0.687301 false 0.0371891 over 0.131007 false0 0.195104 over0 0.687301 overaggr 0.0382681 overcuckoo 0.0927393
+over_uai 0.0863978 over_uai 0.245938 over_ai,0.0982169,over_ai,0.181558,countIP 8.99913e+08 countIP0 1.34254e+09 keysum 7.95674e+08 pktSum 3.59862e+09 aggrSum 3.0449e+07 blackkey_num 72322921 feedback 116 feedsumportion 0.907135 finger0 9 finger 14 time 130477,runTime,21.0001
+
+
+line 360445 total 0.168686 total0 0.437426 false 0.0313058 over 0.168686 false0 0.0811802 over0 0.437426 overaggr 0.0753017 overcuckoo 0.0933844
+over_uai 0.115958 over_uai 0.0863978 over_ai,0.193089,over_ai,0.0323564,countIP 6.88857e+08 countIP0 8.47261e+08 keysum 5.89429e+08 pktSum 3.76547e+09 aggrSum 4.4385e+07 blackkey_num 71743626 feedback 116 feedsumportion 0.946265 finger0 9 finger 14 time 130477,runTime,22.0001
+
+
+line 360445 total 0.10102 total0 0.466486 false 0.0292308 over 0.10102 false0 0.134981 over0 0.466486 overaggr 0.0458045 overcuckoo 0.0552153
+over_uai 0.245938 over_uai 0.115958 over_ai,0.278626,over_ai,0.0481002,countIP 9.3041e+08 countIP0 1.23925e+09 keysum 8.45044e+08 pktSum 3.76547e+09 aggrSum 3.87068e+07 blackkey_num 68245868 feedback 116 feedsumportion 0.942164 finger0 9 finger 14 time 130477,runTime,22.0001
+
+
+line 360445 total 0.132608 total0 0.691014 false 0.0375544 over 0.132608 false0 0.195693 over0 0.691014 overaggr 0.0368788 overcuckoo 0.0957296
+over_uai 0.0863978 over_uai 0.245938 over_ai,0.101965,over_ai,0.179819,countIP 9.41228e+08 countIP0 1.40528e+09 keysum 8.31027e+08 pktSum 3.76547e+09 aggrSum 3.06473e+07 blackkey_num 78066991 feedback 116 feedsumportion 0.907135 finger0 9 finger 14 time 130477,runTime,22.0001
+
+
+line 376903 total 0.168592 total0 0.442499 false 0.0311315 over 0.168592 false0 0.08171 over0 0.442499 overaggr 0.074691 overcuckoo 0.0939014
+over_uai 0.115958 over_uai 0.0863978 over_ai,0.192959,over_ai,0.03227,countIP 7.17475e+08 countIP0 8.85644e+08 keysum 6.13965e+08 pktSum 3.93888e+09 aggrSum 4.58576e+07 blackkey_num 75466172 feedback 116 feedsumportion 0.946265 finger0 9 finger 14 time 130477,runTime,23.0001
+
+
+line 376903 total 0.0992224 total0 0.464117 false 0.0287628 over 0.0992224 false0 0.134539 over0 0.464117 overaggr 0.0453305 overcuckoo 0.053892
+over_uai 0.245938 over_uai 0.115958 over_ai,0.272741,over_ai,0.0481209,countIP 9.73039e+08 countIP0 1.29605e+09 keysum 8.85206e+08 pktSum 3.93888e+09 aggrSum 4.01268e+07 blackkey_num 70699165 feedback 116 feedsumportion 0.942164 finger0 9 finger 14 time 130477,runTime,23.0001
+
+
+line 376903 total 0.135413 total0 0.694681 false 0.0383186 over 0.135413 false0 0.196577 over0 0.694681 overaggr 0.035475 overcuckoo 0.0999381
+over_uai 0.0863978 over_uai 0.245938 over_ai,0.107376,over_ai,0.1784,countIP 9.8641e+08 countIP0 1.47228e+09 keysum 8.68767e+08 pktSum 3.93888e+09 aggrSum 3.08195e+07 blackkey_num 85319521 feedback 116 feedsumportion 0.907135 finger0 9 finger 14 time 130477,runTime,23.0001
+
+
+line 393316 total 0.168679 total0 0.443746 false 0.0309812 over 0.168679 false0 0.0815028 over0 0.443746 overaggr 0.0733625 overcuckoo 0.0953164
+over_uai 0.115958 over_uai 0.0863978 over_ai,0.1933,over_ai,0.0318364,countIP 7.44764e+08 countIP0 9.20056e+08 keysum 6.3727e+08 pktSum 4.10692e+09 aggrSum 4.67517e+07 blackkey_num 79192921 feedback 116 feedsumportion 0.946265 finger0 9 finger 14 time 130477,runTime,24.0001
+
+
+line 393316 total 0.0994301 total0 0.463878 false 0.0289196 over 0.0994301 false0 0.134921 over0 0.463878 overaggr 0.0444335 overcuckoo 0.0549965
+over_uai 0.245938 over_uai 0.115958 over_ai,0.275871,over_ai,0.0473014,countIP 1.01737e+09 countIP0 1.35462e+09 keysum 9.25365e+08 pktSum 4.10692e+09 aggrSum 4.11173e+07 blackkey_num 74835650 feedback 116 feedsumportion 0.942164 finger0 9 finger 14 time 130477,runTime,24.0001
+
+
+line 393316 total 0.135667 total0 0.69685 false 0.0383421 over 0.135667 false0 0.196944 over0 0.69685 overaggr 0.0342806 overcuckoo 0.101386
+over_uai 0.0863978 over_uai 0.245938 over_ai,0.109056,over_ai,0.176431,countIP 1.02771e+09 countIP0 1.53555e+09 keysum 9.04942e+08 pktSum 4.10692e+09 aggrSum 3.1022e+07 blackkey_num 90196026 feedback 116 feedsumportion 0.907135 finger0 9 finger 14 time 130477,runTime,24.0001
+
+
+line 409605 total 0.169078 total0 0.44539 false 0.0308505 over 0.169078 false0 0.081267 over0 0.44539 overaggr 0.074046 overcuckoo 0.0950322
+over_uai 0.115958 over_uai 0.0863978 over_ai,0.193677,over_ai,0.033827,countIP 7.72321e+08 countIP0 9.54859e+08 keysum 6.60624e+08 pktSum 4.28122e+09 aggrSum 4.89165e+07 blackkey_num 83166526 feedback 116 feedsumportion 0.946265 finger0 9 finger 14 time 130477,runTime,25.0001
+
+
+line 409605 total 0.0979417 total0 0.468195 false 0.0285276 over 0.0979417 false0 0.136372 over0 0.468195 overaggr 0.0438236 overcuckoo 0.0541181
+over_uai 0.245938 over_uai 0.115958 over_ai,0.27337,over_ai,0.0465533,countIP 1.0603e+09 countIP0 1.41785e+09 keysum 9.65712e+08 pktSum 4.28122e+09 aggrSum 4.23209e+07 blackkey_num 77379876 feedback 116 feedsumportion 0.942164 finger0 9 finger 14 time 130477,runTime,25.0001
+
+
+line 409605 total 0.135584 total0 0.701283 false 0.0382518 over 0.135584 false0 0.19785 over0 0.701283 overaggr 0.0333022 overcuckoo 0.102282
+over_uai 0.0863978 over_uai 0.245938 over_ai,0.108483,over_ai,0.177259,countIP 1.06979e+09 countIP0 1.60271e+09 keysum 9.42062e+08 pktSum 4.28122e+09 aggrSum 3.13728e+07 blackkey_num 94731422 feedback 116 feedsumportion 0.907135 finger0 9 finger 14 time 130477,runTime,25.0001
+
+* feedback sum: 8.12347e+06 num: 119
+* feedback sum: 5.62048e+06 num: 127
+* feedback sum: 845935 num: 115
+ states size: 5 state: 420
+* state: 420 * action: 320 * stateIndexCur: 1
+* _indexCur: 1 * action: 320
+* input: 420 * nextstate: 420 * Reward: 0
+* q learn!
+* stateIndexNest: 1
+* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 1 * Q value: 0
+ states size: 5 state: 520
+* state: 520 * action: 320 * stateIndexCur: 2
+* _indexCur: 2 * action: 320
+* input: 520 * nextstate: 520 * Reward: 0
+* q learn!
+* stateIndexNest: 2
+* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 2 * Q value: 0
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 420 * nextstate: 420 * Reward: 0
+* q learn!
+* stateIndexNest: 1
+* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 3
+* _indexCur: 0 * Q value: 0
+ states size: 5 state: 420
+* state: 420 * action: 320 * stateIndexCur: 1
+* _indexCur: 1 * action: 320
+* input: 520 * nextstate: 520 * Reward: 0
+* q learn!
+* stateIndexNest: 2
+* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 3
+* _indexCur: 1 * Q value: 0
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 320 * nextstate: 320 * Reward: 0
+* q learn!
+* stateIndexNest: 0
+* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 0 * Q value: 0
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 320 * nextstate: 320 * Reward: 0
+* q learn!
+* stateIndexNest: 0
+* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 0 * Q value: 0
+* feedback bks!
+* si: 0 ai: 0
+* stateIndex: 1
+* actionVec: 
+* randNum: 15
+* randa: 2
+* si: 0 ai: 1
+* stateIndex: 2
+* actionVec: 
+* randNum: 76
+* randa: 3
+* si: 1 ai: 0
+* stateIndex: 1
+* actionVec: 
+* randNum: 50
+* randa: 1
+* randa: 2
+* si: 1 ai: 1
+* stateIndex: 2
+* actionVec: 
+* randNum: 72
+* randa: 4
+* si: 2 ai: 0
+* stateIndex: 0
+* actionVec: 
+* randNum: 19
+* randa: 0
+* si: 2 ai: 1
+* stateIndex: 0
+* actionVec: 
+* randNum: 27
+* randa: 0
+* find max actions!
+* find slotNums!
+* find the index of selected action!
 320 620 
 * rLearn[si][ai]->_actionSuggestIndex: 2
 * rLearn[si][ai]->_actionSuggestIndex: 3
+420 520 
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* rLearn[si][ai]->_actionSuggestIndex: 0
+320 320 
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* rLearn[si][ai]->_actionSuggestIndex: 0
 * feedbackBlackkeyRL:si: 0
 * suggested action++++++++++++++++++++++++++++++++++: 320
-* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 0
+* suggested action++++++++++++++++++++++++++++++++++: 620
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
 * feedbackBlackkeyRL:si: 1
 * suggested action++++++++++++++++++++++++++++++++++: 420
-* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
+* suggested action++++++++++++++++++++++++++++++++++: 520
+* cuckooBlackKeyTable[si].occupyRate(): 0
 * feedbackBlackkeyRL:si: 2
 * suggested action++++++++++++++++++++++++++++++++++: 320
-* suggested action++++++++++++++++++++++++++++++++++: 620
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
+* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
 * feedback bks end!
 
-line 343625 total 0.169586 total0 0.437277 false 0.0314088 over 0.169586 false0 0.0809875 over0 0.437277 overaggr 0.0767198 overcuckoo 0.092866
-over_uai 0.11564 over_uai 0.0862215 over_ai,0.193954,over_ai,0.0324492,countIP 6.57312e+08 countIP0 8.07755e+08 keysum 5.62004e+08 pktSum 3.59644e+09 aggrSum 4.31168e+07 blackkey_num 66898751 feedback 109 feedsumportion 0.938959 finger0 9 finger 14 time 110869,runTime,21.0001
+line 425906 total 0.168861 total0 0.441976 false 0.0307364 over 0.168861 false0 0.0804495 over0 0.441976 overaggr 0.0734706 overcuckoo 0.0953902
+over_uai 0.0940674 over_uai 0.0921225 over_ai,0.193382,over_ai,0.0337301,countIP 8.01692e+08 countIP0 9.89014e+08 keysum 6.85874e+08 pktSum 4.45395e+09 aggrSum 5.03916e+07 blackkey_num 87030245 feedback 115 feedsumportion 0.940476 finger0 9 finger 14 time 133953,runTime,26.0001
 
 
-line 343625 total 0.0990956 total0 0.460346 false 0.0288364 over 0.0990956 false0 0.133959 over0 0.460346 overaggr 0.0469925 overcuckoo 0.0521032
-over_uai 0.233634 over_uai 0.11564 over_ai,0.27039,over_ai,0.0479242,countIP 8.90983e+08 countIP0 1.18383e+09 keysum 8.10651e+08 pktSum 3.59644e+09 aggrSum 3.80945e+07 blackkey_num 63134930 feedback 109 feedsumportion 0.940698 finger0 9 finger 14 time 110869,runTime,21.0001
+line 425906 total 0.0985168 total0 0.471559 false 0.0287157 over 0.0985168 false0 0.13745 over0 0.471559 overaggr 0.0433659 overcuckoo 0.0551509
+over_uai 0.201098 over_uai 0.0940674 over_ai,0.278229,over_ai,0.046317,countIP 1.10427e+09 countIP0 1.47926e+09 keysum 1.00523e+09 pktSum 4.45395e+09 aggrSum 4.35929e+07 blackkey_num 81780584 feedback 115 feedsumportion 0.923378 finger0 9 finger 14 time 133953,runTime,26.0001
 
 
-line 343625 total 0.130727 total0 0.697139 false 0.0371132 over 0.130727 false0 0.197917 over0 0.697139 overaggr 0.0374328 overcuckoo 0.0932939
-over_uai 0.0862215 over_uai 0.233634 over_ai,0.0977721,over_ai,0.181538,countIP 8.99214e+08 countIP0 1.34966e+09 keysum 7.95254e+08 pktSum 3.59644e+09 aggrSum 2.97686e+07 blackkey_num 72840988 feedback 109 feedsumportion 0.902668 finger0 9 finger 14 time 110869,runTime,21.0001
+line 425906 total 0.136648 total0 0.702875 false 0.0385074 over 0.136648 false0 0.198071 over0 0.702875 overaggr 0.0322167 overcuckoo 0.104431
+over_uai 0.0921225 over_uai 0.201098 over_ai,0.11109,over_ai,0.175764,countIP 1.11299e+09 countIP0 1.66744e+09 keysum 9.79189e+08 pktSum 4.45395e+09 aggrSum 3.15463e+07 blackkey_num 100609352 feedback 115 feedsumportion 0.726941 finger0 9 finger 14 time 133953,runTime,26.0001
 
 
-line 360344 total 0.169189 total0 0.437317 false 0.0314006 over 0.169189 false0 0.0811637 over0 0.437317 overaggr 0.0758824 overcuckoo 0.0933068
-over_uai 0.11564 over_uai 0.0862215 over_ai,0.193673,over_ai,0.0323828,countIP 6.88817e+08 countIP0 8.46782e+08 keysum 5.89141e+08 pktSum 3.76348e+09 aggrSum 4.47054e+07 blackkey_num 70941314 feedback 109 feedsumportion 0.938959 finger0 9 finger 14 time 110869,runTime,22.0001
+line 442125 total 0.169156 total0 0.438592 false 0.0307373 over 0.169156 false0 0.0796968 over0 0.438592 overaggr 0.0729499 overcuckoo 0.0962056
+over_uai 0.0940674 over_uai 0.0921225 over_ai,0.193737,over_ai,0.033435,countIP 8.31651e+08 countIP0 1.02331e+09 keysum 7.11326e+08 pktSum 4.62594e+09 aggrSum 5.18912e+07 blackkey_num 91176909 feedback 115 feedsumportion 0.940476 finger0 9 finger 14 time 133953,runTime,27.0001
 
 
-line 360344 total 0.101108 total0 0.462286 false 0.0292649 over 0.101108 false0 0.133806 over0 0.462286 overaggr 0.0458213 overcuckoo 0.0552864
-over_uai 0.233634 over_uai 0.11564 over_ai,0.279037,over_ai,0.0480832,countIP 9.30209e+08 countIP0 1.23533e+09 keysum 8.44794e+08 pktSum 3.76348e+09 aggrSum 3.87096e+07 blackkey_num 68143840 feedback 109 feedsumportion 0.940698 finger0 9 finger 14 time 110869,runTime,22.0001
+line 442125 total 0.0970047 total0 0.471378 false 0.0282697 over 0.0970047 false0 0.137372 over0 0.471378 overaggr 0.0426551 overcuckoo 0.0543496
+over_uai 0.201098 over_uai 0.0940674 over_ai,0.274035,over_ai,0.0460735,countIP 1.14516e+09 countIP0 1.53597e+09 keysum 1.0439e+09 pktSum 4.62594e+09 aggrSum 4.45276e+07 blackkey_num 83977725 feedback 115 feedsumportion 0.923378 finger0 9 finger 14 time 133953,runTime,27.0001
 
 
-line 360344 total 0.132381 total0 0.701495 false 0.0374857 over 0.132381 false0 0.198639 over0 0.701495 overaggr 0.0359965 overcuckoo 0.0963846
-over_uai 0.0862215 over_uai 0.233634 over_ai,0.101662,over_ai,0.179714,countIP 9.40459e+08 countIP0 1.41312e+09 keysum 8.30514e+08 pktSum 3.76348e+09 aggrSum 2.98956e+07 blackkey_num 78685831 feedback 109 feedsumportion 0.902668 finger0 9 finger 14 time 110869,runTime,22.0001
+line 442125 total 0.136295 total0 0.69906 false 0.0385877 over 0.136295 false0 0.197918 over0 0.69906 overaggr 0.0312009 overcuckoo 0.105094
+over_uai 0.0921225 over_uai 0.201098 over_ai,0.111658,over_ai,0.173694,countIP 1.15983e+09 countIP0 1.73425e+09 keysum 1.02071e+09 pktSum 4.62594e+09 aggrSum 3.1847e+07 blackkey_num 105585424 feedback 115 feedsumportion 0.726941 finger0 9 finger 14 time 133953,runTime,27.0001
 
 
-line 376777 total 0.169047 total0 0.442556 false 0.0312176 over 0.169047 false0 0.081726 over0 0.442556 overaggr 0.0751501 overcuckoo 0.0938974
-over_uai 0.11564 over_uai 0.0862215 over_ai,0.193512,over_ai,0.0321863,countIP 7.17389e+08 countIP0 8.85229e+08 keysum 6.13653e+08 pktSum 3.93666e+09 aggrSum 4.61161e+07 blackkey_num 74705357 feedback 109 feedsumportion 0.938959 finger0 9 finger 14 time 110869,runTime,23.0001
+line 458631 total 0.168688 total0 0.437258 false 0.030637 over 0.168688 false0 0.0794146 over0 0.437258 overaggr 0.0729483 overcuckoo 0.0957397
+over_uai 0.0940674 over_uai 0.0921225 over_ai,0.193103,over_ai,0.033401,countIP 8.61962e+08 countIP0 1.06004e+09 keysum 7.37547e+08 pktSum 4.79849e+09 aggrSum 5.38027e+07 blackkey_num 95114673 feedback 115 feedsumportion 0.940476 finger0 9 finger 14 time 133953,runTime,28.0001
 
 
-line 376777 total 0.0993984 total0 0.460164 false 0.0288104 over 0.0993984 false0 0.133378 over0 0.460164 overaggr 0.0454141 overcuckoo 0.0539843
-over_uai 0.233634 over_uai 0.11564 over_ai,0.273295,over_ai,0.0481698,countIP 9.72557e+08 countIP0 1.2917e+09 keysum 8.84626e+08 pktSum 3.93666e+09 aggrSum 4.01745e+07 blackkey_num 70631257 feedback 109 feedsumportion 0.940698 finger0 9 finger 14 time 110869,runTime,23.0001
+line 458631 total 0.0976122 total0 0.47187 false 0.0283706 over 0.0976122 false0 0.137147 over0 0.47187 overaggr 0.0415235 overcuckoo 0.0560886
+over_uai 0.201098 over_uai 0.0940674 over_ai,0.278684,over_ai,0.0457382,countIP 1.18607e+09 countIP0 1.59049e+09 keysum 1.08059e+09 pktSum 4.79849e+09 aggrSum 4.487e+07 blackkey_num 88145168 feedback 115 feedsumportion 0.923378 finger0 9 finger 14 time 133953,runTime,28.0001
 
 
-line 376777 total 0.135201 total0 0.704963 false 0.0382545 over 0.135201 false0 0.199465 over0 0.704963 overaggr 0.034591 overcuckoo 0.10061
-over_uai 0.0862215 over_uai 0.233634 over_ai,0.107052,over_ai,0.178348,countIP 9.85585e+08 countIP0 1.48025e+09 keysum 8.68203e+08 pktSum 3.93666e+09 aggrSum 3.0032e+07 blackkey_num 85980821 feedback 109 feedsumportion 0.902668 finger0 9 finger 14 time 110869,runTime,23.0001
+line 458631 total 0.135833 total0 0.699071 false 0.0385689 over 0.135833 false0 0.198497 over0 0.699071 overaggr 0.0303512 overcuckoo 0.105482
+over_uai 0.0921225 over_uai 0.201098 over_ai,0.11124,over_ai,0.172784,countIP 1.20533e+09 countIP0 1.80303e+09 keysum 1.06118e+09 pktSum 4.79849e+09 aggrSum 3.22082e+07 blackkey_num 110192982 feedback 115 feedsumportion 0.726941 finger0 9 finger 14 time 133953,runTime,28.0001
 
 
-line 393217 total 0.169058 total0 0.443305 false 0.0310602 over 0.169058 false0 0.0814463 over0 0.443305 overaggr 0.0740253 overcuckoo 0.0950325
-over_uai 0.11564 over_uai 0.0862215 over_ai,0.193742,over_ai,0.0318597,countIP 7.44829e+08 countIP0 9.19557e+08 keysum 6.37119e+08 pktSum 4.1049e+09 aggrSum 4.71629e+07 blackkey_num 78490927 feedback 109 feedsumportion 0.938959 finger0 9 finger 14 time 110869,runTime,24.0001
+line 474729 total 0.167236 total0 0.438765 false 0.0304193 over 0.167236 false0 0.0798092 over0 0.438765 overaggr 0.071431 overcuckoo 0.0958046
+over_uai 0.0940674 over_uai 0.0921225 over_ai,0.191354,over_ai,0.0328885,countIP 8.94257e+08 countIP0 1.10228e+09 keysum 7.66132e+08 pktSum 4.97808e+09 aggrSum 5.47256e+07 blackkey_num 98682595 feedback 115 feedsumportion 0.940476 finger0 9 finger 14 time 133953,runTime,29.0001
 
 
-line 393217 total 0.0995963 total0 0.459925 false 0.0289671 over 0.0995963 false0 0.133767 over0 0.459925 overaggr 0.0445151 overcuckoo 0.0550812
-over_uai 0.233634 over_uai 0.11564 over_ai,0.276513,over_ai,0.0473378,countIP 1.01701e+09 countIP0 1.35027e+09 keysum 9.2489e+08 pktSum 4.1049e+09 aggrSum 4.11715e+07 blackkey_num 74761702 feedback 109 feedsumportion 0.940698 finger0 9 finger 14 time 110869,runTime,24.0001
+line 474729 total 0.0964706 total0 0.472334 false 0.0279281 over 0.0964706 false0 0.13674 over0 0.472334 overaggr 0.041095 overcuckoo 0.0553755
+over_uai 0.201098 over_uai 0.0940674 over_ai,0.274116,over_ai,0.0454792,countIP 1.22542e+09 countIP0 1.64548e+09 keysum 1.1176e+09 pktSum 4.97808e+09 aggrSum 4.59279e+07 blackkey_num 90448687 feedback 115 feedsumportion 0.923378 finger0 9 finger 14 time 133953,runTime,29.0001
 
 
-line 393217 total 0.135421 total0 0.707297 false 0.0382731 over 0.135421 false0 0.199899 over0 0.707297 overaggr 0.0333951 overcuckoo 0.102026
-over_uai 0.0862215 over_uai 0.233634 over_ai,0.108688,over_ai,0.176365,countIP 1.02699e+09 countIP0 1.54426e+09 keysum 9.04506e+08 pktSum 4.1049e+09 aggrSum 3.02061e+07 blackkey_num 90870895 feedback 109 feedsumportion 0.902668 finger0 9 finger 14 time 110869,runTime,24.0001
+line 474729 total 0.13513 total0 0.69878 false 0.0384862 over 0.13513 false0 0.199018 over0 0.69878 overaggr 0.0294029 overcuckoo 0.105727
+over_uai 0.0921225 over_uai 0.201098 over_ai,0.110981,over_ai,0.170923,countIP 1.25263e+09 countIP0 1.87462e+09 keysum 1.10351e+09 pktSum 4.97808e+09 aggrSum 3.24463e+07 blackkey_num 114908595 feedback 115 feedsumportion 0.726941 finger0 9 finger 14 time 133953,runTime,29.0001
 
 
-line 409484 total 0.169428 total0 0.445507 false 0.0309162 over 0.169428 false0 0.0812933 over0 0.445507 overaggr 0.0748533 overcuckoo 0.094575
-over_uai 0.11564 over_uai 0.0862215 over_ai,0.194082,over_ai,0.0338599,countIP 7.72265e+08 countIP0 9.54581e+08 keysum 6.60378e+08 pktSum 4.27941e+09 aggrSum 4.94315e+07 blackkey_num 82439422 feedback 109 feedsumportion 0.938959 finger0 9 finger 14 time 110869,runTime,25.0001
+line 490703 total 0.166732 total0 0.451257 false 0.0302304 over 0.166732 false0 0.0818179 over0 0.451257 overaggr 0.0701781 overcuckoo 0.0965543
+over_uai 0.0940674 over_uai 0.0921225 over_ai,0.190681,over_ai,0.0328911,countIP 9.23719e+08 countIP0 1.14898e+09 keysum 7.91715e+08 pktSum 5.15832e+09 aggrSum 5.55611e+07 blackkey_num 102425946 feedback 115 feedsumportion 0.940476 finger0 9 finger 14 time 133953,runTime,30.0001
 
 
-line 409484 total 0.0980865 total0 0.464287 false 0.0285696 over 0.0980865 false0 0.135232 over0 0.464287 overaggr 0.0439035 overcuckoo 0.054183
-over_uai 0.233634 over_uai 0.11564 over_ai,0.273847,over_ai,0.0465871,countIP 1.05998e+09 countIP0 1.41347e+09 keysum 9.65299e+08 pktSum 4.27941e+09 aggrSum 4.238e+07 blackkey_num 77285960 feedback 109 feedsumportion 0.940698 finger0 9 finger 14 time 110869,runTime,25.0001
+line 490703 total 0.0972522 total0 0.470175 false 0.0282189 over 0.0972522 false0 0.136427 over0 0.470175 overaggr 0.0406906 overcuckoo 0.0565615
+over_uai 0.201098 over_uai 0.0940674 over_ai,0.281299,over_ai,0.0448746,countIP 1.27295e+09 countIP0 1.70559e+09 keysum 1.16013e+09 pktSum 5.15832e+09 aggrSum 4.72063e+07 blackkey_num 95415716 feedback 115 feedsumportion 0.923378 finger0 9 finger 14 time 133953,runTime,30.0001
 
 
-line 409484 total 0.135358 total0 0.711462 false 0.038192 over 0.135358 false0 0.200743 over0 0.711462 overaggr 0.0323239 overcuckoo 0.103034
-over_uai 0.0862215 over_uai 0.233634 over_ai,0.108233,over_ai,0.177074,countIP 1.06921e+09 countIP0 1.61175e+09 keysum 9.41741e+08 pktSum 4.27941e+09 aggrSum 3.04407e+07 blackkey_num 95605895 feedback 109 feedsumportion 0.902668 finger0 9 finger 14 time 110869,runTime,25.0001
+line 490703 total 0.134261 total0 0.699588 false 0.0381143 over 0.134261 false0 0.198601 over0 0.699588 overaggr 0.0286519 overcuckoo 0.105609
+over_uai 0.0921225 over_uai 0.201098 over_ai,0.110445,over_ai,0.169357,countIP 1.29371e+09 countIP0 1.9385e+09 keysum 1.14057e+09 pktSum 5.15832e+09 aggrSum 3.26795e+07 blackkey_num 118676543 feedback 115 feedsumportion 0.726941 finger0 9 finger 14 time 133953,runTime,30.0001
 
-* feedback sum: 8.31971e+06 num: 121
-* feedback sum: 5.71197e+06 num: 128
-* feedback sum: 556464 num: 110
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 420
-* state: 420 * action: 320 * stateIndexCur: 1
-* _indexCur: 1 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 1 * Q value: 0
- states size: 5 state: 420
-* state: 420 * action: 320 * stateIndexCur: 1
-* _indexCur: 1 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 1 * Q value: 0
+* feedback sum: 8.01326e+06 num: 120
+* feedback sum: 4.72548e+06 num: 124
+* feedback sum: 1.08174e+06 num: 113
  states size: 5 state: 420
 * state: 420 * action: 320 * stateIndexCur: 1
 * _indexCur: 1 * action: 320
@@ -1123,489 +1293,6 @@ over_uai 0.0862215 over_uai 0.233634 over_ai,0.108233,over_ai,0.177074,countIP 1
 
 * index: 3 _actionSuggestIndex: 3
 * _indexCur: 2 * Q value: 0
-* feedback bks!
-* si: 0 ai: 0
-* stateIndex: 0
-* actionVec: 
-* randNum: 69
-* randa: 0
-* si: 0 ai: 1
-* stateIndex: 0
-* actionVec: 
-* randNum: 25
-* randa: 2
-* randa: 4
-* si: 1 ai: 0
-* stateIndex: 1
-* actionVec: 
-* randNum: 96
-* randa: 4
-* si: 1 ai: 1
-* stateIndex: 1
-* actionVec: 
-* randNum: 42
-* randa: 3
-* si: 2 ai: 0
-* stateIndex: 0
-* actionVec: 
-* randNum: 61
-* randa: 2
-* randa: 4
-* si: 2 ai: 1
-* stateIndex: 3
-* actionVec: 
-* randNum: 50
-* randa: 3
-* find max actions!
-* find slotNums!
-* find the index of selected action!
-320 520 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 4
-420 420 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 0
-320 620 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* feedbackBlackkeyRL:si: 0
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* suggested action++++++++++++++++++++++++++++++++++: 520
-* feedbackBlackkeyRL:si: 1
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* feedbackBlackkeyRL:si: 2
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* suggested action++++++++++++++++++++++++++++++++++: 620
-* feedback bks end!
-
-line 425742 total 0.169264 total0 0.442176 false 0.0308079 over 0.169264 false0 0.0804807 over0 0.442176 overaggr 0.0742593 overcuckoo 0.095005
-over_uai 0.0937101 over_uai 0.0943799 over_ai,0.193863,over_ai,0.0337571,countIP 8.01473e+08 countIP0 9.8854e+08 keysum 6.8545e+08 pktSum 4.45144e+09 aggrSum 5.09011e+07 blackkey_num 86329773 feedback 110 feedsumportion 0.938975 finger0 9 finger 14 time 116589,runTime,26.0001
-
-
-line 425742 total 0.0986164 total0 0.467704 false 0.0287441 over 0.0986164 false0 0.136323 over0 0.467704 overaggr 0.0434226 overcuckoo 0.0551938
-over_uai 0.197897 over_uai 0.0937101 over_ai,0.278678,over_ai,0.0462927,countIP 1.10373e+09 countIP0 1.47453e+09 keysum 1.00465e+09 pktSum 4.45144e+09 aggrSum 4.36245e+07 blackkey_num 81626800 feedback 110 feedsumportion 0.920231 finger0 9 finger 14 time 116589,runTime,26.0001
-
-
-line 425742 total 0.136454 total0 0.713092 false 0.0384518 over 0.136454 false0 0.200945 over0 0.713092 overaggr 0.0312158 overcuckoo 0.105238
-over_uai 0.0943799 over_uai 0.197897 over_ai,0.110852,over_ai,0.175639,countIP 1.11216e+09 countIP0 1.67646e+09 keysum 9.78619e+08 pktSum 4.45144e+09 aggrSum 3.05484e+07 blackkey_num 101553574 feedback 110 feedsumportion 0.661412 finger0 9 finger 14 time 116589,runTime,26.0001
-
-
-line 441903 total 0.169501 total0 0.43863 false 0.0308009 over 0.169501 false0 0.0797058 over0 0.43863 overaggr 0.073705 overcuckoo 0.0957958
-over_uai 0.0937101 over_uai 0.0943799 over_ai,0.194139,over_ai,0.0334604,countIP 8.31366e+08 countIP0 1.02268e+09 keysum 7.10873e+08 pktSum 4.62288e+09 aggrSum 5.23949e+07 blackkey_num 90456295 feedback 110 feedsumportion 0.938975 finger0 9 finger 14 time 116589,runTime,27.0001
-
-
-line 441903 total 0.0971549 total0 0.467918 false 0.0283137 over 0.0971549 false0 0.136365 over0 0.467918 overaggr 0.042778 overcuckoo 0.0543769
-over_uai 0.197897 over_uai 0.0937101 over_ai,0.274669,over_ai,0.0460931,countIP 1.14457e+09 countIP0 1.53136e+09 keysum 1.04322e+09 pktSum 4.62288e+09 aggrSum 4.46268e+07 blackkey_num 83857637 feedback 110 feedsumportion 0.920231 finger0 9 finger 14 time 116589,runTime,27.0001
-
-
-line 441903 total 0.136101 total0 0.709272 false 0.0385271 over 0.136101 false0 0.200778 over0 0.709272 overaggr 0.0300526 overcuckoo 0.106049
-over_uai 0.0943799 over_uai 0.197897 over_ai,0.111396,over_ai,0.173613,countIP 1.15873e+09 countIP0 1.74331e+09 keysum 1.01992e+09 pktSum 4.62288e+09 aggrSum 3.06511e+07 blackkey_num 106697634 feedback 110 feedsumportion 0.661412 finger0 9 finger 14 time 116589,runTime,27.0001
-
-
-line 458377 total 0.169127 total0 0.43737 false 0.0307119 over 0.169127 false0 0.0794224 over0 0.43737 overaggr 0.073794 overcuckoo 0.0953331
-over_uai 0.0937101 over_uai 0.0943799 over_ai,0.19363,over_ai,0.0334258,countIP 8.61506e+08 countIP0 1.05917e+09 keysum 7.3688e+08 pktSum 4.79479e+09 aggrSum 5.43773e+07 blackkey_num 94402322 feedback 110 feedsumportion 0.938975 finger0 9 finger 14 time 116589,runTime,28.0001
-
-
-line 458377 total 0.0977451 total0 0.467997 false 0.0284173 over 0.0977451 false0 0.13606 over0 0.467997 overaggr 0.0416338 overcuckoo 0.0561113
-over_uai 0.197897 over_uai 0.0937101 over_ai,0.279154,over_ai,0.0457655,countIP 1.18556e+09 countIP0 1.58543e+09 keysum 1.08e+09 pktSum 4.79479e+09 aggrSum 4.49644e+07 blackkey_num 88011266 feedback 110 feedsumportion 0.920231 finger0 9 finger 14 time 116589,runTime,28.0001
-
-
-line 458377 total 0.13565 total0 0.708767 false 0.0385259 over 0.13565 false0 0.201296 over0 0.708767 overaggr 0.029196 overcuckoo 0.106454
-over_uai 0.0943799 over_uai 0.197897 over_ai,0.111002,over_ai,0.172688,countIP 1.20442e+09 countIP0 1.81224e+09 keysum 1.06056e+09 pktSum 4.79479e+09 aggrSum 3.0964e+07 blackkey_num 111398222 feedback 110 feedsumportion 0.661412 finger0 9 finger 14 time 116589,runTime,28.0001
-
-
-line 474472 total 0.167615 total0 0.438962 false 0.0304842 over 0.167615 false0 0.0798344 over0 0.438962 overaggr 0.0721354 overcuckoo 0.0954792
-over_uai 0.0937101 over_uai 0.0943799 over_ai,0.191796,over_ai,0.0329316,countIP 8.93678e+08 countIP0 1.10136e+09 keysum 7.65388e+08 pktSum 4.9738e+09 aggrSum 5.52116e+07 blackkey_num 97915430 feedback 110 feedsumportion 0.938975 finger0 9 finger 14 time 116589,runTime,29.0001
-
-
-line 474472 total 0.0966097 total0 0.468337 false 0.0279716 over 0.0966097 false0 0.135599 over0 0.468337 overaggr 0.0411909 overcuckoo 0.0554188
-over_uai 0.197897 over_uai 0.0937101 over_ai,0.274654,over_ai,0.0455073,countIP 1.22463e+09 countIP0 1.63975e+09 keysum 1.11674e+09 pktSum 4.9738e+09 aggrSum 4.59996e+07 blackkey_num 90298340 feedback 110 feedsumportion 0.920231 finger0 9 finger 14 time 116589,runTime,29.0001
-
-
-line 474472 total 0.134983 total0 0.708435 false 0.0384388 over 0.134983 false0 0.20174 over0 0.708435 overaggr 0.02824 overcuckoo 0.106743
-over_uai 0.0943799 over_uai 0.197897 over_ai,0.11076,over_ai,0.170879,countIP 1.25125e+09 countIP0 1.88345e+09 keysum 1.10244e+09 pktSum 4.9738e+09 aggrSum 3.1133e+07 blackkey_num 116161652 feedback 110 feedsumportion 0.661412 finger0 9 finger 14 time 116589,runTime,29.0001
-
-
-line 490483 total 0.167101 total0 0.450232 false 0.0302965 over 0.167101 false0 0.08163 over0 0.450232 overaggr 0.0708661 overcuckoo 0.0962347
-over_uai 0.0937101 over_uai 0.0943799 over_ai,0.191143,over_ai,0.0328047,countIP 9.23116e+08 countIP0 1.14706e+09 keysum 7.90948e+08 pktSum 5.15344e+09 aggrSum 5.60514e+07 blackkey_num 101644754 feedback 110 feedsumportion 0.938975 finger0 9 finger 14 time 116589,runTime,30.0001
-
-
-line 490483 total 0.0973801 total0 0.465965 false 0.0282668 over 0.0973801 false0 0.135257 over0 0.465965 overaggr 0.040783 overcuckoo 0.0565971
-over_uai 0.197897 over_uai 0.0937101 over_ai,0.28174,over_ai,0.0449023,countIP 1.27227e+09 countIP0 1.69959e+09 keysum 1.15937e+09 pktSum 5.15344e+09 aggrSum 4.72825e+07 blackkey_num 95257983 feedback 110 feedsumportion 0.920231 finger0 9 finger 14 time 116589,runTime,30.0001
-
-
-line 490483 total 0.134067 total0 0.709364 false 0.0380727 over 0.134067 false0 0.201446 over0 0.709364 overaggr 0.0274715 overcuckoo 0.106596
-over_uai 0.0943799 over_uai 0.197897 over_ai,0.110175,over_ai,0.169282,countIP 1.29261e+09 countIP0 1.94833e+09 keysum 1.1398e+09 pktSum 5.15344e+09 aggrSum 3.1312e+07 blackkey_num 119976706 feedback 110 feedsumportion 0.661412 finger0 9 finger 14 time 116589,runTime,30.0001
-
-* feedback sum: 7.96721e+06 num: 120
-* feedback sum: 4.75571e+06 num: 124
-* feedback sum: 699734 num: 104
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 520 * nextstate: 520 * Reward: 0
-* q learn!
-* stateIndexNest: 2
-* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 4
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 420
-* state: 420 * action: 320 * stateIndexCur: 1
-* _indexCur: 1 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 1 * Q value: 0
- states size: 5 state: 420
-* state: 420 * action: 320 * stateIndexCur: 1
-* _indexCur: 1 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 1 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 620
-* state: 620 * action: 320 * stateIndexCur: 3
-* _indexCur: 3 * action: 320
-* input: 620 * nextstate: 620 * Reward: 0
-* q learn!
-* stateIndexNest: 3
-* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     
-* max index: 3
-
-* index: 3 _actionSuggestIndex: 0
-* _indexCur: 3 * Q value: 0
-* feedback bks!
-* si: 0 ai: 0
-* stateIndex: 0
-* actionVec: 
-* randNum: 60
-* randa: 3
-* si: 0 ai: 1
-* stateIndex: 2
-* actionVec: 
-* randNum: 12
-* randa: 0
-* si: 1 ai: 0
-* stateIndex: 1
-* actionVec: 
-* randNum: 9
-* randa: 4
-* si: 1 ai: 1
-* stateIndex: 1
-* actionVec: 
-* randNum: 61
-* randa: 4
-* si: 2 ai: 0
-* stateIndex: 0
-* actionVec: 
-* randNum: 25
-* randa: 3
-* si: 2 ai: 1
-* stateIndex: 3
-* actionVec: 
-* randNum: 41
-* randa: 4
-* randa: 3
-* find max actions!
-* find slotNums!
-* find the index of selected action!
-420 520 
-* rLearn[si][ai]->_actionSuggestIndex: 3
-* rLearn[si][ai]->_actionSuggestIndex: 0
-420 420 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 0
-320 620 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* feedbackBlackkeyRL:si: 0
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* suggested action++++++++++++++++++++++++++++++++++: 520
-* feedbackBlackkeyRL:si: 1
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* feedbackBlackkeyRL:si: 2
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* suggested action++++++++++++++++++++++++++++++++++: 620
-* feedback bks end!
-
-line 506558 total 0.16722 total0 0.455625 false 0.0302583 over 0.16722 false0 0.0824452 over0 0.455625 overaggr 0.0696199 overcuckoo 0.0975997
-over_uai 0.0847891 over_uai 0.0823622 over_ai,0.191049,over_ai,0.0337243,countIP 9.52511e+08 countIP0 1.18786e+09 keysum 8.16051e+08 pktSum 5.32587e+09 aggrSum 5.68134e+07 blackkey_num 105848591 feedback 104 feedsumportion 0.932414 finger0 9 finger 14 time 116030,runTime,31.0001
-
-
-line 506558 total 0.0975016 total0 0.465052 false 0.028273 over 0.0975016 false0 0.134853 over0 0.465052 overaggr 0.0401664 overcuckoo 0.0573352
-over_uai 0.248601 over_uai 0.0847891 over_ai,0.283077,over_ai,0.0448377,countIP 1.31394e+09 countIP0 1.75397e+09 keysum 1.19721e+09 pktSum 5.32587e+09 aggrSum 4.80875e+07 blackkey_num 99000124 feedback 104 feedsumportion 0.90856 finger0 9 finger 14 time 116030,runTime,31.0001
-
-
-line 506558 total 0.134499 total0 0.706754 false 0.0382422 over 0.134499 false0 0.200952 over0 0.706754 overaggr 0.0266424 overcuckoo 0.107856
-over_uai 0.0823622 over_uai 0.248601 over_ai,0.110421,over_ai,0.169577,countIP 1.33765e+09 countIP0 2.01237e+09 keysum 1.17907e+09 pktSum 5.32587e+09 aggrSum 3.14132e+07 blackkey_num 125624984 feedback 104 feedsumportion 0.742884 finger0 9 finger 14 time 116030,runTime,31.0001
-
-
-line 522606 total 0.167915 total0 0.459544 false 0.0302629 over 0.167915 false0 0.0828224 over0 0.459544 overaggr 0.0707834 overcuckoo 0.0971317
-over_uai 0.0847891 over_uai 0.0823622 over_ai,0.191359,over_ai,0.0358111,countIP 9.81715e+08 countIP0 1.22685e+09 keysum 8.4057e+08 pktSum 5.50452e+09 aggrSum 5.94985e+07 blackkey_num 110392287 feedback 104 feedsumportion 0.932414 finger0 9 finger 14 time 116030,runTime,32.0001
-
-
-line 522606 total 0.096245 total0 0.465493 false 0.0279855 over 0.096245 false0 0.135353 over0 0.465493 overaggr 0.040074 overcuckoo 0.056171
-over_uai 0.248601 over_uai 0.0847891 over_ai,0.281606,over_ai,0.044137,countIP 1.35935e+09 countIP0 1.81722e+09 keysum 1.24001e+09 pktSum 5.50452e+09 aggrSum 4.96921e+07 blackkey_num 101568263 feedback 104 feedsumportion 0.90856 finger0 9 finger 14 time 116030,runTime,32.0001
-
-
-line 522606 total 0.13301 total0 0.701493 false 0.0380927 over 0.13301 false0 0.200901 over0 0.701493 overaggr 0.025762 overcuckoo 0.107248
-over_uai 0.0823622 over_uai 0.248601 over_ai,0.109014,over_ai,0.168078,countIP 1.38848e+09 countIP0 2.08514e+09 keysum 1.22548e+09 pktSum 5.50452e+09 aggrSum 3.15707e+07 blackkey_num 129876939 feedback 104 feedsumportion 0.742884 finger0 9 finger 14 time 116030,runTime,32.0001
-
-
-line 538877 total 0.166478 total0 0.461375 false 0.0299991 over 0.166478 false0 0.0831389 over0 0.461375 overaggr 0.0703389 overcuckoo 0.0961393
-over_uai 0.0847891 over_uai 0.0823622 over_ai,0.189927,over_ai,0.0352498,countIP 1.01188e+09 countIP0 1.26769e+09 keysum 8.67467e+08 pktSum 5.68143e+09 aggrSum 6.10167e+07 blackkey_num 113538168 feedback 104 feedsumportion 0.932414 finger0 9 finger 14 time 116030,runTime,33.0001
-
-
-line 538877 total 0.0955875 total0 0.465709 false 0.0277791 over 0.0955875 false0 0.135342 over0 0.465709 overaggr 0.0392978 overcuckoo 0.0562897
-over_uai 0.248601 over_uai 0.0847891 over_ai,0.280987,over_ai,0.0436274,countIP 1.4016e+09 countIP0 1.87511e+09 keysum 1.27932e+09 pktSum 5.68143e+09 aggrSum 5.02743e+07 blackkey_num 104465856 feedback 104 feedsumportion 0.90856 finger0 9 finger 14 time 116030,runTime,33.0001
-
-
-line 538877 total 0.131998 total0 0.697989 false 0.0379535 over 0.131998 false0 0.200693 over0 0.697989 overaggr 0.0250045 overcuckoo 0.106994
-over_uai 0.0823622 over_uai 0.248601 over_ai,0.108356,over_ai,0.166532,countIP 1.43625e+09 countIP0 2.15436e+09 keysum 1.26877e+09 pktSum 5.68143e+09 aggrSum 3.1725e+07 blackkey_num 134147583 feedback 104 feedsumportion 0.742884 finger0 9 finger 14 time 116030,runTime,33.0001
-
-
-line 555136 total 0.165813 total0 0.462215 false 0.0299229 over 0.165813 false0 0.0834122 over0 0.462215 overaggr 0.0693199 overcuckoo 0.0964934
-over_uai 0.0847891 over_uai 0.0823622 over_ai,0.189365,over_ai,0.0345695,countIP 1.04356e+09 countIP0 1.30888e+09 keysum 8.95135e+08 pktSum 5.85539e+09 aggrSum 6.20507e+07 blackkey_num 117433024 feedback 104 feedsumportion 0.932414 finger0 9 finger 14 time 116030,runTime,34.0001
-
-
-line 555136 total 0.0949473 total0 0.463863 false 0.0277437 over 0.0949473 false0 0.135541 over0 0.463863 overaggr 0.0385668 overcuckoo 0.0563805
-over_uai 0.248601 over_uai 0.0847891 over_ai,0.281448,over_ai,0.0431827,countIP 1.44977e+09 countIP0 1.93824e+09 keysum 1.32406e+09 pktSum 5.85539e+09 aggrSum 5.10646e+07 blackkey_num 107844512 feedback 104 feedsumportion 0.90856 finger0 9 finger 14 time 116030,runTime,34.0001
-
-
-line 555136 total 0.131752 total0 0.70103 false 0.0377807 over 0.131752 false0 0.201024 over0 0.70103 overaggr 0.0244083 overcuckoo 0.107344
-over_uai 0.0823622 over_uai 0.248601 over_ai,0.108069,over_ai,0.166361,countIP 1.4768e+09 countIP0 2.21964e+09 keysum 1.30488e+09 pktSum 5.85539e+09 aggrSum 3.185e+07 blackkey_num 138433253 feedback 104 feedsumportion 0.742884 finger0 9 finger 14 time 116030,runTime,34.0001
-
-
-line 571515 total 0.165472 total0 0.46897 false 0.0297346 over 0.165472 false0 0.0842722 over0 0.46897 overaggr 0.0683153 overcuckoo 0.0971565
-over_uai 0.0847891 over_uai 0.0823622 over_ai,0.18902,over_ai,0.0342413,countIP 1.0698e+09 countIP0 1.34839e+09 keysum 9.17915e+08 pktSum 6.02607e+09 aggrSum 6.27077e+07 blackkey_num 120792031 feedback 104 feedsumportion 0.932414 finger0 9 finger 14 time 116030,runTime,35.0001
-
-
-line 571515 total 0.094682 total0 0.460971 false 0.0277453 over 0.094682 false0 0.135081 over0 0.460971 overaggr 0.0391093 overcuckoo 0.0555726
-over_uai 0.248601 over_uai 0.0847891 over_ai,0.282487,over_ai,0.0427751,countIP 1.49497e+09 countIP0 1.9952e+09 keysum 1.36567e+09 pktSum 6.02607e+09 aggrSum 5.34103e+07 blackkey_num 111378514 feedback 104 feedsumportion 0.90856 finger0 9 finger 14 time 116030,runTime,35.0001
-
-
-line 571515 total 0.132235 total0 0.702835 false 0.0379152 over 0.132235 false0 0.201521 over0 0.702835 overaggr 0.0238406 overcuckoo 0.108395
-over_uai 0.0823622 over_uai 0.248601 over_ai,0.107671,over_ai,0.168116,countIP 1.52038e+09 countIP0 2.28658e+09 keysum 1.34281e+09 pktSum 6.02607e+09 aggrSum 3.20134e+07 blackkey_num 142777003 feedback 104 feedsumportion 0.742884 finger0 9 finger 14 time 116030,runTime,35.0001
-
-* feedback sum: 8.05699e+06 num: 113
-* feedback sum: 6.24109e+06 num: 128
-* feedback sum: 477697 num: 105
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 3
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 520
-* state: 520 * action: 320 * stateIndexCur: 2
-* _indexCur: 2 * action: 320
-* input: 520 * nextstate: 520 * Reward: 0
-* q learn!
-* stateIndexNest: 2
-* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 2 * Q value: 0
- states size: 5 state: 420
-* state: 420 * action: 320 * stateIndexCur: 1
-* _indexCur: 1 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 1 * Q value: 0
- states size: 5 state: 420
-* state: 420 * action: 320 * stateIndexCur: 1
-* _indexCur: 1 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 1 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 620
-* state: 620 * action: 320 * stateIndexCur: 3
-* _indexCur: 3 * action: 320
-* input: 620 * nextstate: 620 * Reward: 0
-* q learn!
-* stateIndexNest: 3
-* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     
-* max index: 3
-
-* index: 3 _actionSuggestIndex: 0
-* _indexCur: 3 * Q value: 0
-* feedback bks!
-* si: 0 ai: 0
-* stateIndex: 1
-* actionVec: 
-* randNum: 94
-* randa: 3
-* si: 0 ai: 1
-* stateIndex: 2
-* actionVec: 
-* randNum: 68
-* randa: 4
-* si: 1 ai: 0
-* stateIndex: 1
-* actionVec: 
-* randNum: 59
-* randa: 2
-* si: 1 ai: 1
-* stateIndex: 1
-* actionVec: 
-* randNum: 8
-* randa: 2
-* si: 2 ai: 0
-* stateIndex: 0
-* actionVec: 
-* randNum: 81
-* randa: 4
-* si: 2 ai: 1
-* stateIndex: 3
-* actionVec: 
-* randNum: 49
-* randa: 2
-* find max actions!
-* find slotNums!
-* find the index of selected action!
-420 520 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 0
-320 320 
-* rLearn[si][ai]->_actionSuggestIndex: 2
-* rLearn[si][ai]->_actionSuggestIndex: 2
-320 620 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* feedbackBlackkeyRL:si: 0
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* suggested action++++++++++++++++++++++++++++++++++: 520
-* feedbackBlackkeyRL:si: 1
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* feedbackBlackkeyRL:si: 2
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* suggested action++++++++++++++++++++++++++++++++++: 620
-* feedback bks end!
-
-line 587437 total 0.16508 total0 0.475228 false 0.0295135 over 0.16508 false0 0.0849628 over0 0.475228 overaggr 0.0680511 overcuckoo 0.0970287
-over_uai 0.0834881 over_uai 0.0841337 over_ai,0.188686,over_ai,0.0338156,countIP 1.0963e+09 countIP0 1.38814e+09 keysum 9.40968e+08 pktSum 6.20414e+09 aggrSum 6.40339e+07 blackkey_num 124083325 feedback 105 feedsumportion 0.948988 finger0 9 finger 14 time 98055,runTime,36.0001
-
-
-line 587437 total 0.093602 total0 0.458775 false 0.0275821 over 0.093602 false0 0.135189 over0 0.458775 overaggr 0.0388385 overcuckoo 0.0547635
-over_uai 0.258933 over_uai 0.0834881 over_ai,0.281524,over_ai,0.0422679,countIP 1.54427e+09 countIP0 2.05993e+09 keysum 1.41209e+09 pktSum 6.20414e+09 aggrSum 5.48436e+07 blackkey_num 114174980 feedback 105 feedsumportion 0.92778 finger0 9 finger 14 time 98055,runTime,36.0001
-
-
-line 587437 total 0.132001 total0 0.702166 false 0.0379684 over 0.132001 false0 0.201969 over0 0.702166 overaggr 0.0232564 overcuckoo 0.108745
-over_uai 0.0841337 over_uai 0.258933 over_ai,0.106671,over_ai,0.169269,countIP 1.56884e+09 countIP0 2.35904e+09 keysum 1.3859e+09 pktSum 6.20414e+09 aggrSum 3.22311e+07 blackkey_num 146829486 feedback 105 feedsumportion 0.635568 finger0 9 finger 14 time 98055,runTime,36.0001
-
-
-line 603843 total 0.165 total0 0.47877 false 0.02942 over 0.165 false0 0.0853663 over0 0.47877 overaggr 0.0680943 overcuckoo 0.0969055
-over_uai 0.0834881 over_uai 0.0841337 over_ai,0.188559,over_ai,0.0337926,countIP 1.12421e+09 countIP0 1.42699e+09 keysum 9.64985e+08 pktSum 6.37702e+09 aggrSum 6.571e+07 blackkey_num 127657253 feedback 105 feedsumportion 0.948988 finger0 9 finger 14 time 98055,runTime,37.0001
-
-
-line 603843 total 0.0929814 total0 0.45707 false 0.0274684 over 0.0929814 false0 0.135027 over0 0.45707 overaggr 0.0392025 overcuckoo 0.0537789
-over_uai 0.258933 over_uai 0.0834881 over_ai,0.279926,over_ai,0.0420809,countIP 1.58949e+09 countIP0 2.11897e+09 keysum 1.45427e+09 pktSum 6.37702e+09 aggrSum 5.7011e+07 blackkey_num 117139149 feedback 105 feedsumportion 0.92778 finger0 9 finger 14 time 98055,runTime,37.0001
-
-
-line 603843 total 0.131499 total0 0.700114 false 0.0379012 over 0.131499 false0 0.20179 over0 0.700114 overaggr 0.0227284 overcuckoo 0.108771
-over_uai 0.0841337 over_uai 0.258933 over_ai,0.105878,over_ai,0.169405,countIP 1.6144e+09 countIP0 2.42569e+09 keysum 1.42678e+09 pktSum 6.37702e+09 aggrSum 3.24284e+07 blackkey_num 151262596 feedback 105 feedsumportion 0.635568 finger0 9 finger 14 time 98055,runTime,37.0001
-
-
-line 620278 total 0.165638 total0 0.481786 false 0.0294989 over 0.165638 false0 0.0858026 over0 0.481786 overaggr 0.0689006 overcuckoo 0.0967373
-over_uai 0.0834881 over_uai 0.0841337 over_ai,0.189278,over_ai,0.0335425,countIP 1.1533e+09 countIP0 1.4661e+09 keysum 9.89415e+08 pktSum 6.54503e+09 aggrSum 6.81713e+07 blackkey_num 132018269 feedback 105 feedsumportion 0.948988 finger0 9 finger 14 time 98055,runTime,38.0001
-
-
-line 620278 total 0.0928047 total0 0.456908 false 0.0274872 over 0.0928047 false0 0.135329 over0 0.456907 overaggr 0.0396767 overcuckoo 0.053128
-over_uai 0.258933 over_uai 0.0834881 over_ai,0.279081,over_ai,0.0422592,countIP 1.63436e+09 countIP0 2.1789e+09 keysum 1.49557e+09 pktSum 6.54503e+09 aggrSum 5.93392e+07 blackkey_num 120613303 feedback 105 feedsumportion 0.92778 finger0 9 finger 14 time 98055,runTime,38.0001
-
-
-line 620278 total 0.131764 total0 0.702502 false 0.0378185 over 0.131764 false0 0.20163 over0 0.702502 overaggr 0.0223304 overcuckoo 0.109433
-over_uai 0.0841337 over_uai 0.258933 over_ai,0.106126,over_ai,0.169708,countIP 1.65193e+09 countIP0 2.48498e+09 keysum 1.4596e+09 pktSum 6.54503e+09 aggrSum 3.25936e+07 blackkey_num 155686060 feedback 105 feedsumportion 0.635568 finger0 9 finger 14 time 98055,runTime,38.0001
-
-
-line 636590 total 0.164588 total0 0.483387 false 0.0293239 over 0.164588 false0 0.0861227 over0 0.483387 overaggr 0.0677532 overcuckoo 0.0968353
-over_uai 0.0834881 over_uai 0.0841337 over_ai,0.188004,over_ai,0.0332767,countIP 1.18298e+09 countIP0 1.50682e+09 keysum 1.01579e+09 pktSum 6.71722e+09 aggrSum 6.88233e+07 blackkey_num 135211885 feedback 105 feedsumportion 0.948988 finger0 9 finger 14 time 98055,runTime,39.0001
-
-
-line 636590 total 0.0927621 total0 0.455787 false 0.0275704 over 0.0927621 false0 0.135467 over0 0.455787 overaggr 0.0389806 overcuckoo 0.0537815
-over_uai 0.258933 over_uai 0.0834881 over_ai,0.28004,over_ai,0.0421924,countIP 1.6818e+09 countIP0 2.24051e+09 keysum 1.53904e+09 pktSum 6.71722e+09 aggrSum 5.99928e+07 blackkey_num 124493545 feedback 105 feedsumportion 0.92778 finger0 9 finger 14 time 98055,runTime,39.0001
-
-
-line 636590 total 0.131724 total0 0.705133 false 0.0377333 over 0.131724 false0 0.201991 over0 0.705133 overaggr 0.0219095 overcuckoo 0.109814
-over_uai 0.0841337 over_uai 0.258933 over_ai,0.105977,over_ai,0.16991,countIP 1.69276e+09 countIP0 2.55043e+09 keysum 1.49574e+09 pktSum 6.71722e+09 aggrSum 3.27709e+07 blackkey_num 160192378 feedback 105 feedsumportion 0.635568 finger0 9 finger 14 time 98055,runTime,39.0001
-
-
-line 652983 total 0.163124 total0 0.481243 false 0.0291891 over 0.163124 false0 0.0861125 over0 0.481243 overaggr 0.066266 overcuckoo 0.0968585
-over_uai 0.0834881 over_uai 0.0841337 over_ai,0.186278,over_ai,0.0328894,countIP 1.21557e+09 countIP0 1.54804e+09 keysum 1.04509e+09 pktSum 6.88564e+09 aggrSum 6.92542e+07 blackkey_num 138374025 feedback 105 feedsumportion 0.948988 finger0 9 finger 14 time 98055,runTime,40.0001
-
-
-line 652983 total 0.0926398 total0 0.4573 false 0.0275111 over 0.0926398 false0 0.135804 over0 0.4573 overaggr 0.0384172 overcuckoo 0.0542227
-over_uai 0.258933 over_uai 0.0834881 over_ai,0.279274,over_ai,0.0423183,countIP 1.72267e+09 countIP0 2.2976e+09 keysum 1.57661e+09 pktSum 6.88564e+09 aggrSum 6.0569e+07 blackkey_num 127731832 feedback 105 feedsumportion 0.92778 finger0 9 finger 14 time 98055,runTime,40.0001
-
-
-line 652983 total 0.132216 total0 0.70632 false 0.0377678 over 0.132216 false0 0.201762 over0 0.70632 overaggr 0.021555 overcuckoo 0.110661
-over_uai 0.0841337 over_uai 0.258933 over_ai,0.105938,over_ai,0.171255,countIP 1.73216e+09 countIP0 2.61047e+09 keysum 1.52989e+09 pktSum 6.88564e+09 aggrSum 3.29768e+07 blackkey_num 164810340 feedback 105 feedsumportion 0.635568 finger0 9 finger 14 time 98055,runTime,40.0001
-
-* feedback sum: 7.68839e+06 num: 115
-* feedback sum: 6.88741e+06 num: 118
-* feedback sum: 916778 num: 104
  states size: 5 state: 420
 * state: 420 * action: 320 * stateIndexCur: 1
 * _indexCur: 1 * action: 320
@@ -1628,28 +1315,6 @@ over_uai 0.0841337 over_uai 0.258933 over_ai,0.105938,over_ai,0.171255,countIP 1
 
 * index: 4 _actionSuggestIndex: 0
 * _indexCur: 2 * Q value: 0
- states size: 5 state: 420
-* state: 420 * action: 320 * stateIndexCur: 1
-* _indexCur: 1 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 2
-* _indexCur: 1 * Q value: 0
- states size: 5 state: 420
-* state: 420 * action: 320 * stateIndexCur: 1
-* _indexCur: 1 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 2
-* _indexCur: 1 * Q value: 0
  states size: 5 state: 320
 * state: 320 * action: 320 * stateIndexCur: 0
 * _indexCur: 0 * action: 320
@@ -1661,137 +1326,162 @@ over_uai 0.0841337 over_uai 0.258933 over_ai,0.105938,over_ai,0.171255,countIP 1
 
 * index: 4 _actionSuggestIndex: 0
 * _indexCur: 0 * Q value: 0
- states size: 5 state: 620
-* state: 620 * action: 320 * stateIndexCur: 3
-* _indexCur: 3 * action: 320
-* input: 620 * nextstate: 620 * Reward: 0
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 320 * nextstate: 320 * Reward: 0
 * q learn!
-* stateIndexNest: 3
-* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     
-* max index: 3
+* stateIndexNest: 0
+* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
 
-* index: 3 _actionSuggestIndex: 0
-* _indexCur: 3 * Q value: 0
+* index: 4 _actionSuggestIndex: 0
+* _indexCur: 0 * Q value: 0
 * feedback bks!
 * si: 0 ai: 0
-* stateIndex: 1
+* stateIndex: 0
 * actionVec: 
-* randNum: 91
-* randa: 3
+* randNum: 30
+* randa: 4
 * si: 0 ai: 1
-* stateIndex: 2
+* stateIndex: 3
 * actionVec: 
 * randNum: 18
-* randa: 4
-* si: 1 ai: 0
-* stateIndex: 0
-* actionVec: 
-* randNum: 34
-* randa: 2
-* randa: 3
-* si: 1 ai: 1
-* stateIndex: 0
-* actionVec: 
-* randNum: 20
-* randa: 2
 * randa: 1
+* si: 1 ai: 0
+* stateIndex: 1
+* actionVec: 
+* randNum: 77
 * randa: 4
+* si: 1 ai: 1
+* stateIndex: 2
+* actionVec: 
+* randNum: 55
+* randa: 0
 * si: 2 ai: 0
 * stateIndex: 0
 * actionVec: 
 * randNum: 88
-* randa: 0
+* randa: 3
 * si: 2 ai: 1
-* stateIndex: 3
+* stateIndex: 0
 * actionVec: 
-* randNum: 25
-* randa: 4
+* randNum: 46
 * randa: 2
+* randa: 4
 * find max actions!
 * find slotNums!
 * find the index of selected action!
+520 420 
+* rLearn[si][ai]->_actionSuggestIndex: 4
+* rLearn[si][ai]->_actionSuggestIndex: 1
 420 520 
 * rLearn[si][ai]->_actionSuggestIndex: 0
 * rLearn[si][ai]->_actionSuggestIndex: 0
 420 520 
 * rLearn[si][ai]->_actionSuggestIndex: 3
 * rLearn[si][ai]->_actionSuggestIndex: 4
-320 520 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 2
 * feedbackBlackkeyRL:si: 0
-* suggested action++++++++++++++++++++++++++++++++++: 420
 * suggested action++++++++++++++++++++++++++++++++++: 520
+* cuckooBlackKeyTable[si].occupyRate(): 0
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
 * feedbackBlackkeyRL:si: 1
 * suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
 * suggested action++++++++++++++++++++++++++++++++++: 520
+* cuckooBlackKeyTable[si].occupyRate(): 0
 * feedbackBlackkeyRL:si: 2
-* suggested action++++++++++++++++++++++++++++++++++: 320
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
 * suggested action++++++++++++++++++++++++++++++++++: 520
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
 * feedback bks end!
 
-line 669501 total 0.161875 total0 0.480282 false 0.028986 over 0.161875 false0 0.0860011 over0 0.480282 overaggr 0.0653653 overcuckoo 0.0965097
-over_uai 0.0840151 over_uai 0.0904064 over_ai,0.184804,over_ai,0.0325617,countIP 1.24576e+09 countIP0 1.58715e+09 keysum 1.0722e+09 pktSum 7.05999e+09 aggrSum 7.00844e+07 blackkey_num 141338499 feedback 104 feedsumportion 0.939674 finger0 9 finger 14 time 116851,runTime,41.0001
+line 506797 total 0.166869 total0 0.455662 false 0.0301964 over 0.166869 false0 0.0824558 over0 0.455662 overaggr 0.0689111 overcuckoo 0.0979582
+over_uai 0.0844757 over_uai 0.0842939 over_ai,0.190622,over_ai,0.0337725,countIP 9.53127e+08 countIP0 1.18902e+09 keysum 8.16824e+08 pktSum 5.3307e+09 aggrSum 5.62882e+07 blackkey_num 106658620 feedback 113 feedsumportion 0.933081 finger0 9 finger 14 time 138590,runTime,31.0001
 
 
-line 669501 total 0.0924726 total0 0.457331 false 0.0274857 over 0.0924726 false0 0.135933 over0 0.457331 overaggr 0.0381691 overcuckoo 0.0543035
-over_uai 0.237858 over_uai 0.0840151 over_ai,0.280153,over_ai,0.0419794,countIP 1.76722e+09 countIP0 2.35743e+09 keysum 1.61763e+09 pktSum 7.05999e+09 aggrSum 6.17435e+07 blackkey_num 131823993 feedback 104 feedsumportion 0.933855 finger0 9 finger 14 time 116851,runTime,41.0001
+line 506797 total 0.0973551 total0 0.469632 false 0.0282265 over 0.0973551 false0 0.136162 over0 0.469632 overaggr 0.040075 overcuckoo 0.05728
+over_uai 0.250083 over_uai 0.0844757 over_ai,0.282431,over_ai,0.0448245,countIP 1.31481e+09 countIP0 1.76086e+09 keysum 1.19816e+09 pktSum 5.3307e+09 aggrSum 4.80163e+07 blackkey_num 99165185 feedback 113 feedsumportion 0.909785 finger0 9 finger 14 time 138590,runTime,31.0001
 
 
-line 669501 total 0.133352 total0 0.708541 false 0.0380477 over 0.133352 false0 0.202158 over0 0.708541 overaggr 0.0221457 overcuckoo 0.111207
-over_uai 0.0904064 over_uai 0.237858 over_ai,0.105623,over_ai,0.174421,countIP 1.77617e+09 countIP0 2.6776e+09 keysum 1.56719e+09 pktSum 7.05999e+09 aggrSum 3.47065e+07 blackkey_num 168160666 feedback 104 feedsumportion 0.747221 finger0 9 finger 14 time 116851,runTime,41.0001
+line 506797 total 0.134681 total0 0.696886 false 0.0382976 over 0.134681 false0 0.198165 over0 0.696886 overaggr 0.0277676 overcuckoo 0.106914
+over_uai 0.0842939 over_uai 0.250083 over_ai,0.110657,over_ai,0.169699,countIP 1.33918e+09 countIP0 2.0027e+09 keysum 1.18022e+09 pktSum 5.3307e+09 aggrSum 3.27719e+07 blackkey_num 124369666 feedback 113 feedsumportion 0.781147 finger0 9 finger 14 time 138590,runTime,31.0001
 
 
-line 685776 total 0.160783 total0 0.478104 false 0.0288612 over 0.160783 false0 0.0858214 over0 0.478104 overaggr 0.0643147 overcuckoo 0.0964687
-over_uai 0.0840151 over_uai 0.0904064 over_ai,0.183466,over_ai,0.0327178,countIP 1.27728e+09 countIP0 1.62644e+09 keysum 1.10036e+09 pktSum 7.23036e+09 aggrSum 7.07693e+07 blackkey_num 144551520 feedback 104 feedsumportion 0.939674 finger0 9 finger 14 time 116851,runTime,42.0001
+line 522869 total 0.16754 total0 0.459829 false 0.0301896 over 0.16754 false0 0.0828581 over0 0.459829 overaggr 0.0700172 overcuckoo 0.097523
+over_uai 0.0844757 over_uai 0.0842939 over_ai,0.190943,over_ai,0.0357523,countIP 9.82229e+08 countIP0 1.22813e+09 keysum 8.41281e+08 pktSum 5.51005e+09 aggrSum 5.89041e+07 blackkey_num 111232564 feedback 113 feedsumportion 0.933081 finger0 9 finger 14 time 138590,runTime,32.0001
 
 
-line 685776 total 0.0920286 total0 0.45836 false 0.0273184 over 0.0920286 false0 0.136063 over0 0.45836 overaggr 0.0375599 overcuckoo 0.0544686
-over_uai 0.237858 over_uai 0.0840151 over_ai,0.277994,over_ai,0.0419783,countIP 1.80733e+09 countIP0 2.41362e+09 keysum 1.65502e+09 pktSum 7.23036e+09 aggrSum 6.21625e+07 blackkey_num 135737255 feedback 104 feedsumportion 0.933855 finger0 9 finger 14 time 116851,runTime,42.0001
+line 522869 total 0.0961032 total0 0.470202 false 0.027947 over 0.0961032 false0 0.136735 over0 0.470202 overaggr 0.0399907 overcuckoo 0.0561124
+over_uai 0.250083 over_uai 0.0844757 over_ai,0.28108,over_ai,0.0440917,countIP 1.36064e+09 countIP0 1.82503e+09 keysum 1.24134e+09 pktSum 5.51005e+09 aggrSum 4.96423e+07 blackkey_num 101787752 feedback 113 feedsumportion 0.909785 finger0 9 finger 14 time 138590,runTime,32.0001
 
 
-line 685776 total 0.134396 total0 0.708449 false 0.0383909 over 0.134396 false0 0.202373 over0 0.708449 overaggr 0.0229004 overcuckoo 0.111495
-over_uai 0.0904064 over_uai 0.237858 over_ai,0.105486,over_ai,0.176945,countIP 1.8224e+09 countIP0 2.74461e+09 keysum 1.60649e+09 pktSum 7.23036e+09 aggrSum 3.67893e+07 blackkey_num 171392685 feedback 104 feedsumportion 0.747221 finger0 9 finger 14 time 116851,runTime,42.0001
+line 522869 total 0.133209 total0 0.691709 false 0.03816 over 0.133209 false0 0.198152 over0 0.691709 overaggr 0.0267952 overcuckoo 0.106414
+over_uai 0.0842939 over_uai 0.250083 over_ai,0.109288,over_ai,0.168177,countIP 1.39041e+09 countIP0 2.07567e+09 keysum 1.22696e+09 pktSum 5.51005e+09 aggrSum 3.28768e+07 blackkey_num 128740053 feedback 113 feedsumportion 0.781147 finger0 9 finger 14 time 138590,runTime,32.0001
 
 
-line 701920 total 0.160556 total0 0.476352 false 0.0288008 over 0.160556 false0 0.0854488 over0 0.476352 overaggr 0.0632754 overcuckoo 0.0972805
-over_uai 0.0840151 over_uai 0.0904064 over_ai,0.183048,over_ai,0.0330963,countIP 1.3068e+09 countIP0 1.66238e+09 keysum 1.12601e+09 pktSum 7.40317e+09 aggrSum 7.12486e+07 blackkey_num 148122476 feedback 104 feedsumportion 0.939674 finger0 9 finger 14 time 116851,runTime,43.0001
+line 539159 total 0.166056 total0 0.461379 false 0.0299248 over 0.166056 false0 0.0831444 over0 0.461379 overaggr 0.0695397 overcuckoo 0.0965165
+over_uai 0.0844757 over_uai 0.0842939 over_ai,0.189456,over_ai,0.0351738,countIP 1.01253e+09 countIP0 1.26897e+09 keysum 8.6834e+08 pktSum 5.68686e+09 aggrSum 6.0384e+07 blackkey_num 114404477 feedback 113 feedsumportion 0.933081 finger0 9 finger 14 time 138590,runTime,33.0001
 
 
-line 701920 total 0.0920051 total0 0.458151 false 0.0273826 over 0.0920051 false0 0.136355 over0 0.458151 overaggr 0.037806 overcuckoo 0.0541991
-over_uai 0.237858 over_uai 0.0840151 over_ai,0.272914,over_ai,0.0426351,countIP 1.85421e+09 countIP0 2.47592e+09 keysum 1.69798e+09 pktSum 7.40317e+09 aggrSum 6.4194e+07 blackkey_num 139598754 feedback 104 feedsumportion 0.933855 finger0 9 finger 14 time 116851,runTime,43.0001
+line 539159 total 0.0954544 total0 0.470496 false 0.0277498 over 0.0954544 false0 0.136779 over0 0.470496 overaggr 0.0392098 overcuckoo 0.0562446
+over_uai 0.250083 over_uai 0.0844757 over_ai,0.28072,over_ai,0.0435637,countIP 1.40314e+09 countIP0 1.88352e+09 keysum 1.28088e+09 pktSum 5.68686e+09 aggrSum 5.0223e+07 blackkey_num 104728553 feedback 113 feedsumportion 0.909785 finger0 9 finger 14 time 138590,runTime,33.0001
 
 
-line 701920 total 0.135421 total0 0.709573 false 0.0386985 over 0.135421 false0 0.20277 over0 0.709573 overaggr 0.0238134 overcuckoo 0.111608
-over_uai 0.0904064 over_uai 0.237858 over_ai,0.10556,over_ai,0.179188,countIP 1.86819e+09 countIP0 2.81288e+09 keysum 1.64537e+09 pktSum 7.40317e+09 aggrSum 3.9182e+07 blackkey_num 174261207 feedback 104 feedsumportion 0.747221 finger0 9 finger 14 time 116851,runTime,43.0001
+line 539159 total 0.132144 total0 0.68855 false 0.0379904 over 0.132144 false0 0.197954 over0 0.68855 overaggr 0.0259746 overcuckoo 0.106169
+over_uai 0.0842939 over_uai 0.250083 over_ai,0.10857,over_ai,0.166585,countIP 1.43766e+09 countIP0 2.14422e+09 keysum 1.26986e+09 pktSum 5.68686e+09 aggrSum 3.29841e+07 blackkey_num 132939921 feedback 113 feedsumportion 0.781147 finger0 9 finger 14 time 138590,runTime,33.0001
 
 
-line 718017 total 0.160593 total0 0.475389 false 0.0287867 over 0.160593 false0 0.0852147 over0 0.475389 overaggr 0.0629049 overcuckoo 0.097688
-over_uai 0.0840151 over_uai 0.0904064 over_ai,0.183087,over_ai,0.0330699,countIP 1.33653e+09 countIP0 1.69905e+09 keysum 1.15159e+09 pktSum 7.576e+09 aggrSum 7.24408e+07 blackkey_num 151870520 feedback 104 feedsumportion 0.939674 finger0 9 finger 14 time 116851,runTime,44.0001
+line 555363 total 0.16545 total0 0.462394 false 0.0298599 over 0.16545 false0 0.0834516 over0 0.462394 overaggr 0.0685874 overcuckoo 0.0968622
+over_uai 0.0844757 over_uai 0.0842939 over_ai,0.188944,over_ai,0.0345334,countIP 1.04424e+09 countIP0 1.3103e+09 keysum 8.95994e+08 pktSum 5.86058e+09 aggrSum 6.14539e+07 blackkey_num 118382687 feedback 113 feedsumportion 0.933081 finger0 9 finger 14 time 138590,runTime,34.0001
 
 
-line 718017 total 0.0922581 total0 0.458417 false 0.0274162 over 0.0922581 false0 0.136227 over0 0.458417 overaggr 0.0374341 overcuckoo 0.0548239
-over_uai 0.237858 over_uai 0.0840151 over_ai,0.270045,over_ai,0.043551,countIP 1.89571e+09 countIP0 2.53121e+09 keysum 1.73559e+09 pktSum 7.576e+09 aggrSum 6.49702e+07 blackkey_num 143418188 feedback 104 feedsumportion 0.933855 finger0 9 finger 14 time 116851,runTime,44.0001
+line 555363 total 0.0948242 total0 0.468867 false 0.0277016 over 0.0948242 false0 0.136973 over0 0.468867 overaggr 0.0388019 overcuckoo 0.0560223
+over_uai 0.250083 over_uai 0.0844757 over_ai,0.280928,over_ai,0.04317,countIP 1.45065e+09 countIP0 1.94626e+09 keysum 1.32501e+09 pktSum 5.86058e+09 aggrSum 5.14128e+07 blackkey_num 108068550 feedback 113 feedsumportion 0.909785 finger0 9 finger 14 time 138590,runTime,34.0001
 
 
-line 718017 total 0.136853 total0 0.708577 false 0.039143 over 0.136853 false0 0.202669 over0 0.708577 overaggr 0.0257449 overcuckoo 0.111108
-over_uai 0.0904064 over_uai 0.237858 over_ai,0.10556,over_ai,0.182571,countIP 1.91556e+09 countIP0 2.87889e+09 keysum 1.68497e+09 pktSum 7.576e+09 aggrSum 4.33793e+07 blackkey_num 177538954 feedback 104 feedsumportion 0.747221 finger0 9 finger 14 time 116851,runTime,44.0001
+line 555363 total 0.131904 total0 0.691734 false 0.0378241 over 0.131904 false0 0.198358 over0 0.691734 overaggr 0.0253385 overcuckoo 0.106565
+over_uai 0.0842939 over_uai 0.250083 over_ai,0.108298,over_ai,0.166392,countIP 1.47831e+09 countIP0 2.20947e+09 keysum 1.30604e+09 pktSum 5.86058e+09 aggrSum 3.30931e+07 blackkey_num 137259352 feedback 113 feedsumportion 0.781147 finger0 9 finger 14 time 138590,runTime,34.0001
 
 
-line 734424 total 0.159928 total0 0.475788 false 0.0287714 over 0.159928 false0 0.0855953 over0 0.475788 overaggr 0.062832 overcuckoo 0.0970962
-over_uai 0.0840151 over_uai 0.0904064 over_ai,0.18215,over_ai,0.033172,countIP 1.36973e+09 countIP0 1.74272e+09 keysum 1.18088e+09 pktSum 7.74486e+09 aggrSum 7.41967e+07 blackkey_num 155467928 feedback 104 feedsumportion 0.939674 finger0 9 finger 14 time 116851,runTime,45.0001
+line 571709 total 0.165189 total0 0.469113 false 0.0296746 over 0.165189 false0 0.0842714 over0 0.469113 overaggr 0.0679033 overcuckoo 0.0972861
+over_uai 0.0844757 over_uai 0.0842939 over_ai,0.188701,over_ai,0.0341901,countIP 1.07002e+09 countIP0 1.34911e+09 keysum 9.18319e+08 pktSum 6.03032e+09 aggrSum 6.23569e+07 blackkey_num 121781442 feedback 113 feedsumportion 0.933081 finger0 9 finger 14 time 138590,runTime,35.0001
 
 
-line 734424 total 0.091551 total0 0.45808 false 0.0271906 over 0.091551 false0 0.13605 over0 0.45808 overaggr 0.0369858 overcuckoo 0.0545652
-over_uai 0.237858 over_uai 0.0840151 over_ai,0.266169,over_ai,0.0435521,countIP 1.93586e+09 countIP0 2.5859e+09 keysum 1.77349e+09 pktSum 7.74486e+09 aggrSum 6.55941e+07 blackkey_num 145590610 feedback 104 feedsumportion 0.933855 finger0 9 finger 14 time 116851,runTime,45.0001
+line 571709 total 0.0944871 total0 0.465573 false 0.0276996 over 0.0944871 false0 0.136486 over0 0.465573 overaggr 0.0392877 overcuckoo 0.0551994
+over_uai 0.250083 over_uai 0.0844757 over_ai,0.281813,over_ai,0.0427304,countIP 1.49624e+09 countIP0 2.00354e+09 keysum 1.36707e+09 pktSum 6.03032e+09 aggrSum 5.3709e+07 blackkey_num 111551652 feedback 113 feedsumportion 0.909785 finger0 9 finger 14 time 138590,runTime,35.0001
 
 
-line 734424 total 0.136472 total0 0.70779 false 0.0390447 over 0.136472 false0 0.202499 over0 0.70779 overaggr 0.0262959 overcuckoo 0.110176
-over_uai 0.0904064 over_uai 0.237858 over_ai,0.105389,over_ai,0.181715,countIP 1.95801e+09 countIP0 2.94233e+09 keysum 1.72289e+09 pktSum 7.74486e+09 aggrSum 4.53049e+07 blackkey_num 179829462 feedback 104 feedsumportion 0.747221 finger0 9 finger 14 time 116851,runTime,45.0001
+line 571709 total 0.13246 total0 0.693331 false 0.0379765 over 0.13246 false0 0.198779 over0 0.69333 overaggr 0.024717 overcuckoo 0.107743
+over_uai 0.0842939 over_uai 0.250083 over_ai,0.107976,over_ai,0.168226,countIP 1.52165e+09 countIP0 2.27528e+09 keysum 1.34367e+09 pktSum 6.03032e+09 aggrSum 3.32116e+07 blackkey_num 141697049 feedback 113 feedsumportion 0.781147 finger0 9 finger 14 time 138590,runTime,35.0001
 
-* feedback sum: 6.06676e+06 num: 119
-* feedback sum: 5.00622e+06 num: 125
-* feedback sum: 1.35408e+07 num: 110
+* feedback sum: 8.20554e+06 num: 111
+* feedback sum: 6.61275e+06 num: 126
+* feedback sum: 306058 num: 105
+ states size: 5 state: 320
+* state: 320 * action: 320 * stateIndexCur: 0
+* _indexCur: 0 * action: 320
+* input: 520 * nextstate: 520 * Reward: 0
+* q learn!
+* stateIndexNest: 2
+* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 4
+* _indexCur: 0 * Q value: 0
+ states size: 5 state: 620
+* state: 620 * action: 320 * stateIndexCur: 3
+* _indexCur: 3 * action: 320
+* input: 420 * nextstate: 420 * Reward: 0
+* q learn!
+* stateIndexNest: 1
+* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* max index: 4
+
+* index: 4 _actionSuggestIndex: 1
+* _indexCur: 3 * Q value: 0
  states size: 5 state: 420
 * state: 420 * action: 320 * stateIndexCur: 1
 * _indexCur: 1 * action: 320
@@ -1836,146 +1526,150 @@ over_uai 0.0904064 over_uai 0.237858 over_ai,0.105389,over_ai,0.181715,countIP 1
 
 * index: 4 _actionSuggestIndex: 4
 * _indexCur: 0 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
+* feedback bks!
+* si: 0 ai: 0
+* stateIndex: 2
+* actionVec: 
+* randNum: 83
+* randa: 2
+* si: 0 ai: 1
+* stateIndex: 1
+* actionVec: 
+* randNum: 53
+* randa: 3
+* si: 1 ai: 0
+* stateIndex: 1
+* actionVec: 
+* randNum: 87
+* randa: 0
+* si: 1 ai: 1
+* stateIndex: 2
+* actionVec: 
+* randNum: 26
+* randa: 1
+* si: 2 ai: 0
+* stateIndex: 1
+* actionVec: 
+* randNum: 71
+* randa: 4
+* si: 2 ai: 1
+* stateIndex: 2
+* actionVec: 
+* randNum: 86
+* randa: 1
+* find max actions!
+* find slotNums!
+* find the index of selected action!
+420 520 
+* rLearn[si][ai]->_actionSuggestIndex: 2
+* rLearn[si][ai]->_actionSuggestIndex: 3
+420 320 
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* rLearn[si][ai]->_actionSuggestIndex: 1
+620 320 
+* rLearn[si][ai]->_actionSuggestIndex: 4
+* rLearn[si][ai]->_actionSuggestIndex: 1
+* feedbackBlackkeyRL:si: 0
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 0
+* suggested action++++++++++++++++++++++++++++++++++: 520
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
+* feedbackBlackkeyRL:si: 1
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
+* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 0
+* feedbackBlackkeyRL:si: 2
+* suggested action++++++++++++++++++++++++++++++++++: 620
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
+* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
+* feedback bks end!
+
+line 587640 total 0.164826 total0 0.47552 false 0.0294626 over 0.164826 false0 0.0849988 over0 0.47552 overaggr 0.0676781 overcuckoo 0.0971483
+over_uai 0.0829994 over_uai 0.086568 over_ai,0.188393,over_ai,0.0337714,countIP 1.09666e+09 countIP0 1.38917e+09 keysum 9.4148e+08 pktSum 6.20852e+09 aggrSum 6.37176e+07 blackkey_num 125014182 feedback 105 feedsumportion 0.954681 finger0 9 finger 14 time 129034,runTime,36.0001
+
+
+line 587640 total 0.093452 total0 0.463665 false 0.0275415 over 0.093452 false0 0.136648 over0 0.463665 overaggr 0.0390288 overcuckoo 0.0544232
+over_uai 0.259631 over_uai 0.0829994 over_ai,0.280924,over_ai,0.0422358,countIP 1.5453e+09 countIP0 2.0685e+09 keysum 1.41323e+09 pktSum 6.20852e+09 aggrSum 5.51568e+07 blackkey_num 114403032 feedback 105 feedsumportion 0.93425 finger0 9 finger 14 time 129034,runTime,36.0001
+
+
+line 587640 total 0.132248 total0 0.69307 false 0.0380318 over 0.132248 false0 0.199313 over0 0.69307 overaggr 0.025312 overcuckoo 0.106936
+over_uai 0.086568 over_uai 0.259631 over_ai,0.106998,over_ai,0.169393,countIP 1.57005e+09 countIP0 2.34773e+09 keysum 1.38667e+09 pktSum 6.20852e+09 aggrSum 3.50993e+07 blackkey_num 144111845 feedback 105 feedsumportion 0.53387 finger0 9 finger 14 time 129034,runTime,36.0001
+
+
+line 604052 total 0.164679 total0 0.47905 false 0.0293604 over 0.164679 false0 0.0854093 over0 0.47905 overaggr 0.0677309 overcuckoo 0.0969476
+over_uai 0.0829994 over_uai 0.086568 over_ai,0.188181,over_ai,0.0337586,countIP 1.1246e+09 countIP0 1.42815e+09 keysum 9.65589e+08 pktSum 6.38145e+09 aggrSum 6.54002e+07 blackkey_num 128475323 feedback 105 feedsumportion 0.954681 finger0 9 finger 14 time 129034,runTime,37.0001
+
+
+line 604052 total 0.0928513 total0 0.461578 false 0.0274354 over 0.0928513 false0 0.136385 over0 0.461578 overaggr 0.0392935 overcuckoo 0.0535578
+over_uai 0.259631 over_uai 0.0829994 over_ai,0.279347,over_ai,0.0420776,countIP 1.59065e+09 countIP0 2.12733e+09 keysum 1.4555e+09 pktSum 6.38145e+09 aggrSum 5.71918e+07 blackkey_num 117422502 feedback 105 feedsumportion 0.93425 finger0 9 finger 14 time 129034,runTime,37.0001
+
+
+line 604052 total 0.131711 total0 0.690737 false 0.0379564 over 0.131711 false0 0.199057 over0 0.690737 overaggr 0.0260823 overcuckoo 0.105628
+over_uai 0.086568 over_uai 0.259631 over_ai,0.106134,over_ai,0.169553,countIP 1.61563e+09 countIP0 2.4137e+09 keysum 1.4276e+09 pktSum 6.38145e+09 aggrSum 3.72351e+07 blackkey_num 146560227 feedback 105 feedsumportion 0.53387 finger0 9 finger 14 time 129034,runTime,37.0001
+
+
+line 620424 total 0.165326 total0 0.481939 false 0.0294425 over 0.165326 false0 0.0858271 over0 0.481939 overaggr 0.0685613 overcuckoo 0.0967652
+over_uai 0.0829994 over_uai 0.086568 over_ai,0.188915,over_ai,0.0335055,countIP 1.15362e+09 countIP0 1.46705e+09 keysum 9.8995e+08 pktSum 6.54875e+09 aggrSum 6.78722e+07 blackkey_num 133000676 feedback 105 feedsumportion 0.954681 finger0 9 finger 14 time 129034,runTime,38.0001
+
+
+line 620424 total 0.0926818 total0 0.461724 false 0.0274475 over 0.0926818 false0 0.136739 over0 0.461724 overaggr 0.0397244 overcuckoo 0.0529574
+over_uai 0.259631 over_uai 0.0829994 over_ai,0.278572,over_ai,0.0422476,countIP 1.63496e+09 countIP0 2.18715e+09 keysum 1.49628e+09 pktSum 6.54875e+09 aggrSum 5.94387e+07 blackkey_num 120877937 feedback 105 feedsumportion 0.93425 finger0 9 finger 14 time 129034,runTime,38.0001
+
+
+line 620424 total 0.131985 total0 0.693147 false 0.0378795 over 0.131985 false0 0.198931 over0 0.693147 overaggr 0.0268729 overcuckoo 0.105113
+over_uai 0.086568 over_uai 0.259631 over_ai,0.106446,over_ai,0.169786,countIP 1.6531e+09 countIP0 2.4726e+09 keysum 1.46035e+09 pktSum 6.54875e+09 aggrSum 3.92439e+07 blackkey_num 149149409 feedback 105 feedsumportion 0.53387 finger0 9 finger 14 time 129034,runTime,38.0001
+
+
+line 636710 total 0.164295 total0 0.48356 false 0.0292658 over 0.164295 false0 0.0861363 over0 0.48356 overaggr 0.0674347 overcuckoo 0.0968603
+over_uai 0.0829994 over_uai 0.086568 over_ai,0.187664,over_ai,0.0332434,countIP 1.1832e+09 countIP0 1.50765e+09 keysum 1.01624e+09 pktSum 6.72128e+09 aggrSum 6.85296e+07 blackkey_num 136178717 feedback 105 feedsumportion 0.954681 finger0 9 finger 14 time 129034,runTime,39.0001
+
+
+line 636710 total 0.0926623 total0 0.460502 false 0.027544 over 0.0926623 false0 0.136885 over0 0.460502 overaggr 0.0390392 overcuckoo 0.0536231
+over_uai 0.259631 over_uai 0.0829994 over_ai,0.27947,over_ai,0.0422251,countIP 1.68282e+09 countIP0 2.24933e+09 keysum 1.54011e+09 pktSum 6.72128e+09 aggrSum 6.01246e+07 blackkey_num 124851802 feedback 105 feedsumportion 0.93425 finger0 9 finger 14 time 129034,runTime,39.0001
+
+
+line 636710 total 0.131936 total0 0.695608 false 0.037793 over 0.131936 false0 0.199256 over0 0.695608 overaggr 0.0277165 overcuckoo 0.10422
+over_uai 0.086568 over_uai 0.259631 over_ai,0.106275,over_ai,0.170004,countIP 1.69406e+09 countIP0 2.53765e+09 keysum 1.4966e+09 pktSum 6.72128e+09 aggrSum 4.14805e+07 blackkey_num 151594916 feedback 105 feedsumportion 0.53387 finger0 9 finger 14 time 129034,runTime,39.0001
+
+
+line 653143 total 0.162785 total0 0.481352 false 0.0291271 over 0.162785 false0 0.0861282 over0 0.481352 overaggr 0.0659505 overcuckoo 0.0968345
+over_uai 0.0829994 over_uai 0.086568 over_ai,0.185877,over_ai,0.0328552,countIP 1.21577e+09 countIP0 1.54885e+09 keysum 1.04557e+09 pktSum 6.88902e+09 aggrSum 6.89556e+07 blackkey_num 139283880 feedback 105 feedsumportion 0.954681 finger0 9 finger 14 time 129034,runTime,40.0001
+
+
+line 653143 total 0.0925867 total0 0.46242 false 0.0274941 over 0.0925867 false0 0.137318 over0 0.46242 overaggr 0.0384024 overcuckoo 0.0541844
+over_uai 0.259631 over_uai 0.0829994 over_ai,0.279167,over_ai,0.0422927,countIP 1.72337e+09 countIP0 2.30672e+09 keysum 1.57733e+09 pktSum 6.88902e+09 aggrSum 6.05733e+07 blackkey_num 128168935 feedback 105 feedsumportion 0.93425 finger0 9 finger 14 time 129034,runTime,40.0001
+
+
+line 653143 total 0.132398 total0 0.69699 false 0.0378199 over 0.132398 false0 0.199098 over0 0.69699 overaggr 0.0285585 overcuckoo 0.103839
+over_uai 0.086568 over_uai 0.259631 over_ai,0.106205,over_ai,0.171303,countIP 1.73329e+09 countIP0 2.59748e+09 keysum 1.53064e+09 pktSum 6.88902e+09 aggrSum 4.37128e+07 blackkey_num 154126057 feedback 105 feedsumportion 0.53387 finger0 9 finger 14 time 129034,runTime,40.0001
+
+* feedback sum: 7.72741e+06 num: 115
+* feedback sum: 6.6012e+06 num: 116
+* feedback sum: 1.04195e+07 num: 104
+ states size: 5 state: 520
+* state: 520 * action: 320 * stateIndexCur: 2
+* _indexCur: 2 * action: 320
+* input: 420 * nextstate: 420 * Reward: 0
 * q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
+* stateIndexNest: 1
+* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
 * max index: 4
 
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 620
-* state: 620 * action: 320 * stateIndexCur: 3
-* _indexCur: 3 * action: 320
+* index: 4 _actionSuggestIndex: 2
+* _indexCur: 2 * Q value: 0
+ states size: 5 state: 420
+* state: 420 * action: 320 * stateIndexCur: 1
+* _indexCur: 1 * action: 320
 * input: 520 * nextstate: 520 * Reward: 0
 * q learn!
 * stateIndexNest: 2
 * i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
 * max index: 4
 
-* index: 4 _actionSuggestIndex: 2
-* _indexCur: 3 * Q value: 0
-* feedback bks!
-* si: 0 ai: 0
-* stateIndex: 1
-* actionVec: 
-* randNum: 44
-* randa: 0
-* si: 0 ai: 1
-* stateIndex: 2
-* actionVec: 
-* randNum: 29
-* randa: 1
-* si: 1 ai: 0
-* stateIndex: 1
-* actionVec: 
-* randNum: 24
-* randa: 3
-* si: 1 ai: 1
-* stateIndex: 2
-* actionVec: 
-* randNum: 59
-* randa: 3
-* si: 2 ai: 0
-* stateIndex: 0
-* actionVec: 
-* randNum: 21
-* randa: 1
-* randa: 1
-* randa: 4
-* si: 2 ai: 1
-* stateIndex: 2
-* actionVec: 
-* randNum: 9
-* randa: 4
-* find max actions!
-* find slotNums!
-* find the index of selected action!
-420 320 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 1
-420 520 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 0
-320 520 
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 0
-* feedbackBlackkeyRL:si: 0
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* feedbackBlackkeyRL:si: 1
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* suggested action++++++++++++++++++++++++++++++++++: 520
-* feedbackBlackkeyRL:si: 2
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* suggested action++++++++++++++++++++++++++++++++++: 520
-* feedback bks end!
-
-line 750769 total 0.15968 total0 0.475724 false 0.0287861 over 0.15968 false0 0.0857609 over0 0.475724 overaggr 0.06239 overcuckoo 0.0972895
-over_uai 0.0925124 over_uai 0.0888633 over_ai,0.181776,over_ai,0.0330364,countIP 1.40204e+09 countIP0 1.78414e+09 keysum 1.20899e+09 pktSum 7.91538e+09 aggrSum 7.54289e+07 blackkey_num 159429555 feedback 110 feedsumportion 0.924647 finger0 9 finger 14 time 118212,runTime,46.0001
-
-
-line 750769 total 0.0913107 total0 0.459132 false 0.0269958 over 0.0913107 false0 0.135742 over0 0.459132 overaggr 0.0370941 overcuckoo 0.0542166
-over_uai 0.133283 over_uai 0.0925124 over_ai,0.263013,over_ai,0.043874,countIP 1.9711e+09 countIP0 2.63545e+09 keysum 1.80618e+09 pktSum 7.91538e+09 aggrSum 6.69985e+07 blackkey_num 148080964 feedback 110 feedsumportion 0.918282 finger0 9 finger 14 time 118212,runTime,46.0001
-
-
-line 750769 total 0.136296 total0 0.705717 false 0.0390727 over 0.136296 false0 0.202311 over0 0.705717 overaggr 0.0258382 overcuckoo 0.110458
-over_uai 0.0888633 over_uai 0.133283 over_ai,0.105241,over_ai,0.181479,countIP 2.00394e+09 countIP0 3.00815e+09 keysum 1.76357e+09 pktSum 7.91538e+09 aggrSum 4.55676e+07 blackkey_num 184788138 feedback 110 feedsumportion 0.97705 finger0 9 finger 14 time 118212,runTime,46.0001
-
-
-line 766809 total 0.159985 total0 0.475761 false 0.0288503 over 0.159985 false0 0.0857943 over0 0.475761 overaggr 0.0621421 overcuckoo 0.0978431
-over_uai 0.0925124 over_uai 0.0888633 over_ai,0.181953,over_ai,0.0336057,countIP 1.43308e+09 countIP0 1.82319e+09 keysum 1.23543e+09 pktSum 8.08632e+09 aggrSum 7.6772e+07 blackkey_num 163862048 feedback 110 feedsumportion 0.924647 finger0 9 finger 14 time 118212,runTime,47.0001
-
-
-line 766809 total 0.0909257 total0 0.458718 false 0.0268876 over 0.0909257 false0 0.135648 over0 0.458718 overaggr 0.036839 overcuckoo 0.0540867
-over_uai 0.133283 over_uai 0.0925124 over_ai,0.260969,over_ai,0.0440244,countIP 2.01328e+09 countIP0 2.69203e+09 keysum 1.84548e+09 pktSum 8.08632e+09 aggrSum 6.79856e+07 blackkey_num 150912650 feedback 110 feedsumportion 0.918282 finger0 9 finger 14 time 118212,runTime,47.0001
-
-
-line 766809 total 0.136347 total0 0.706448 false 0.0390501 over 0.136347 false0 0.202328 over0 0.706448 overaggr 0.025491 overcuckoo 0.110856
-over_uai 0.0888633 over_uai 0.133283 over_ai,0.105277,over_ai,0.18142,countIP 2.04579e+09 countIP0 3.07215e+09 keysum 1.80032e+09 pktSum 8.08632e+09 aggrSum 4.58918e+07 blackkey_num 189526545 feedback 110 feedsumportion 0.97705 finger0 9 finger 14 time 118212,runTime,47.0001
-
-
-line 782997 total 0.16012 total0 0.473187 false 0.0289259 over 0.16012 false0 0.0854815 over0 0.473187 overaggr 0.0621674 overcuckoo 0.097953
-over_uai 0.0925124 over_uai 0.0888633 over_ai,0.182063,over_ai,0.0334475,countIP 1.4649e+09 countIP0 1.86021e+09 keysum 1.26271e+09 pktSum 8.25253e+09 aggrSum 7.84997e+07 blackkey_num 168216826 feedback 110 feedsumportion 0.924647 finger0 9 finger 14 time 118212,runTime,48.0001
-
-
-line 782997 total 0.0908039 total0 0.45872 false 0.0268418 over 0.0908039 false0 0.135599 over0 0.45872 overaggr 0.0367957 overcuckoo 0.0540081
-over_uai 0.133283 over_uai 0.0925124 over_ai,0.258802,over_ai,0.0442907,countIP 2.05385e+09 countIP0 2.7466e+09 keysum 1.88288e+09 pktSum 8.25253e+09 aggrSum 6.92819e+07 blackkey_num 154080141 feedback 110 feedsumportion 0.918282 finger0 9 finger 14 time 118212,runTime,48.0001
-
-
-line 782997 total 0.136388 total0 0.707106 false 0.0390165 over 0.136388 false0 0.202282 over0 0.707106 overaggr 0.0251701 overcuckoo 0.111218
-over_uai 0.0888633 over_uai 0.133283 over_ai,0.105151,over_ai,0.18172,countIP 2.08604e+09 countIP0 3.13369e+09 keysum 1.83567e+09 pktSum 8.25253e+09 aggrSum 4.6204e+07 blackkey_num 194079286 feedback 110 feedsumportion 0.97705 finger0 9 finger 14 time 118212,runTime,48.0001
-
-
-line 799249 total 0.16017 total0 0.473727 false 0.0288979 over 0.16017 false0 0.0854696 over0 0.473727 overaggr 0.0623842 overcuckoo 0.0977859
-over_uai 0.0925124 over_uai 0.0888633 over_ai,0.18211,over_ai,0.0333573,countIP 1.49334e+09 countIP0 1.89694e+09 keysum 1.28717e+09 pktSum 8.4215e+09 aggrSum 8.02993e+07 blackkey_num 172000714 feedback 110 feedsumportion 0.924647 finger0 9 finger 14 time 118212,runTime,49.0001
-
-
-line 799249 total 0.090859 total0 0.458493 false 0.026825 over 0.090859 false0 0.135364 over0 0.458493 overaggr 0.0369975 overcuckoo 0.0538614
-over_uai 0.133283 over_uai 0.0925124 over_ai,0.258643,over_ai,0.0443415,countIP 2.09402e+09 countIP0 2.79973e+09 keysum 1.9196e+09 pktSum 8.4215e+09 aggrSum 7.10206e+07 blackkey_num 159114785 feedback 110 feedsumportion 0.918282 finger0 9 finger 14 time 118212,runTime,49.0001
-
-
-line 799249 total 0.136392 total0 0.708116 false 0.0389797 over 0.136392 false0 0.202374 over0 0.708116 overaggr 0.0248765 overcuckoo 0.111515
-over_uai 0.0888633 over_uai 0.133283 over_ai,0.105337,over_ai,0.181385,countIP 2.12715e+09 countIP0 3.19733e+09 keysum 1.87184e+09 pktSum 8.4215e+09 aggrSum 4.65649e+07 blackkey_num 198627948 feedback 110 feedsumportion 0.97705 finger0 9 finger 14 time 118212,runTime,49.0001
-
-
-line 815873 total 0.159741 total0 0.473719 false 0.0287968 over 0.159741 false0 0.0853984 over0 0.473719 overaggr 0.0625826 overcuckoo 0.0971579
-over_uai 0.0925124 over_uai 0.0888633 over_ai,0.181581,over_ai,0.0333224,countIP 1.52319e+09 countIP0 1.93556e+09 keysum 1.31339e+09 pktSum 8.59896e+09 aggrSum 8.21952e+07 blackkey_num 175298135 feedback 110 feedsumportion 0.924647 finger0 9 finger 14 time 118212,runTime,50.0001
-
-
-line 815873 total 0.0906128 total0 0.457166 false 0.026807 over 0.0906128 false0 0.135248 over0 0.457166 overaggr 0.0370702 overcuckoo 0.0535426
-over_uai 0.133283 over_uai 0.0925124 over_ai,0.25721,over_ai,0.0443702,countIP 2.14103e+09 countIP0 2.86063e+09 keysum 1.96315e+09 pktSum 8.59896e+09 aggrSum 7.27741e+07 blackkey_num 163998129 feedback 110 feedsumportion 0.918282 finger0 9 finger 14 time 118212,runTime,50.0001
-
-
-line 815873 total 0.136899 total0 0.707132 false 0.0390976 over 0.136899 false0 0.201953 over0 0.707132 overaggr 0.0245056 overcuckoo 0.112393
-over_uai 0.0888633 over_uai 0.133283 over_ai,0.105288,over_ai,0.182451,countIP 2.17177e+09 countIP0 3.26106e+09 keysum 1.91026e+09 pktSum 8.59896e+09 aggrSum 4.6812e+07 blackkey_num 204573080 feedback 110 feedsumportion 0.97705 finger0 9 finger 14 time 118212,runTime,50.0001
-
-* feedback sum: 8.98956e+06 num: 119
-* feedback sum: 6.92646e+06 num: 123
-* feedback sum: 1.27219e+06 num: 112
+* index: 4 _actionSuggestIndex: 3
+* _indexCur: 1 * Q value: 0
  states size: 5 state: 420
 * state: 420 * action: 320 * stateIndexCur: 1
 * _indexCur: 1 * action: 320
@@ -1998,189 +1692,6 @@ over_uai 0.0888633 over_uai 0.133283 over_ai,0.105288,over_ai,0.182451,countIP 2
 
 * index: 4 _actionSuggestIndex: 1
 * _indexCur: 2 * Q value: 0
- states size: 5 state: 420
-* state: 420 * action: 320 * stateIndexCur: 1
-* _indexCur: 1 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 1 * Q value: 0
- states size: 5 state: 520
-* state: 520 * action: 320 * stateIndexCur: 2
-* _indexCur: 2 * action: 320
-* input: 520 * nextstate: 520 * Reward: 0
-* q learn!
-* stateIndexNest: 2
-* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 2 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 520
-* state: 520 * action: 320 * stateIndexCur: 2
-* _indexCur: 2 * action: 320
-* input: 520 * nextstate: 520 * Reward: 0
-* q learn!
-* stateIndexNest: 2
-* i: 0 *: 0     * i: 1 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 0
-* _indexCur: 2 * Q value: 0
-* feedback bks!
-* si: 0 ai: 0
-* stateIndex: 1
-* actionVec: 
-* randNum: 64
-* randa: 1
-* randa: 2
-* si: 0 ai: 1
-* stateIndex: 0
-* actionVec: 
-* randNum: 50
-* randa: 3
-* si: 1 ai: 0
-* stateIndex: 1
-* actionVec: 
-* randNum: 36
-* randa: 4
-* si: 1 ai: 1
-* stateIndex: 2
-* actionVec: 
-* randNum: 39
-* randa: 1
-* si: 2 ai: 0
-* stateIndex: 0
-* actionVec: 
-* randNum: 78
-* randa: 3
-* si: 2 ai: 1
-* stateIndex: 2
-* actionVec: 
-* randNum: 74
-* randa: 2
-* find max actions!
-* find slotNums!
-* find the index of selected action!
-320 420 
-* rLearn[si][ai]->_actionSuggestIndex: 2
-* rLearn[si][ai]->_actionSuggestIndex: 3
-620 320 
-* rLearn[si][ai]->_actionSuggestIndex: 4
-* rLearn[si][ai]->_actionSuggestIndex: 1
-420 420 
-* rLearn[si][ai]->_actionSuggestIndex: 3
-* rLearn[si][ai]->_actionSuggestIndex: 2
-* feedbackBlackkeyRL:si: 0
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* feedbackBlackkeyRL:si: 1
-* suggested action++++++++++++++++++++++++++++++++++: 620
-* suggested action++++++++++++++++++++++++++++++++++: 320
-* feedbackBlackkeyRL:si: 2
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* suggested action++++++++++++++++++++++++++++++++++: 420
-* feedback bks end!
-
-line 832528 total 0.159058 total0 0.47254 false 0.0286347 over 0.159058 false0 0.08507 over0 0.47254 overaggr 0.0619559 overcuckoo 0.0971019
-over_uai 0.0898636 over_uai 0.0918057 over_ai,0.180754,over_ai,0.0335508,countIP 1.5519e+09 countIP0 1.97164e+09 keysum 1.33894e+09 pktSum 8.77635e+09 aggrSum 8.2955e+07 blackkey_num 178223439 feedback 112 feedsumportion 0.938633 finger0 9 finger 14 time 116878,runTime,51.0001
-
-
-line 832528 total 0.0904563 total0 0.458283 false 0.0267122 over 0.0904563 false0 0.135333 over0 0.458283 overaggr 0.0368539 overcuckoo 0.0536025
-over_uai 0.216523 over_uai 0.0898636 over_ai,0.25508,over_ai,0.0444869,countIP 2.18183e+09 countIP0 2.91779e+09 keysum 2.00084e+09 pktSum 8.77635e+09 aggrSum 7.37386e+07 blackkey_num 167801022 feedback 112 feedsumportion 0.935459 finger0 9 finger 14 time 116878,runTime,51.0001
-
-
-line 832528 total 0.136404 total0 0.703535 false 0.0390828 over 0.136404 false0 0.201579 over0 0.703535 overaggr 0.0249834 overcuckoo 0.111421
-over_uai 0.0918057 over_uai 0.216523 over_ai,0.104859,over_ai,0.181663,countIP 2.2212e+09 countIP0 3.32971e+09 keysum 1.95459e+09 pktSum 8.77635e+09 aggrSum 4.88322e+07 blackkey_num 207631561 feedback 112 feedsumportion 0.797547 finger0 9 finger 14 time 116878,runTime,51.0001
-
-
-line 849134 total 0.159227 total0 0.472132 false 0.0286256 over 0.159227 false0 0.0848792 over0 0.472132 overaggr 0.0618452 overcuckoo 0.0973817
-over_uai 0.0898636 over_uai 0.0918057 over_ai,0.180935,over_ai,0.0335493,countIP 1.58214e+09 countIP0 2.0092e+09 keysum 1.36482e+09 pktSum 8.95651e+09 aggrSum 8.44077e+07 blackkey_num 181907855 feedback 112 feedsumportion 0.938633 finger0 9 finger 14 time 116878,runTime,52.0001
-
-
-line 849134 total 0.0897064 total0 0.45651 false 0.0265784 over 0.0897064 false0 0.135256 over0 0.45651 overaggr 0.0364023 overcuckoo 0.0533042
-over_uai 0.216523 over_uai 0.0898636 over_ai,0.250702,over_ai,0.0443271,countIP 2.23077e+09 countIP0 2.98166e+09 keysum 2.04713e+09 pktSum 8.95651e+09 aggrSum 7.45201e+07 blackkey_num 170365146 feedback 112 feedsumportion 0.935459 finger0 9 finger 14 time 116878,runTime,52.0001
-
-
-line 849134 total 0.13616 total0 0.703385 false 0.0389701 over 0.13616 false0 0.201314 over0 0.703385 overaggr 0.0257329 overcuckoo 0.110427
-over_uai 0.0918057 over_uai 0.216523 over_ai,0.10498,over_ai,0.180612,countIP 2.26437e+09 countIP0 3.39485e+09 keysum 1.993e+09 pktSum 8.95651e+09 aggrSum 5.12857e+07 blackkey_num 209915873 feedback 112 feedsumportion 0.797547 finger0 9 finger 14 time 116878,runTime,52.0001
-
-
-line 866054 total 0.159856 total0 0.471637 false 0.0286789 over 0.159856 false0 0.0846135 over0 0.471637 overaggr 0.0618762 overcuckoo 0.0979802
-over_uai 0.0898636 over_uai 0.0918057 over_ai,0.181641,over_ai,0.0337589,countIP 1.61148e+09 countIP0 2.04466e+09 keysum 1.38938e+09 pktSum 9.13377e+09 aggrSum 8.59693e+07 blackkey_num 185599728 feedback 112 feedsumportion 0.938633 finger0 9 finger 14 time 116878,runTime,53.0002
-
-
-line 866054 total 0.0890269 total0 0.457126 false 0.0264088 over 0.089027 false0 0.135601 over0 0.457126 overaggr 0.0360635 overcuckoo 0.0529635
-over_uai 0.216523 over_uai 0.0898636 over_ai,0.24865,over_ai,0.0440347,countIP 2.2756e+09 countIP0 3.04477e+09 keysum 2.08957e+09 pktSum 9.13377e+09 aggrSum 7.53574e+07 blackkey_num 172668817 feedback 112 feedsumportion 0.935459 finger0 9 finger 14 time 116878,runTime,53.0002
-
-
-line 866054 total 0.135939 total0 0.704633 false 0.0388905 over 0.135939 false0 0.201587 over0 0.704633 overaggr 0.0262647 overcuckoo 0.109674
-over_uai 0.0918057 over_uai 0.216523 over_ai,0.105155,over_ai,0.179738,countIP 2.30799e+09 countIP0 3.46346e+09 keysum 2.03179e+09 pktSum 9.13377e+09 aggrSum 5.33642e+07 blackkey_num 212640143 feedback 112 feedsumportion 0.797547 finger0 9 finger 14 time 116878,runTime,53.0002
-
-
-line 882732 total 0.159796 total0 0.470698 false 0.0286627 over 0.159796 false0 0.0844296 over0 0.470698 overaggr 0.0616747 overcuckoo 0.098121
-over_uai 0.0898636 over_uai 0.0918057 over_ai,0.18165,over_ai,0.0336931,countIP 1.64223e+09 countIP0 2.08246e+09 keysum 1.41597e+09 pktSum 9.31004e+09 aggrSum 8.73294e+07 blackkey_num 188996880 feedback 112 feedsumportion 0.938633 finger0 9 finger 14 time 116878,runTime,54.0002
-
-
-line 882732 total 0.0895742 total0 0.458015 false 0.0265136 over 0.0895742 false0 0.135571 over0 0.458015 overaggr 0.0359056 overcuckoo 0.0536686
-over_uai 0.216523 over_uai 0.0898636 over_ai,0.250811,over_ai,0.0438823,countIP 2.31681e+09 countIP0 3.10024e+09 keysum 2.12635e+09 pktSum 9.31004e+09 aggrSum 7.63477e+07 blackkey_num 177029867 feedback 112 feedsumportion 0.935459 finger0 9 finger 14 time 116878,runTime,54.0002
-
-
-line 882732 total 0.135534 total0 0.703111 false 0.0388214 over 0.135534 false0 0.201395 over0 0.703111 overaggr 0.0267512 overcuckoo 0.108782
-over_uai 0.0918057 over_uai 0.216523 over_ai,0.104966,over_ai,0.178901,countIP 2.3539e+09 countIP0 3.53046e+09 keysum 2.07295e+09 pktSum 9.31004e+09 aggrSum 5.54539e+07 blackkey_num 215284079 feedback 112 feedsumportion 0.797547 finger0 9 finger 14 time 116878,runTime,54.0002
-
-
-line 899425 total 0.159752 total0 0.470627 false 0.0286374 over 0.159752 false0 0.0843656 over0 0.470627 overaggr 0.0613506 overcuckoo 0.0984013
-over_uai 0.0898636 over_uai 0.0918057 over_ai,0.181777,over_ai,0.0334385,countIP 1.67266e+09 countIP0 2.12102e+09 keysum 1.44225e+09 pktSum 9.48776e+09 aggrSum 8.84831e+07 blackkey_num 192739847 feedback 112 feedsumportion 0.938633 finger0 9 finger 14 time 116878,runTime,55.0002
-
-
-line 899425 total 0.0898386 total0 0.458708 false 0.0265362 over 0.0898386 false0 0.135491 over0 0.458708 overaggr 0.0357991 overcuckoo 0.0540395
-over_uai 0.216523 over_uai 0.0898636 over_ai,0.250628,over_ai,0.0441998,countIP 2.35779e+09 countIP0 3.15581e+09 keysum 2.16343e+09 pktSum 9.48776e+09 aggrSum 7.74488e+07 blackkey_num 180868778 feedback 112 feedsumportion 0.935459 finger0 9 finger 14 time 116878,runTime,55.0002
-
-
-line 899425 total 0.135324 total0 0.701838 false 0.0388281 over 0.135324 false0 0.201376 over0 0.701838 overaggr 0.0275073 overcuckoo 0.107817
-over_uai 0.0918057 over_uai 0.216523 over_ai,0.104859,over_ai,0.178397,countIP 2.4016e+09 countIP0 3.59998e+09 keysum 2.11535e+09 pktSum 9.48776e+09 aggrSum 5.81875e+07 blackkey_num 217824788 feedback 112 feedsumportion 0.797547 finger0 9 finger 14 time 116878,runTime,55.0002
-
-* feedback sum: 7.52149e+06 num: 132
-* feedback sum: 4.59711e+06 num: 123
-* feedback sum: 1.1113e+07 num: 112
- states size: 5 state: 420
-* state: 420 * action: 320 * stateIndexCur: 1
-* _indexCur: 1 * action: 320
-* input: 320 * nextstate: 320 * Reward: 0
-* q learn!
-* stateIndexNest: 0
-* i: 0 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 2
-* _indexCur: 1 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 3
-* _indexCur: 0 * Q value: 0
  states size: 5 state: 420
 * state: 420 * action: 320 * stateIndexCur: 1
 * _indexCur: 1 * action: 320
@@ -2203,118 +1714,75 @@ over_uai 0.0918057 over_uai 0.216523 over_ai,0.104859,over_ai,0.178397,countIP 2
 
 * index: 4 _actionSuggestIndex: 1
 * _indexCur: 2 * Q value: 0
- states size: 5 state: 320
-* state: 320 * action: 320 * stateIndexCur: 0
-* _indexCur: 0 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 3
-* _indexCur: 0 * Q value: 0
- states size: 5 state: 520
-* state: 520 * action: 320 * stateIndexCur: 2
-* _indexCur: 2 * action: 320
-* input: 420 * nextstate: 420 * Reward: 0
-* q learn!
-* stateIndexNest: 1
-* i: 0 *: 0     * i: 2 *: 0     * i: 3 *: 0     * i: 4 *: 0     
-* max index: 4
-
-* index: 4 _actionSuggestIndex: 2
-* _indexCur: 2 * Q value: 0
 * feedback bks!
 * si: 0 ai: 0
-* stateIndex: 0
-* actionVec: 
-* randNum: 53
-* randa: 1
-* randa: 4
-* si: 0 ai: 1
 * stateIndex: 1
 * actionVec: 
-* randNum: 53
-* randa: 4
-* si: 1 ai: 0
-* stateIndex: 3
+* randNum: 32
+* randa: 0
+* si: 0 ai: 1
+* stateIndex: 2
 * actionVec: 
-* randNum: 96
-* randa: 1
+* randNum: 18
+* randa: 2
+* si: 1 ai: 0
+* stateIndex: 1
+* actionVec: 
+* randNum: 52
+* randa: 2
 * si: 1 ai: 1
 * stateIndex: 0
 * actionVec: 
-* randNum: 74
+* randNum: 51
+* randa: 2
 * randa: 4
 * si: 2 ai: 0
-* stateIndex: 1
+* stateIndex: 3
 * actionVec: 
-* randNum: 73
-* randa: 1
-* randa: 1
-* randa: 4
+* randNum: 72
+* randa: 0
 * si: 2 ai: 1
-* stateIndex: 1
+* stateIndex: 0
 * actionVec: 
-* randNum: 63
-* randa: 1
-* randa: 2
+* randNum: 97
+* randa: 3
 * find max actions!
 * find slotNums!
 * find the index of selected action!
-320 420 
+420 420 
 * rLearn[si][ai]->_actionSuggestIndex: 0
-* rLearn[si][ai]->_actionSuggestIndex: 0
-420 520 
-* rLearn[si][ai]->_actionSuggestIndex: 1
+* rLearn[si][ai]->_actionSuggestIndex: 2
+320 520 
+* rLearn[si][ai]->_actionSuggestIndex: 2
 * rLearn[si][ai]->_actionSuggestIndex: 4
 620 320 
-* rLearn[si][ai]->_actionSuggestIndex: 4
-* rLearn[si][ai]->_actionSuggestIndex: 2
+* rLearn[si][ai]->_actionSuggestIndex: 0
+* rLearn[si][ai]->_actionSuggestIndex: 0
 * feedbackBlackkeyRL:si: 0
-* suggested action++++++++++++++++++++++++++++++++++: 320
 * suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 0
+* suggested action++++++++++++++++++++++++++++++++++: 420
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
 * feedbackBlackkeyRL:si: 1
-* suggested action++++++++++++++++++++++++++++++++++: 420
+* suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
 * suggested action++++++++++++++++++++++++++++++++++: 520
+* cuckooBlackKeyTable[si].occupyRate(): 0
 * feedbackBlackkeyRL:si: 2
 * suggested action++++++++++++++++++++++++++++++++++: 620
+* cuckooBlackKeyTable[si].occupyRate(): 2.8026e-45
 * suggested action++++++++++++++++++++++++++++++++++: 320
+* cuckooBlackKeyTable[si].occupyRate(): 1.4013e-45
 * feedback bks end!
 
-line 916171 total 0.159676 total0 0.470444 false 0.0286172 over 0.159676 false0 0.0843132 over0 0.470444 overaggr 0.0615786 overcuckoo 0.0980975
-over_uai 0.117041 over_uai 0.085667 over_ai,0.181888,over_ai,0.0331858,countIP 1.70315e+09 countIP0 2.15956e+09 keysum 1.46864e+09 pktSum 9.66325e+09 aggrSum 9.04369e+07 blackkey_num 196558477 feedback 112 feedsumportion 0.926966 finger0 9 finger 14 time 127993,runTime,56.0002
+line 669615 total 0.161544 total0 0.48047 false 0.0289282 over 0.161544 false0 0.0860393 over0 0.48047 overaggr 0.0650584 overcuckoo 0.0964855
+over_uai 0.0818724 over_uai 0.089493 over_ai,0.18442,over_ai,0.0325176,countIP 1.24599e+09 countIP0 1.5881e+09 keysum 1.0727e+09 pktSum 7.06297e+09 aggrSum 6.9788e+07 blackkey_num 142253839 feedback 104 feedsumportion 0.93987 finger0 9 finger 14 time 128727,runTime,41.0001
 
 
-line 916171 total 0.0903804 total0 0.457916 false 0.0266995 over 0.0903804 false0 0.135274 over0 0.457916 overaggr 0.0355393 overcuckoo 0.0548411
-over_uai 0.182442 over_uai 0.117041 over_ai,0.252707,over_ai,0.0440901,countIP 2.40283e+09 countIP0 3.21275e+09 keysum 2.20366e+09 pktSum 9.66325e+09 aggrSum 7.83165e+07 blackkey_num 185647009 feedback 112 feedsumportion 0.91068 finger0 9 finger 14 time 127993,runTime,56.0002
+line 669615 total 0.0923616 total0 0.462465 false 0.0274527 over 0.0923616 false0 0.137459 over0 0.462465 overaggr 0.0381965 overcuckoo 0.0541651
+over_uai 0.24328 over_uai 0.0818724 over_ai,0.279696,over_ai,0.0419656,countIP 1.76779e+09 countIP0 2.36673e+09 keysum 1.61832e+09 pktSum 7.06297e+09 aggrSum 6.1814e+07 blackkey_num 132205011 feedback 104 feedsumportion 0.935675 finger0 9 finger 14 time 128727,runTime,41.0001
 
 
-line 916171 total 0.135151 total0 0.70194 false 0.0388081 over 0.135151 false0 0.20156 over0 0.70194 overaggr 0.0270745 overcuckoo 0.108076
-over_uai 0.085667 over_uai 0.182442 over_ai,0.104692,over_ai,0.177994,countIP 2.44711e+09 countIP0 3.66897e+09 keysum 2.15576e+09 pktSum 9.66325e+09 aggrSum 5.8366e+07 blackkey_num 222572377 feedback 112 feedsumportion 0.969633 finger0 9 finger 14 time 127993,runTime,56.0002
-
-
-line 932761 total 0.159549 total0 0.470503 false 0.0286111 over 0.159549 false0 0.0843731 over0 0.470503 overaggr 0.0616696 overcuckoo 0.097879
-over_uai 0.117041 over_uai 0.085667 over_ai,0.181815,over_ai,0.0330319,countIP 1.73538e+09 countIP0 2.20076e+09 keysum 1.4966e+09 pktSum 9.84233e+09 aggrSum 9.22948e+07 blackkey_num 200345584 feedback 112 feedsumportion 0.926966 finger0 9 finger 14 time 127993,runTime,57.0002
-
-
-line 932761 total 0.0896413 total0 0.457796 false 0.02649 over 0.0896413 false0 0.135284 over0 0.457796 overaggr 0.0351186 overcuckoo 0.0545227
-over_uai 0.182442 over_uai 0.117041 over_ai,0.249095,over_ai,0.0440318,countIP 2.44632e+09 countIP0 3.27286e+09 keysum 2.24507e+09 pktSum 9.84233e+09 aggrSum 7.88437e+07 blackkey_num 187709895 feedback 112 feedsumportion 0.91068 finger0 9 finger 14 time 127993,runTime,57.0002
-
-
-line 932761 total 0.135485 total0 0.70169 false 0.038852 over 0.135485 false0 0.201218 over0 0.70169 overaggr 0.0267402 overcuckoo 0.108745
-over_uai 0.085667 over_uai 0.182442 over_ai,0.104997,over_ai,0.178281,countIP 2.49059e+09 countIP0 3.73252e+09 keysum 2.19342e+09 pktSum 9.84233e+09 aggrSum 5.86524e+07 blackkey_num 228090043 feedback 112 feedsumportion 0.969633 finger0 9 finger 14 time 127993,runTime,57.0002
-
-
-line 949131 total 0.15876 total0 0.468774 false 0.0285489 over 0.15876 false0 0.0842971 over0 0.468774 overaggr 0.0618946 overcuckoo 0.0968652
-over_uai 0.117041 over_uai 0.085667 over_ai,0.181001,over_ai,0.0326559,countIP 1.76994e+09 countIP0 2.24347e+09 keysum 1.52744e+09 pktSum 1.00215e+10 aggrSum 9.45405e+07 blackkey_num 203694380 feedback 112 feedsumportion 0.926966 finger0 9 finger 14 time 127993,runTime,58.0002
-
-
-line 949131 total 0.0889591 total0 0.458291 false 0.0263149 over 0.0889591 false0 0.135567 over0 0.458291 overaggr 0.0350244 overcuckoo 0.0539347
-over_uai 0.182442 over_uai 0.117041 over_ai,0.244769,over_ai,0.0439657,countIP 2.49124e+09 countIP0 3.33617e+09 keysum 2.28773e+09 pktSum 1.00215e+10 aggrSum 8.01263e+07 blackkey_num 189927056 feedback 112 feedsumportion 0.91068 finger0 9 finger 14 time 127993,runTime,58.0002
-
-
-line 949131 total 0.136759 total0 0.70208 false 0.039143 over 0.136759 false0 0.200949 over0 0.70208 overaggr 0.0264121 overcuckoo 0.110347
-over_uai 0.085667 over_uai 0.182442 over_ai,0.107274,over_ai,0.178097,countIP 2.53505e+09 countIP0 3.79575e+09 keysum 2.23007e+09 pktSum 1.00215e+10 aggrSum 5.89008e+07 blackkey_num 235626500 feedback 112 feedsumportion 0.969633 finger0 9 finger 14 time 127993,runTime,58.0002
+line 669615 total 0.133627 total0 0.699049 false 0.0381243 over 0.133627 false0 0.199441 over0 0.699049 overaggr 0.0279625 overcuckoo 0.105665
+over_uai 0.089493 over_uai 0.24328 over_ai,0.105905,over_ai,0.174687,countIP 1.77729e+09 countIP0 2.66376e+09 keysum 1.56779e+09 pktSum 7.06297e+09 aggrSum 4.38394e+07 blackkey_num 159443500 feedback 104 feedsumportion 0.973761 finger0 9 finger 14 time 128727,runTime,41.0001
 

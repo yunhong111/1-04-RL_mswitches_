@@ -102,5 +102,5 @@ public:
     void returnKey(vector<string>& keys, vector<size_t>& keyNos,
                             vector<int>& keyPrefixes, vector<int>& keyActions);
 
-    float CuckooTable::occupyRate();
+    float occupyRate();
 };
