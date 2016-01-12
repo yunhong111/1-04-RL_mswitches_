@@ -47,10 +47,10 @@ bool readFile0(ifstream& infile, vector<string> &flow, vector<size_t> &flow_cnt,
 void initRLearn(RLearn* rLearn);
 
 void updateBlacklist(vector<string>& overBigKeys, vector<int>& overActions, RLearn* rLearn, int actionSeq
-, vector<string>& blackkeyPres, vector<int>& blackActionPres, ofstream& blackKeyFileOut, size_t& slotNum);
+, vector<string>& blackkeyPres, vector<int>& blackActionPres, ofstream& blackKeyFileOut,  size_t& slotNum);
 
 void feedbackBlackkeyRL(VBkInfo& vBkInfo, RLearn** rLearn[],
-int actionSize, int switchNum, size_tss& slotNums, size_t line);
+int actionSize, int switchNum, size_tss& slotNums, intss& flowActionUnique, size_t line);
 
 void printQList(RLearn* rLearn);
 
@@ -63,5 +63,7 @@ void printVec(vector<size_t>& vec);
 void loadKeys2Filter(string& inFileName, vector<size_t>& mask, VUPrefix& vuniquePrefix,
 VUPrefix& vuniqueAggPrefix, char mL0[][ACTIONSIZE][20], char * argv[], int& finger, int& finger0,int switchNum,
 int actionSize, intss& uniqueActs);
+
+double nextTime(double rateParameter);
 
 

@@ -9,6 +9,12 @@ create time: 07/21/2015
 
 ofstream outfileR[3];
 
+// time
+double runTime = 0.0;
+
+// packet generation rate: pps
+const float rateParameter0 = 297298.0;
+
 int main(int argc, char * argv[])
 {
     cout << "\n";
@@ -35,7 +41,7 @@ int main(int argc, char * argv[])
     long timeInv = 0;
 
     // -----------------------------------------------------------------------80
-    int switchNum = 2;
+    int switchNum = 3;
     const int actionSize = ACTIONSIZE;
 
     // -----------------------------------------------------------------------80
@@ -92,7 +98,7 @@ int main(int argc, char * argv[])
     vector<vector<size_t> > keyCountDiffs= vector<vector<size_t> > (but, vector<size_t>(actionSize, 0));
 
     uint16_t blackBackSize = 0;
-    float feedSumPortion = 0.0;
+    float feedSumPortion[switchNum];
 
     // -----------------------------------------------------------------------80
     // File name for caida trace
@@ -107,13 +113,13 @@ int main(int argc, char * argv[])
     std::ofstream outfile0[switchNum];
     for(int si = 0; si < switchNum; si++)
     {
-        string outfileName = ("outfile0_simple_"+ string(argv[2]) + '_' +
+        string outfileName = ("../test/outfile0_simple_"+ string(argv[2]) + '_' +
                               string(argv[4]))+ "_tstNum_"+ string(argv[5])+"_b"+string(argv[6])+"_s"+num2str(si)+".csv";
         outfile0[si].open(outfileName.c_str());
 
         // wirte resource allocation
         //std::ofstream outfileR;
-        outfileName = ("resouce_assign_"+ string(argv[2]) + '_' +
+        outfileName = ("../test/resouce_assign_"+ string(argv[2]) + '_' +
                        string(argv[4]))+ "_tstNum_"+ string(argv[5])+"_b"+string(argv[6])+"_s"+num2str(si)+".csv";
         outfileR[si].open(outfileName.c_str());
     }
@@ -300,15 +306,18 @@ int main(int argc, char * argv[])
         while(!isEndFlag )
         {
             // init overselection rate each cycle
-            if(line < 100000)
+            for (int si = 0; si < switchNum; si++)
             {
-                for (int si = 0; si < switchNum; si++)
-                {
                     keySumsInv[si].clear();
                     countIPsInv[si].clear();
                     keySumsInv[si].assign(actionSize,0);
                     countIPsInv[si].assign(actionSize,0);
+            }
 
+            if(line < 100000)
+            {
+                for (int si = 0; si < switchNum; si++)
+                {
                     for(int ai = 0; ai < actionSize; ai++)
                         rLearn[si][ai]->clearList();
                 }
@@ -355,7 +364,10 @@ int main(int argc, char * argv[])
                     {
                         int prefix;
                         int flag_look,flag_look0, flag_lookkey[switchNum];
-                        bool flag_lookblack = 0;
+                        bool flag_lookblack[switchNum];
+
+                        bzero(&flag_lookblack,sizeof(flag_lookblack));
+
                         uint32_t subIP;
                         string flowstr;
                         string flowIpv4 = parsedec2IPV4(flowInt);
@@ -405,8 +417,8 @@ int main(int argc, char * argv[])
                                     flowstr = parsedec2IPV4(ip);//s.str();
                                     prefix = mi+8;
 
-                                    flag_lookblack = cuckooBlackKeyTable[si].LookUpKeyAction(flowstr,prefix,iflowaction);
-                                    if (flag_lookblack)
+                                    flag_lookblack[si] = cuckooBlackKeyTable[si].LookUpKeyAction(flowstr,prefix,iflowaction);
+                                    if (flag_lookblack[si])
                                     {
                                         countBlack[si] += flowNoInt;
                                         //break;
@@ -415,15 +427,15 @@ int main(int argc, char * argv[])
 
 
                             }
-                        }
+
 
                         // ---------------------------------------------------80
-                        if (flag_lookblack == 0) // not a blackkey
-                        {
-                            // look up key
-                            flag_look = 0;
-                            for(int si = 0; si < switchNum; si++)
+                        //for(int si = 0; si < switchNum; si++)
+                        //{
+                            if (flag_lookblack[si] == 0) // not a blackkey
                             {
+                            // look up key
+                                flag_look = 0;
                                 for(int mi = vuniquePrefix[si].uPres.size()-1; mi >=0; mi--)
                                 {
 
@@ -442,7 +454,7 @@ int main(int argc, char * argv[])
                                         keySumLocal[si] += (flowNoInt);
                                         for(int ai = 0; ai <actionSize; ai++)
                                         {
-                                            if(iflowaction == ai)  // ?
+                                            if(iflowaction == flowactionunique[si][ai])  // ?
                                             {
                                                 //#pragma omp atomic
                                                 keySumsLocal[si][ai] += (flowNoInt);
@@ -459,7 +471,7 @@ int main(int argc, char * argv[])
                             vector<int> iactions;
                             bool overbigFlag[switchNum];
 
-                            for(int si = 0; si < switchNum; si++)
+                            //for(int si = 0; si < switchNum; si++)
                             {
                                 bool isAKey = 0;
                                 for(int mi = 0; mi < vuniqueAggPrefix[si].uPres.size(); mi++)
@@ -488,7 +500,7 @@ int main(int argc, char * argv[])
                                         {
                                             for(int li = 0; li < iactions.size(); li++)
                                             {
-                                                if(iactions[li] == ai)
+                                                if(iactions[li] == flowactionunique[si][ai])
                                                 {
                                                     countIPsLocal[si][ai] += (flowNoInt);
                                                 }
@@ -514,7 +526,7 @@ int main(int argc, char * argv[])
                             // look up aggregate key
 
                             //if(cuckooAggrKeyTable.mm > 1)
-                            for(int si = 0; si < switchNum; si++)
+                            //for(int si = 0; si < switchNum; si++)
                             {
                                 bool isAggregatekey = 0;
                                 for(int mi = vuniqueAggPrefix[si].uPres.size()-1; mi >=0; mi--)
@@ -609,7 +621,7 @@ int main(int argc, char * argv[])
                 {
                     for(int si = 0; si < switchNum; si ++)
                     {
-                        if(size_t(line)%200 == 0)
+                        //if(size_t(line)%200 == 0)
                         {
                             // update total overselects value
                             countIPTotal[si] = countIPTotalOff[si] + countIP[si];
@@ -651,50 +663,52 @@ int main(int argc, char * argv[])
                                 haoFalsePos0Total[si] = (countIP0Total[si]-keySumTotal[si])/(keySumTotal[si]);
                             }
 
+                            if(keySumTotal[si] != 0)
                             overAggr[si] = aggrSum[si]/keySumTotal[si];
                         }
 
-                        if(size_t(line)%updateInvDis == 0 || line%flowNum == 0)
-                        {
-
-                            // -----------------------------------------------80
-                            // Display and write to file
-                            outfile0[si]<<"line,"<<line<<",total,"<<haoFalsePosTotal[si]<<",total0,"<<haoFalsePos0Total[si]<<",false,"<<
-                                        falsePos[si]<<",over,"<<haoFalsePos[si]<<",false0,"<<falsePos0[si]<<",over0,"<<
-                                        haoFalsePos0[si]<<",overaggr,"<<overAggr[si]<<",overcuckoo,"<<(haoFalsePosTotal[si]-overAggr[si])<<",";
-                            for(int ai = 0; ai < actionSize; ai++)
-                                outfile0[si]<<"over_ai,"<<haoOversAction[flowactionunique[si][ai]]<<",";
-                            for(int ai = 0; ai < actionSize; ai++)
-                                outfile0[si]<<"over_ai,"<<haoOvers[si][ai]<<",";
-
-                            outfile0[si]<<"countIP,"<<countIPTotal[si]<<",countIP0,"<<countIP0Total[si]<<",keysum,"<<keySumTotal[si]<<
-                                        ",pktSum,"<<pktSumTotal[si]<<",aggrSum,"<<aggrSum[si]<<",blackkey_num,"<<countBlack[si]<<",feedback,"<<blackBackSize<<",feedsumportion,"
-                                        <<feedSumPortion<<",finger0,"<<finger0<<",finger,"<<finger<<",time,"<<timeInv<<endl;
-
-
-                            cout<<endl<<"line "<<line<<" total "<<haoFalsePosTotal[si]<<" total0 "<<haoFalsePos0Total[si]<<" false "<<
-                                falsePos[si]<<" over "<<haoFalsePos[si]<<" false0 "<<falsePos0[si]<<" over0 "<<
-                                haoFalsePos0[si]<<" overaggr "<<overAggr[si]<<" overcuckoo "<<(haoFalsePosTotal[si]-overAggr[si])<<endl;
-
-                            for(int ai = 0; ai < actionSize; ai++)
-                                cout<<"over_ai "<<haoOversAction[flowactionunique[si][ai]]<<" ";
-                            for(int ai = 0; ai < actionSize; ai++)
-                                cout<<"over_ai,"<<haoOvers[si][ai]<<",";
-
-                            cout<<"countIP "<<countIPTotal[si]<<" countIP0 "<<countIP0Total[si]<<" keysum "<<keySumTotal[si]<<
-                                " pktSum "<<pktSumTotal[si]<<" aggrSum "<<aggrSum[si]<<" blackkey_num "<<countBlack[si]<<" feedback "<<blackBackSize<<" feedsumportion "
-                                <<feedSumPortion<<" finger0 "<<finger0<<" finger "<<finger<<" time "<<timeInv<<endl<<endl;
-                        }
                     }
                 }
 
             }
 
+            // -----------------------------------------------80
+            // Display and write to file
+            for(int si = 0; si < switchNum; si++)
+            {
+                outfile0[si]<<"line,"<<line<<",total,"<<haoFalsePosTotal[si]<<",total0,"<<haoFalsePos0Total[si]<<",false,"<<
+                falsePos[si]<<",over,"<<haoFalsePos[si]<<",false0,"<<falsePos0[si]<<",over0,"<<
+                haoFalsePos0[si]<<",overaggr,"<<overAggr[si]<<",overcuckoo,"<<(haoFalsePosTotal[si]-overAggr[si])<<",";
+                for(int ai = 0; ai < actionSize; ai++)
+                    outfile0[si]<<"over_uai,"<<haoOversAction[flowactionunique[si][ai]]<<",";
+                for(int ai = 0; ai < actionSize; ai++)
+                    outfile0[si]<<"over_ai,"<<haoOvers[si][ai]<<",";
+
+                outfile0[si]<<"countIP,"<<countIPTotal[si]<<",countIP0,"<<countIP0Total[si]<<",keysum,"<<keySumTotal[si]<<
+                ",pktSum,"<<pktSumTotal[si]<<",aggrSum,"<<aggrSum[si]<<",blackkey_num,"<<countBlack[si]<<",feedback,"<<blackBackSize<<",feedsumportion,"
+                <<feedSumPortion[si]<<",finger0,"<<finger0<<",finger,"<<finger<<",time,"<<timeInv<<",runTime,"<<runTime<<endl;
+
+
+                cout<<endl<<"line "<<line<<" total "<<haoFalsePosTotal[si]<<" total0 "<<haoFalsePos0Total[si]<<" false "<<
+                falsePos[si]<<" over "<<haoFalsePos[si]<<" false0 "<<falsePos0[si]<<" over0 "<<
+                haoFalsePos0[si]<<" overaggr "<<overAggr[si]<<" overcuckoo "<<(haoFalsePosTotal[si]-overAggr[si])<<endl;
+
+                for(int ai = 0; ai < actionSize; ai++)
+                    cout<<"over_uai "<<haoOversAction[flowactionunique[si][ai]]<<" ";
+                for(int ai = 0; ai < actionSize; ai++)
+                    cout<<"over_ai,"<<haoOvers[si][ai]<<",";
+
+                cout<<"countIP "<<countIPTotal[si]<<" countIP0 "<<countIP0Total[si]<<" keysum "<<keySumTotal[si]<<
+                " pktSum "<<pktSumTotal[si]<<" aggrSum "<<aggrSum[si]<<" blackkey_num "<<countBlack[si]<<" feedback "<<blackBackSize<<" feedsumportion "
+                <<feedSumPortion[si]<<" finger0 "<<finger0<<" finger "<<finger<<" time "<<timeInv<<",runTime,"<<runTime<<endl<<endl;
+            }
+
             // ---------------------------------------------------------------80
             // feed back portionFeedBack% overselections and overselection rates for actions
             //if(size_t(line)%2000000 == 0 )
+            if(size_t(runTime)%5 == 0)
             {
-
+                vBkInfo.clear();
                 // -----------------------------------------------------------80
                 // the overselects for feedback
                 for(int si = 0; si < switchNum; si++)
@@ -723,7 +737,9 @@ int main(int argc, char * argv[])
                     blackActions.erase(blackActions.begin()+blackBackSize, blackActions.end());
 
                     float feedSum = accumulate(blackKeyNos.begin(), blackKeyNos.end(), init);
-                    feedSumPortion = feedSum/overTotalSum;
+                    feedSumPortion[si] = feedSum/overTotalSum;
+
+                    cout<<"* feedback sum: "<<feedSum<<" num: "<<blackBackSize<<endl;
 
                     // output
                     BkInfo bkInfo;
@@ -747,16 +763,16 @@ int main(int argc, char * argv[])
                     {
                         for(int ri = 0; ri < actionSize; ri++)
                         {
-                            countIPsSum += countIPs[si][ri];
-                            keySumsSum += keySums[si][ri];
 
                             if (flowactionunique[si][ri] == flowActions0[ai])
                             {
-                                haoOversAction[ai] = float(countIPs[si][ai]-keySums[si][ai])/float(keySums[si][ai]);
+                                countIPsSum += countIPsInv[si][ri];
+                                keySumsSum += keySumsInv[si][ri];
                             }
                         }
 
                     }
+                    if(keySumsSum != 0)
                     haoOversAction[ai] = (countIPsSum - keySumsSum)/keySumsSum;
                 }
                 // -----------------------------------------------------------80
@@ -780,7 +796,7 @@ int main(int argc, char * argv[])
                             EPSILON0 = 0.20;
                         }
                         rLearn[si][ri]->qLearn();
-                        printQList(rLearn[si][ri]);
+                        //printQList(rLearn[si][ri]);
                     }
                 }
 
@@ -795,7 +811,7 @@ int main(int argc, char * argv[])
                 // -----------------------------------------------------------80
                 // call function
                 cout<<"* feedback bks!"<<endl;
-                feedbackBlackkeyRL(vBkInfo, rLearn, actionSize,switchNum,slotNums, line);
+                feedbackBlackkeyRL(vBkInfo, rLearn, actionSize,switchNum,slotNums, flowactionunique, line);
                 cout<<"* feedback bks end!"<<endl;
 
                 // ------------------------------
@@ -839,23 +855,49 @@ bool readFile0(ifstream& infile, vector<string> &flow, vector<size_t> &flow_cnt,
     size_t flowNo;
     size_t in_num = 0;
 
-    while((infile >> flowInt >>flowNo) && (in_num < readNum))
+    double timeInv = 0.0f;
+    double nTime = 0.0f;
+
+    while((infile >> flowInt >>flowNo) && timeInv < 1.0f/*&& (in_num < readNum)*/)
     {
 
         bTrie->addWordCount(DecToBin(flowInt),32, isnonkey, flowNo);
         in_num ++;
+
+        // generate next time
+        nTime = nextTime(rateParameter0);
+        timeInv += nTime;
+
+        if(nTime< 0)
+        {
+            cout<<"* readFile0: timeInv < 0. wrong!"<<endl;
+            exit(0);
+        }
+        //cout<<"* timeInv: "<<endl;
         //if(in_num%1000000 == 0)
-        //cout<<"loading file ...."<<in_num<<"  ";
+            //cout<<"loading file ...."<<in_num<<"  ";
     }
+
+    // run time
+    runTime += timeInv;
+    if(runTime >= INFINITY)
+    {
+        cout<<"* readFile0:runTime: "<<runTime<<" timeInv: "<<timeInv<<" nTime: "<<nTime<<endl;
+        exit(0);
+    }
+    //cout<<"* timeInv: "<<endl;
+
     vector<char> word;
     vector<int> flowActions;
     bTrie->getLeaf(bTrie->root,word,flow,flow_cnt,flowActions);
 
 
-    if(in_num < readNum)
+    if(timeInv < 1.0f/*in_num < readNum*/)
     {
         isEndFlag = 1;
+        cout<<"* readFile0:timeInv: "<<timeInv<<endl;
     }
+
     //cout<<"* Flow size: "<<flow.size()<<endl;
 
     delete bTrie;
@@ -868,9 +910,9 @@ void initRLearn(RLearn* rLearn)
     // build a RL for rev1
 
     // create a qlist and initialize it
-    float minState = 20;
+    float minState = 320;
     float maxState = 820;   // ovs
-    float minAction = 20;
+    float minAction = 320;
     float maxAction = 820; // #slots
 
     float state = minState;
@@ -878,8 +920,8 @@ void initRLearn(RLearn* rLearn)
     float ovs = 0;
     float ovsTarget = 0.01;
 
-    size_t numS = 8;
-    size_t numA = 8;
+    size_t numS = 5;
+    size_t numA = 5;
 
     //float initState = 500;
     //float initAction = 500;
@@ -889,7 +931,7 @@ void initRLearn(RLearn* rLearn)
 
     // initialize the table
     cout<<"* init qlist..."<<endl;
-    rLearn->initQtable(minState,maxState,minAction,maxAction, numS,  numA,  ovsTarget);
+    rLearn->initQtable(minState, maxState, minAction, maxAction, numS,  numA,  ovsTarget);
 
 
     // initialized state
@@ -1027,7 +1069,7 @@ void updateBlacklist(vector<string>& overBigKeys, vector<int>& overActions, RLea
 
 }
 void feedbackBlackkeyRL(VBkInfo& vBkInfo, RLearn** rLearn[],
-                        int actionSize, int switchNum, size_tss& slotNums, size_t line)
+                        int actionSize, int switchNum, size_tss& slotNums, intss& flowActionUnique, size_t line)
 {
 
     selectAction(rLearn, actionSize, switchNum,slotNums);
@@ -1089,7 +1131,7 @@ void feedbackBlackkeyRL(VBkInfo& vBkInfo, RLearn** rLearn[],
             strings overBigKeys = vBkInfo[si].bks;
             ints overActions = vBkInfo[si].bkActions;
 
-            updateBlacklist(overBigKeys, overActions, rLearn[si][i], i, blackkeyPres, actionPres,
+            updateBlacklist(overBigKeys, overActions, rLearn[si][i], flowActionUnique[si][i], blackkeyPres, actionPres,
                             blackKeyFileOut, slotNums[si][i], si);
         }
 
@@ -1399,7 +1441,7 @@ void loadKeys2Filter(string& inFileName, vector<size_t>& mask, VUPrefix& vunique
         // Init blackkey file
         cout<<"* Write blackkey to file!"<<endl;
         ofstream blackKeyFileOut;
-        BLACKFILENAME = "blackkeyfile_" + string(argv[2]) + '_' +
+        BLACKFILENAME = "../test/blackkeyfile_" + string(argv[2]) + '_' +
                         string(argv[4])+ "_tstNum_"+ string(argv[5])+"_b"+string(argv[6]);
         blackKeyFileOut.open(BLACKFILENAME.c_str());
         blackKeyFileOut.clear();
@@ -1410,7 +1452,7 @@ void loadKeys2Filter(string& inFileName, vector<size_t>& mask, VUPrefix& vunique
         // Init aggr file
         cout<<"* Write aggr to file!"<<endl;
         ofstream aggrFileOut;
-        AGGRFILENAME = "aggrfile" + string(argv[2]) + '_' +
+        AGGRFILENAME = "../test/aggrfile" + string(argv[2]) + '_' +
                        string(argv[4])+ "_tstNum_"+ string(argv[5])+"_b"+string(argv[6]);
         aggrFileOut.open(AGGRFILENAME.c_str());
         aggrFileOut.clear();
@@ -1456,6 +1498,20 @@ void loadKeys2Filter(string& inFileName, vector<size_t>& mask, VUPrefix& vunique
         vuniqueAggPrefix.push_back(uPrefix);
     }// end si
 }
+
+double nextTime(double rateParameter)
+{
+    double nTime = -log(1.0f - (double) rand() / double(RAND_MAX + 1.0)) / rateParameter;
+
+    while(nTime == INFINITY)
+    {
+        double nTime = -log(1.0f - (double) rand() / (RAND_MAX + 1.0)) / rateParameter;
+        cout<<"* nextTime: INFINITY!"<<endl;
+        exit(0);
+    }
+    return nTime;
+}
+
 
 
 

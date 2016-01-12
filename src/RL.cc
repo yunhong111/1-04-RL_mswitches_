@@ -51,7 +51,7 @@ void RLearn::update(float state, float ovs)
     //cout<<"* Reward: "<<_reward<<endl;
 }
 
-void RLearn::reward(float ovs)
+/*void RLearn::reward(float ovs)
 {
     float C1 = (ovs - _ovsTarget);
     if(fabs(C1) < 0.0005)
@@ -71,22 +71,29 @@ void RLearn::reward(float ovs)
         _reward = -pow(C1*10.0,2.0)*10.0;
     }
 
-    //if(fabs(ovs-_ovsTarget)>0.5*_ovsTarget)
-    /*float C1 = (ovs - _ovsTarget);
-    if(ovs>_ovsTarget) // small reward
-    {
-       // _reward = -10*fabs(ovs - _ovsTarget);
+}*/
 
-        _reward = 0.1/float(exp(pow(C1*100.0,2.0)));
+// positive reward function
+void RLearn::reward(float ovs)
+{
+    float C1 = (ovs - _ovsTarget);
+    if(fabs(C1) < 0.0005)
+    {
+        //_reward = 0.0001*1.0/float(pow(0.0005,2.0));
+        _reward = exp(-pow(C1*10.0,2.0)*10000.0);
+    }
+    else if(fabs(C1) < 0.001 && C1 < 0) // small reward
+        _reward = exp(-pow(C1*10.0,2.0)*10000.0);
+
+    else if(ovs > _ovsTarget)
+    {
+        _reward = exp(-pow(C1*10.0,2.0)*10000.0);
     }
     else
     {
-       // _reward = -5*fabs(ovs - _ovsTarget);
-        _reward = 1.0/float(exp(pow(C1*100.0,2.0)));
-    }*/
-   // _reward = 0.0001*1.0/float(pow((ovs - _ovsTarget),2.0));
+        _reward = exp(-pow(C1*10.0,2.0)*10000.0);
+    }
 
-   // cout<<"* diff: "<<fabs(ovs - _ovsTarget)<<" * reward: "<<_reward<<endl;
 }
 
 
@@ -355,8 +362,9 @@ void RLearn::initQtable(float minState, float maxState, float minAction, float m
     }
 
     _actionSuggest = minAction;
-    _nextState = minState;
-    _state = minState;
+    _nextState = _states[_states.size()/2];
+    _state = _nextState;
+    _indexCur = _states.size()/2;
 
     //cout<<" _indexCur: "<<_indexCur<<endl;
 }
