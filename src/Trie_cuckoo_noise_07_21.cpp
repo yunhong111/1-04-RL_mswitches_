@@ -1134,9 +1134,10 @@ void feedbackBlackkeyRL(VBkInfo& vBkInfo, RLearn** rLearn[],
                             blackKeyFileOut, slotNums[si][i], si);
 
             // cuckoo black table occupy rate
-            cout<<"* cuckooBlackKeyTable[si].occupyRate(): "<<cuckooBlackKeyTable[si].occupyRate()<<endl;
 
         }
+
+        cout<<"* cuckooBlackKeyTable[si].occupyRate(): "<<cuckooBlackKeyTable[si].occupyRate()<<endl;
 
         outfileR[si]<<endl;
 
