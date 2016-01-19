@@ -103,9 +103,9 @@ int main(int argc, char * argv[])
     // -----------------------------------------------------------------------80
     // File name for caida trace
     const char * fp[] = {"mapped-caida-1","mapped-caida-6", "mapped-caida-11",
-                         "mapped-caida-16","mapped-caida-21","mapped-caida-31",
-                         "mapped-caida-36","mapped-caida-41","mapped-caida-46",
-                         "mapped-caida-51","mapped-caida-56"
+                         "mapped-caida-16","mapped-caida-21","mapped-caida-26",
+                         "mapped-caida-31","mapped-caida-36","mapped-caida-41",
+                         "mapped-caida-46","mapped-caida-51","mapped-caida-56"
                         };
 
     // -----------------------------------------------------------------------80
@@ -267,7 +267,7 @@ int main(int argc, char * argv[])
 
     // -----------------------------------------------------------------------80
     // load packets from file
-    for (int fi = 0; fi < 6; fi++)
+    for (int fi = 0; fi < 12; fi++)
     {
         // --------------------------
         // Open trace file
@@ -276,7 +276,6 @@ int main(int argc, char * argv[])
         inFileName += pathname;
         infile.open(inFileName.c_str());
         cout<<inFileName.c_str()<<endl;
-        cout<<inFileName<<endl;
         if(!infile)
             std::cout << "* TestIP File Error " << std::endl;
 
@@ -349,7 +348,7 @@ int main(int argc, char * argv[])
 
             }
 
-            if(line < 100000)
+            if(runTime < 10)
             {
                 for (int si = 0; si < switchNum; si++)
                 {
@@ -744,6 +743,9 @@ int main(int argc, char * argv[])
 
             }
 
+            vector<string>().swap(flows);
+            vector<size_t>().swap(flowNos);
+
             // -----------------------------------------------80
             // Display and write to file
             for(int si = 0; si < switchNum; si++)
@@ -907,6 +909,7 @@ int main(int argc, char * argv[])
 
 bool readFile0(ifstream& infile, vector<string> &flow, vector<size_t> &flow_cnt, size_t readNum, bool& isEndFlag)
 {
+    cout<<"* Read File!"<<endl;
     Trie *bTrie = new Trie();
     uint32_t flowInt;
     size_t flowNo;
@@ -930,11 +933,10 @@ bool readFile0(ifstream& infile, vector<string> &flow, vector<size_t> &flow_cnt,
             cout<<"* readFile0: timeInv < 0. wrong!"<<endl;
             exit(0);
         }
-        //cout<<"* timeInv: "<<endl;
-        //if(in_num%1000000 == 0)
-            //cout<<"loading file ...."<<in_num<<"  ";
+
     }
 
+    cout<<"* Read File end!"<<" timeInv: "<<timeInv<<endl;
     // run time
     runTime += timeInv;
     if(runTime >= INFINITY)
@@ -946,6 +948,11 @@ bool readFile0(ifstream& infile, vector<string> &flow, vector<size_t> &flow_cnt,
 
     vector<char> word;
     vector<int> flowActions;
+
+    //vector<string>().swap(flow);
+    //vector<size_t>().swap(flow_cnt);
+    vector<int>().swap(flowActions);
+
     bTrie->getLeaf(bTrie->root,word,flow,flow_cnt,flowActions);
 
 
@@ -956,6 +963,7 @@ bool readFile0(ifstream& infile, vector<string> &flow, vector<size_t> &flow_cnt,
     }
 
     //cout<<"* Flow size: "<<flow.size()<<endl;
+
 
     delete bTrie;
     return true;
@@ -1373,8 +1381,8 @@ void selectAction(RLearn** rLearn[], int actionSize, int switchNum, size_tss& sl
         }
     }
 
-    //vector<QSum>().swap(qSums);
-    //vector<vector<QEntry> >().swap(qVecs);
+    vector<vector<QSum> >().swap(qSums);
+    vector<vector<vector<QEntry> > >().swap(qVecs);
 }
 
 void findMax(vector<QSum>& qSums, size_ts& slotNums, int actionSize, int switchNum )
@@ -1564,7 +1572,7 @@ double nextTime(double rateParameter)
 {
     double nTime = -log(1.0f - (double) rand() / double(RAND_MAX + 1.0)) / rateParameter;
 
-    while(nTime == INFINITY)
+    if(nTime == INFINITY)
     {
         double nTime = -log(1.0f - (double) rand() / (RAND_MAX + 1.0)) / rateParameter;
         cout<<"* nextTime: INFINITY!"<<endl;

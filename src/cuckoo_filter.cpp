@@ -23,9 +23,26 @@ void CuckooFilter::cuckooFilterInit(long m,int f,int bc,long MaxNumKicks)
 
     // Start with empty hash table
     //mL0 = vector<vector<string> > (m, vector<string>(bc, '\0'));
-    mL = vector<vector<int> > (m, vector<int>(bc, 0));
-    maction = vector<vector<int> > (m, vector<int>(bc, 0));
-    mhigh = vector<vector<bool> > (m, vector<bool>(bc, 0));
+    if(mL.size() == 0)
+    {
+        mL = vector<vector<int> > (m, vector<int>(bc, 0));
+        maction = vector<vector<int> > (m, vector<int>(bc, 0));
+        mhigh = vector<vector<bool> > (m, vector<bool>(bc, 0));
+    }
+    else
+    {
+        for(size_t i = 0; i < m; i++)
+        {
+            for(int j = 0; j < bc; j++)
+            {
+                mL[i][j] = 0;
+                maction[i][j] = 0;
+                mhigh[i][j] = 0;
+            }
+        }
+
+    }
+
     //mcount = vector<vector<size_t> > (m, vector<size_t>(bc, 0));
    // mcount0 = vector<vector<size_t> > (m, vector<size_t>(bc, 0));
    // mcountdiff = vector<vector<size_t> > (m, vector<size_t>(bc, 0));
@@ -755,9 +772,13 @@ bool CuckooFilter::RemovePos(long& xPos, int& yPos)
 }
 void CuckooFilter::ClearTable()
 {
-    mL.clear();
-    maction.clear();
-    mhigh.clear();
+    //mL.clear();
+    //maction.clear();
+    //mhigh.clear();
+
+    //vector<vector<int> >().swap(mL);
+    //ector<vector<int> >().swap(maction);
+    //vector<vector<bool> >().swap(mhigh);
 
 }
 

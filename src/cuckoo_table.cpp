@@ -24,11 +24,31 @@ void CuckooTable::CuckooTableInit(long m,int f,int bc,long MaxNumKicks)
     mm = m;
 
     // Start with empty hash table
-    mL = vector<vector<uint32_t> > (m, vector<uint32_t>(bc, 0));
-    maction = vector<vector<int> > (m, vector<int>(bc, 0));
-    mprefix= vector<vector<int> > (m, vector<int>(bc, 0));
-    mhigh = vector<vector<bool> > (m, vector<bool>(bc, 0));
-    mcount = vector<vector<size_t> > (m, vector<size_t>(bc, 0));
+
+
+    if(mL.size() == 0)
+    {
+        mL = vector<vector<uint32_t> > (m, vector<uint32_t>(bc, 0));
+        maction = vector<vector<int> > (m, vector<int>(bc, 0));
+        mprefix= vector<vector<int> > (m, vector<int>(bc, 0));
+        mhigh = vector<vector<bool> > (m, vector<bool>(bc, 0));
+        mcount = vector<vector<size_t> > (m, vector<size_t>(bc, 0));
+    }
+    else
+    {
+        for(size_t i = 0; i < m; i++)
+        {
+            for(int j = 0; j < bc; j++)
+            {
+                mL[i][j] = 0;
+                maction[i][j] = 0;
+                mhigh[i][j] = 0;
+                mprefix[i][j] = 0;
+                mcount[i][j] = 0;
+            }
+        }
+
+    }
 
     mf = f;
     mbc = bc;
@@ -566,9 +586,16 @@ bool CuckooTable::RemoveKey(const string& key)
 }
 void CuckooTable::ClearTable()
 {
+
     mL.clear();
     maction.clear();
     mhigh.clear();
+
+    vector<vector<uint32_t> >().swap(mL);
+    vector<vector<int> >().swap(maction);
+    vector<vector<int> >().swap(mprefix);
+    vector<vector<bool> >().swap(mhigh);
+    vector<vector<size_t> >().swap(mcount);
 
 }
 
